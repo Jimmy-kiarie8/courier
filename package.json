@@ -12,14 +12,23 @@
     "devDependencies": {
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
-        "popper.js": "^1.12",
+        "browser-sync": "^2.24.4",
+        "browser-sync-webpack-plugin": "^2.0.1",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
+        "popper.js": "^1.12",
         "vue": "^2.5.7"
     },
     "dependencies": {
-        "vue-router": "^3.0.1"
+        "php-unserialize": "0.0.1",
+        "vue-barcode": "^1.1.0",
+        "vue-google-autocomplete": "^1.1.0",
+        "vue-print-nb": "^1.0.3",
+        "vue-router": "^3.0.1",
+        "vue2-google-maps": "^0.9.7",
+        "vuetify": "^1.0.18",
+        "w3-css": "^4.1.0"
     }
 }

@@ -5,7 +5,38 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header" id="socialite">
+                    <v-card flat tile class="flex">
+                        <v-card-title class="grey lighten-2">
+                           <strong class="subheading">Login with!</strong>
+                           <v-spacer></v-spacer>
+                           <a href="/login/facebook">
+                            <v-btn
+                            icon
+                            dark
+                            class="mx-3"
+                            >
+                            <v-icon size="24px">fa fa-facebook</v-icon>
+                            </v-btn>
+                            </a>
+                            <a href="/login/google">
+                                <v-btn
+                                    icon
+                                    dark
+                                    class="mx-3"
+                                    >
+                                <v-icon size="24px">fa fa-google</v-icon>
+                                </v-btn>
+                            </a>
+                        </v-card-title>
+                    </v-card>
+                </div>
+                {{-- <div class="card-header" id="socialite">
+                    {{ __('Login') }}
+                    <div class="text-right">
+                        <a href="/login/facebook">Login with: <v-icon size="18px" class="mr-3">fab fa-facebook</v-icon></a>
+                    </div>
+                </div> --}}
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -18,9 +49,9 @@
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
                                 @endif
                             </div>
                         </div>
@@ -32,9 +63,9 @@
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
                                 @endif
                             </div>
                         </div>
