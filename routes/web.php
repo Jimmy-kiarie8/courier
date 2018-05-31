@@ -88,3 +88,13 @@ Route::post('userDateExpo', 'ReportController@userDateExpo')->name('userDateExpo
 // Socialite
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
+
+
+// Dashboard
+Route::post('delayedShipment', 'ShipmentController@delayedShipment')->name('delayedShipment');
+Route::post('approvedShipment', 'ShipmentController@approvedShipment')->name('approvedShipment');
+Route::post('waitingShipment', 'ShipmentController@waitingShipment')->name('waitingShipment');
+Route::post('deriveredShipment', 'ShipmentController@deriveredShipment')->name('deriveredShipment');
+
+// Chart
+Route::post('getChartData', 'ShipmentController@getChartData')->name('getChartData');

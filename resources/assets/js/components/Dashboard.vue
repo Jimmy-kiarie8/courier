@@ -1,113 +1,310 @@
 <template>
-   <v-content>
-      <v-container fluid fill-height>
-         <v-layout justify-center align-center>
-            
-            <section class="content">
-              <!-- Small boxes (Stat box) -->
-              <div class="row">
-                <div class="col-lg-3 col-xs-6 col-md-3" id="cols">
-                  <!-- small box -->
-                  <div class="small-box bg-aqua">
-                    <div class="inner">
-                      <h3>{{ Allusers.length }}</h3>
+ <v-content>
+  <v-container fluid fill-height>
+   <v-layout justify-center align-center>
+    <div v-show="loader" style="text-align: center; width: 100%;">
+        <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
+    </div>
+    <v-flex xs12 sm12 v-show="!loader">
+      <v-layout row wrap>
+        <v-flex xs6 sm3>
+          <v-card>
+            <v-card-actions>
+              <v-layout row wrap>
+                <v-flex sm4>
+                  <i class="pull-left fa fa-globe icon-rounded" style="font-size: 70px; color: red"></i>
+                </v-flex>
+                <v-flex sm7 offset-sm1>
+                  <strong>10</strong>  <v-divider></v-divider>
+                  <h6>Total Bookings</h6>
+                </v-flex>
+              </v-layout>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+        <v-flex xs6 sm3>
+          <v-card>
+            <v-card-actions>
+              <v-layout row wrap>
+                <v-flex sm4>
+                  <i class="pull-left fa fa-exchange" style="font-size: 70px; color: purple"></i>
+                </v-flex>
+                <v-flex sm7 offset-sm1>
+                  <strong>12</strong>  <v-divider></v-divider>
+                  <h6>Total Bookings</h6>
+                </v-flex>
+              </v-layout>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+        <v-flex xs6 sm3>
+          <v-card>
+            <v-card-actions>
+              <v-layout row wrap>
+                <v-flex sm4>
+                  <i class="pull-left fa fa-check-circle" style="font-size: 70px; color: indigo"></i>
+                </v-flex>
+                <v-flex sm7 offset-sm1>
+                  <strong>4</strong>  <v-divider></v-divider>
+                  <h6>Total Bookings</h6>
+                </v-flex>
+              </v-layout>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+        <v-flex xs6 sm3>
+          <v-card>
+            <v-card-actions>
+              <v-layout row wrap>
+                <v-flex sm4>
+                  <i class="pull-left fa fa-plane" style="font-size: 70px; color: orange"></i>
+                </v-flex>
+                <v-flex sm7 offset-sm1>
+                  <strong>2</strong>  <v-divider></v-divider>
+                  <h6>Total Bookings</h6>
+                </v-flex>
+              </v-layout>
+            </v-card-actions>
+          </v-card>
+        </v-flex>
+        <v-divider></v-divider>
+        <v-divider></v-divider>
+        <v-flex xs8>
+          <line-chart 
+            :messages="{empty: 'No data'}"
+             :refresh="10"
+            :download="true" 
+            :data="[rows]"
+          ></line-chart>
+        </v-flex>
+        <v-flex xs4>
+          <v-card>
+            <v-toolbar color="white" dark>
+              <v-toolbar-title>Business Stats</v-toolbar-title>
+            </v-toolbar>
+            <v-list two-line>
+              <template>
+                <v-list-tile avatar>
+                  <v-list-tile-content>
+                    <v-list-tile-sub-title> Waiting Approval</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list style="color: green"> {{ AllwaitingShipment.length }}</v-list>
+                </v-list-tile>
+                <v-list-tile avatar>
+                  <v-list-tile-content>
+                    <v-list-tile-sub-title> Derivery Orders</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list style="color: green"> {{ AllderiveredShipment.length }}</v-list>
+                </v-list-tile>
+                <v-list-tile avatar>
+                  <v-list-tile-content>
+                    <v-list-tile-sub-title> Total Packages</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list style="color: green"> {{ Allshipments.length }}</v-list>
+                </v-list-tile>
+                <v-list-tile avatar>
+                  <v-list-tile-content>
+                    <v-list-tile-sub-title> Delayed Orders</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list style="color: red"> {{ AlldelayedShipment.length }}</v-list>
+                </v-list-tile>
+                <v-list-tile avatar>
+                  <v-list-tile-content>
+                    <v-list-tile-sub-title> Orders Not Completed</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list style="color: red"> {{ notCompleted.length }}</v-list>
+                </v-list-tile>
+                <v-list-tile avatar>
+                  <v-list-tile-content>
+                    <v-list-tile-sub-title> Total Derivery</v-list-tile-sub-title>
+                  </v-list-tile-content>
+                  <v-list style="color: orange"> {{ AllderiveredShipment.length }}</v-list>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-card>
+        </v-flex>
+        <v-divider></v-divider>
+        <v-divider></v-divider>
+        <v-divider></v-divider>
 
-                      <p>Users </p>
-                    </div>
-                    <div class="icon">
-                      <i class="fa fa-person"></i>
-                    </div>
-                    <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-                  </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-xs-6 col-md-3" id="cols">
-                  <!-- small box -->
-                  <div class="small-box bg-purple">
-                    <div class="inner">
-                      <h3>10</h3>
-
-                      <p>Comments</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fa fa-comments"></i>
-                    </div>
-                    <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-                  </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-xs-6 col-md-3" id="cols">
-                  <!-- small box -->
-                  <div class="small-box bg-orange">
-                    <div class="inner">
-                      <h3>2</h3>
-
-                      <p>Uploads</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fa fa-cloud-upload"></i>
-                    </div>
-                    <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-                  </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-xs-6 col-md-3" id="cols">
-                  <!-- small box -->
-                  <div class="small-box bg-green">
-                    <div class="inner">
-                      <h3>3</h3>
-
-                      <p>Companies registered</p>
-                    </div>
-                    <div class="icon">
-                      <i class="fa fa-building"></i>
-                    </div>
-                    <!-- <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a> -->
-                  </div>
-                </div>
-                <!-- ./col -->
-              </div>
-           </section>
-         </v-layout>
-      </v-container>
-   </v-content>
+        <v-flex xs12>
+          <v-layout row wrap>
+            <v-flex xs4>
+              <v-card>
+                <v-toolbar color="white" dark>
+                  <v-toolbar-title>vehicles</v-toolbar-title>
+                </v-toolbar>
+                <v-list two-line>
+                  <template>
+                    <v-list-tile avatar>
+                      <v-list-tile-content>
+                        <v-list-tile-sub-title> Active</v-list-tile-sub-title>
+                      </v-list-tile-content>
+                      <v-list style="color: green"> 4</v-list>
+                    </v-list-tile>
+                    <v-list-tile avatar>
+                      <v-list-tile-content>
+                        <v-list-tile-sub-title> At Rest</v-list-tile-sub-title>
+                      </v-list-tile-content>
+                      <v-list style="color: red"> 2</v-list>
+                    </v-list-tile>
+                  </template>
+                </v-list>
+              </v-card>
+            </v-flex>
+            <v-flex xs4>
+              <v-card>
+                <v-toolbar color="white" dark>
+                  <v-toolbar-title>Derivery Boys</v-toolbar-title>
+                </v-toolbar>
+                <v-list two-line>
+                  <template>
+                    <v-list-tile avatar>
+                      <v-list-tile-content>
+                        <v-list-tile-sub-title> Active</v-list-tile-sub-title>
+                      </v-list-tile-content>
+                      <v-list style="color: green"> 4</v-list>
+                    </v-list-tile>
+                    <v-list-tile avatar>
+                      <v-list-tile-content>
+                        <v-list-tile-sub-title> At Rest</v-list-tile-sub-title>
+                      </v-list-tile-content>
+                      <v-list style="color: red"> 2</v-list>
+                    </v-list-tile>
+                  </template>
+                </v-list>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+    </v-flex>
+  </v-layout>
+</v-container>
+</v-content>
 </template>
 
 <script>
 export default {
-   data() {
-      return{
-         Allusers: {},
-      }
-   },
-   mounted() {
+ data() {
+  return{
+   Allusers: {},
+   loader: false,
+   Allshipments: {},
+   AllContainers: {},
+   AlldelayedShipment: {},
+   notCompleted: {},
+   AllwaitingShipment: {},
+   AllderiveredShipment: {},
+   AllapprovedShipment: {},
+   chart: [],
+   lables: [],
+   rows: {},
+ }
+},
+  mounted() {
+    this.loader = true
     axios.post('getUsers')
-     .then((response) => this.Allusers = this.temp = response.data)
-     .catch((error) => this.errors = error.response.data.errors)
-   }
+    .then((response) => {
+      this.Allusers = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('getShipments')
+    .then((response) => {
+      this.Allshipments = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('getContainers')
+    .then((response) => {
+      this.AllContainers = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    // Dashboard
+    axios.post('delayedShipment')
+    .then((response) => {
+      this.AlldelayedShipment = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('waitingShipment')
+    .then((response) => {
+      this.AllwaitingShipment = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('deriveredShipment')
+    .then((response) => {
+      this.AllderiveredShipment = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('deriveredShipment')
+    .then((response) => {
+      this.AllderiveredShipment = response.data
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('getChartData')
+    .then((response) => {
+      console.log(response);
+      this.rows = response.data
+      // this.lables = response.data.lables
+    })
+    .catch((error) => {
+      this.errors = error.response.data.errors
+    })
+
+    axios.post('approvedShipment')
+    .then((response) => {
+      this.loader = false
+      this.AllapprovedShipment = response.data
+    })
+    .catch((error) => {
+      this.loader = false
+      this.errors = error.response.data.errors
+    })    
+  }
 }
 </script>
 
 
 <style scoped>
 /*#tiles .col-md-3{
-   width: 90%;
-   height: 90px;
-   border-radius: 3px;
+ width: 90%;
+ height: 90px;
+ border-radius: 3px;
 }
 .bg-green{
-   background: green;
+ background: green;
 }
 .bg-purple{
-   background: purple;
+ background: purple;
 }
 .bg-orange{
-   background: orange;
+ background: orange;
 }
 .bg-aqua{
-   background: aqua;
+ background: aqua;
 }*/
 #cols{
-   background: #f0f0f0;
+ background: #f0f0f0;
 }
 </style>

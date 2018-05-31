@@ -6,6 +6,7 @@ use App\Shipment;
 use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ShipmentController extends Controller
@@ -242,23 +243,6 @@ class ShipmentController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Shipment  $shipment
-     * @return \Illuminate\Http\Response
-     */
-    public function updateStatus(Request $request, Shipment $shipment, $id)
-    {
-        $coordinates = serialize($request->address);
-        $shipment = Shipment::find($id);
-        $shipment->status = $request->status;
-        $shipment->coordinates = $coordinates;
-        $shipment->remark = $request->remark;
-        $shipment->save();
-    }
-
-    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Shipment  $shipment
@@ -269,13 +253,125 @@ class ShipmentController extends Controller
         Shipment::find($shipment->id)->delete();
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Shipment  $shipment
+     * @return \Illuminate\Http\Response
+     */
+    public function updateStatus(Request $request, Shipment $shipment, $id)
+    {
+        $coordinates = serialize($request->address);
+        $latitude = $request->address['latitude'];
+        $longitude = $request->address['longitude'];
+        // var_dump($coordinates); 
+        // var_dump($request->address['longitude']); 
+        // var_dump($coordinates->latitude); 
+        // var_dump($coordinates['longitude']); 
+        // var_dump($coordinates['longitude']); 
+        $coords = array('lat' => $latitude, 'lng' => $longitude);
+
+        $shipment = Shipment::find($id);
+        $shipment->status = $request->status;
+        $shipment->coordinates = $coordinates;
+        $shipment->remark = $request->remark;
+        $shipment->save();
+        return $coords;
+    }
+
 
     public function getcoordinatesArray($id)
     {
         $record = Shipment::find($id);
-        return unserialize($record->coordinates);
-        // var_dump($test); die;
-        // return Shipment::whereIn('id', $shipments)->get();
-        // array_has($shipments_id)
+        if ($record) {
+          // var_dump('pass'); 
+          $coordinates = unserialize($record->coordinates);
+          $arraySt = json_decode(json_encode($coordinates), true);
+          $latitude = $arraySt['latitude'];
+          $longitude = $arraySt['longitude'];
+          return array('lat' => $latitude, 'lng' => $longitude);
+        } else {
+          // var_dump('fail'); 
+          // $latitude = '-1.2808685';
+          // $longitude = '36.73657560000004';
+          return array('lat' => '-1.2808685', 'lng' => '36.73657560000004');
+        }
+
     }
+
+    // Dashboard
+    public function delayedShipment()
+    {
+      return Shipment::where('status', 'delayed')->get();
+    }
+
+    public function approvedShipment()
+    {
+      return Shipment::where('status', 'approved')->get();
+    }
+
+    public function waitingShipment()
+    {
+      return Shipment::where('status', 'waiting approval')->get();
+    }
+
+    public function deriveredShipment()
+    {
+      return Shipment::where('status', 'derivered')->get();
+    }
+
+    // Chart
+    public function getChartData()
+    {
+      /*$shipment = Shipment::select('booking_date', 'id')->get();
+      return json_decode(json_encode($shipment), true);
+      // $flatten = array_flatten($shipmentArray);
+      $retrive = array_except($shipmentArray, [
+        'airway_bill_no', 'amount_ordered', 'assign_staff', 'bar_code',
+        'booking_date', 'client_address', 'client_city', 'client_email',
+        'client_name', 'client_phone', 'client_postal_code', 'client_region',
+        'container', 'coordinates',
+        'sender_name',
+        'sender_phone',
+        'sender_email',
+        'sender_address',
+        'sender_city',
+        'shipment_type',
+        'payment',
+        'total_freight',
+        'insuarance_status',
+        'derivery_date',
+        'derivery_time',
+      ]);*/
+      // var_dump($flatten);
+     /* foreach ($shipmentArray as $value) {
+        $slice = array_only($value, ['created_at', 'id']);
+      var_dump($slice);
+
+      // var_dump($slice); 
+        $sliceArray = array('date' => $slice['created_at'], 'id' => $slice['id']);
+      }
+      return $sliceArray;*/
+      $shipments = DB::table('shipments')
+                     ->select(DB::raw('count(id) as count, booking_date as date'))
+                     ->orderBy('created_at', 'desc')
+                     ->groupBy('date')
+                     ->get();
+    
+    // $lables = [];
+    $rows = [];
+    foreach ($shipments as $shipment) {
+      $rows[] = [$shipment->date .': '. $shipment->count];
+      // $lables[] = $shipment->count;
+    }
+    return json_decode(json_encode($rows), false);
+    // $data = [
+    //   'lables' => $lables, 
+    //   'rows' => $rows, 
+    // ];
+    // return $rows;
+    // var_dump($rows); die;
+}
+
 }

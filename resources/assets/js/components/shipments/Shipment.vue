@@ -341,18 +341,16 @@
                 <v-layout align-center>
                   <v-flex>
                     <GmapMap
-                      :center="{lat:10, lng:10}"
+                      :center="{lat:-1.2808685, lng:36.73657560000004}"
                       :zoom="7"
                       map-type-id="terrain"
-                      style="width: 500px; height: 300px"
+                      style="width: 700px; height: 400px"
                     >
                       <GmapMarker
-                        :key="index"
-                        v-for="(m, index) in markers"
-                        :position="m.position"
+                        :position="markers.position"
                         :clickable="true"
                         :draggable="true"
-                        @click="center=m.position"
+                        @click="center=markers.position"
                       />
                     </GmapMap>
                   </v-flex>
@@ -738,14 +736,9 @@ export default {
        shipments_id: null,
      })
       return {
-        markers: [
-            {
-                position: {lat: 10.0, lng:10}
-            },
-            {
-                position: {lat: 14.0, lng:14}
-            }
-        ],
+        markers: {
+          position: {}
+        },
         address: '',
         snackbar: false,
         timeout: 5000,
@@ -880,7 +873,8 @@ export default {
       // alert(this.updateitedItem.id);      
       axios.post(`/updateStatus/${this.updateitedItem.id}`, {formobg: this.$data.updateitedItem, address: this.$data.address})
       .then((response) => {
-       console.log(response);            
+        console.log(response);            
+        this.markers.push(response.data)
      })
     },
     initialize () {
@@ -889,7 +883,7 @@ export default {
 
     UpdateItem (item) {
       axios.post(`/getcoordinatesArray/${item.id}`)
-        .then((response) => this.coordinatesArr = response.data)
+        .then((response) => this.markers.position = response.data)
         .catch((error) => this.errors = error.response.data.errors)
         console.log(this.coordinatesArr);
       

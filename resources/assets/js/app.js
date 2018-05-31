@@ -12,8 +12,11 @@ import VueRouter from 'vue-router'
 import 'w3-css/w3.css';
 import Vuetify from 'vuetify'
 import Print from 'vue-print-nb'
-
 import * as VueGoogleMaps from 'vue2-google-maps'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
+Vue.use(VueChartkick, {adapter: Chart})
  
 Vue.use(VueGoogleMaps, {
   load: {
