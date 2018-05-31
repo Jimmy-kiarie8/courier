@@ -45,6 +45,7 @@ Route::resource('shipment', 'ShipmentController');
 Route::resource('product', 'ProductController');
 Route::resource('reports', 'ReportController');
 Route::resource('container', 'ContainerController');
+Route::resource('branches', 'BranchController');
 
 Route::post('updateStatus/{id}', 'ShipmentController@updateStatus')->name('updateStatus');
 Route::post('barcodeUpdate/{bar_code}', 'ShipmentController@barcodeUpdate')->name('barcodeUpdate');
@@ -67,8 +68,14 @@ Route::post('getProducts', 'ProductController@getProducts')->name('getProducts')
 
 
 Route::post('getUsers', 'UserController@getUsers')->name('getUsers');
+Route::post('getLogedinUsers', 'UserController@getLogedinUsers')->name('getLogedinUsers');
+Route::post('profile/{id}', 'UserController@profile')->name('profile');
+
+
 Route::post('getUsersRole', 'RoleController@getUsersRole')->name('getUsersRole');
 Route::post('getRoles', 'RoleController@getRoles')->name('getRoles');
+
+Route::post('getBranch', 'BranchController@getBranch')->name('getBranch');
 
 // Reports
 

@@ -74,7 +74,7 @@
             :messages="{empty: 'No data'}"
              :refresh="10"
             :download="true" 
-            :data="[rows]"
+            :data="[['2018-01-18 08:31:24', 11], ['2018-2-02 08:31:24', 4], ['2018-03-03 08:31:24', 19], ['2018-04-04 08:31:24', 12]]"
           ></line-chart>
         </v-flex>
         <v-flex xs4>
@@ -265,8 +265,7 @@ export default {
     axios.post('getChartData')
     .then((response) => {
       console.log(response);
-      this.rows = response.data
-      // this.lables = response.data.lables
+      this.chart = response.data
     })
     .catch((error) => {
       this.errors = error.response.data.errors

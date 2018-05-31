@@ -351,10 +351,10 @@ class ShipmentController extends Controller
 
       // var_dump($slice); 
         $sliceArray = array('date' => $slice['created_at'], 'id' => $slice['id']);
-      }
+      } 
       return $sliceArray;*/
-      $shipments = DB::table('shipments')
-                     ->select(DB::raw('count(id) as count, booking_date as date'))
+      $shipments = DB::table('products')
+                     ->select(DB::raw('count(id) as count, date_format(created_at, "%M %d") as date'))
                      ->orderBy('created_at', 'desc')
                      ->groupBy('date')
                      ->get();
@@ -362,15 +362,16 @@ class ShipmentController extends Controller
     // $lables = [];
     $rows = [];
     foreach ($shipments as $shipment) {
-      $rows[] = [$shipment->date .': '. $shipment->count];
-      // $lables[] = $shipment->count;
+      $lables[] = $shipment->date;
+      $rows[] = $shipment->count;
     }
-    return json_decode(json_encode($rows), false);
-    // $data = [
-    //   'lables' => $lables, 
-    //   'rows' => $rows, 
-    // ];
-    // return $rows;
+    // return json_decode(json_encode($rows), false);
+    $data = [
+      'lables' => $lables, 
+      'rows' => $rows, 
+    ];
+    return $data;
+    // return response()->json([$data]);
     // var_dump($rows); die;
 }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -68,5 +69,24 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         User::find($user->id)->delete();
+    }
+
+    public function getLogedinUsers()
+    {
+        return Auth::user();
+    }
+
+    public function profile(Request $request, User $user, $id)
+    {
+        // return $request->all;
+        $upload = User::find($request->id);
+        if ($request->hasFile('image')) {
+            $imagename = time().$request->image->getClientOriginalName();
+            $request->image->storeAs('public/profile', $imagename);
+            // return response();
+        }
+        $image_name = '/storage/profile/'.$imagename;
+        $upload->profile = $image_name;
+        $upload->save();
     }
 }

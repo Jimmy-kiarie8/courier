@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('country')->nullable();
             $table->string('zipcode')->nullable();
             $table->string('branch')->nullable();
+            $table->string('profile')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

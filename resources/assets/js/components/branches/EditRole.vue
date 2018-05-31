@@ -7,7 +7,7 @@
         </v-card-title>
         <v-card-text>
           <v-container grid-list-md>
-            <v-layout wrap v-show="!loader">
+            <v-layout wrap>
               <v-form ref="form" @submit.prevent="submit">
                 <v-container grid-list-xl fluid>
                   <v-layout wrap>
@@ -31,7 +31,7 @@
                     </v-flex>
                     <v-flex  xs12 sm6>
                       <v-text-field
-                        :append-icon="e1 ? 'visibility_off' : 'visibility'"
+                        :append-icon="e1 ? 'visibility' : 'visibility_off'"
                         :append-icon-cb="() => (e1 = !e1)"
                         :type="e1 ? 'password' : 'text'"
                         v-model="form.password"
@@ -113,9 +113,6 @@
             </v-card-actions>
           </v-form>
         </v-layout>
-      <div v-show="loader" style="text-align: center">
-          <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
-      </div>
       </v-container>
     </v-card-text>
   </v-card>
@@ -140,8 +137,7 @@ export default {
       })
     return{
       defaultForm,
-      e1: true,
-      loader: false,
+      e1: false,
       list: {},
       form: Object.assign({}, defaultForm),
       emailRules: [
@@ -160,17 +156,13 @@ export default {
       axios.patch(`/users/${this.form.id}`, this.$data.form).
       then((response) => {
         // console.log(response);
-            this.loader=false
             this.close;
             this.resetForm();
             this.$emit('closeRequest');
             this.$emit('alertRequest');
 
       })
-      .catch((error) => {
-      this.errors = error.response.data.errors
-      this.loader=false
-    })
+      .catch((error) => this.errors = error.response.data.errors)
     },
     resetForm () {
         this.form = Object.assign({}, this.defaultForm)
