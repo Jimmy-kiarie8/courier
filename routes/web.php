@@ -46,6 +46,7 @@ Route::resource('product', 'ProductController');
 Route::resource('reports', 'ReportController');
 Route::resource('container', 'ContainerController');
 Route::resource('branches', 'BranchController');
+Route::resource('companies', 'CompanyController');
 
 Route::post('updateStatus/{id}', 'ShipmentController@updateStatus')->name('updateStatus');
 Route::post('barcodeUpdate/{bar_code}', 'ShipmentController@barcodeUpdate')->name('barcodeUpdate');
@@ -72,6 +73,9 @@ Route::post('getUsersRole', 'RoleController@getUsersRole')->name('getUsersRole')
 Route::post('getRoles', 'RoleController@getRoles')->name('getRoles');
 
 Route::post('getBranch', 'BranchController@getBranch')->name('getBranch');
+
+Route::post('getCompanies', 'CompanyController@getCompanies')->name('getCompanies');
+Route::post('getCompanyAdmin', 'CompanyController@getCompanyAdmin')->name('getCompanyAdmin');
 
 // Reports
 

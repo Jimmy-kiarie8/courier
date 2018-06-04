@@ -13,14 +13,19 @@
                  </v-flex> -->
                  <v-flex xs4 sm3>
                    <v-select
-                   :items="states"
-                   v-model="a1"
-                   label="Select"
-                   autocomplete
-                   ></v-select>
+                    :items="items"
+                    v-model="select"
+                    :hint="`${select.state}, ${select.abbr}`"
+                    label="Select"
+                    single-line
+                    item-text="state"
+                    item-value="abbr"
+                    return-object
+                    persistent-hint
+                  ></v-select>
                 </v-flex>
 
-                <v-flex xs4 sm3>
+                <v-flex xs4 sm3 offset-sm2>
                    <v-text-field
                    v-model="search"
                    color="blue darken-2"
@@ -43,7 +48,11 @@
          <!-- users display -->
          <div class="row">
           <div class="col-md-3" v-for="Alluser, key in temp" :key="Alluser.id">
-           <div class="card border-primary mb-3" style="max-width: 18rem;">
+           <div 
+              v-for="roles in Alluser.roles" 
+              v-if="select.abbr === 'all' || roles.name === select.abbr"
+              class="card border-primary mb-3" 
+              style="max-width: 18rem;">
             <div class="card-header">
               {{Alluser.name}}'s Details
               <v-btn color="danger" style="float: right;" @click="del(key, Alluser.id)">Delete</v-btn>
@@ -100,6 +109,14 @@ export default {
 }, 
 data() {
   return{
+    select: { state: 'All', abbr: 'all' },
+    items: [
+      { state: 'All', abbr: 'all' },
+      { state: 'Admin', abbr: 'Admin' },
+      { state: 'company Admin', abbr: 'companyAdmin' },
+      { state: 'Customers', abbr: 'Customer' },
+      { state: 'Drivers', abbr: 'Driver' },
+    ],
    search: '',
    loader: false,
    a1: null,
@@ -187,7 +204,16 @@ mounted() {
       this.errors = error.response.data.errors
       this.loader=false
     })
-}
+},
+ beforeRouteEnter(to, from, next) {
+   next(vm => {
+    if (vm.role === 'Admin' || vm.role === 'companyAdmin') {
+      next(); 
+    } else {
+      next('/');
+    }
+  })
+ }
 }
 </script>
 

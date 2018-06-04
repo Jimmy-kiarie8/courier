@@ -55,6 +55,14 @@
             </div>
           </div>
         </router-link>
+        <router-link to="/companies" class="list__tile list__tile--link">
+          <div class="list__tile__action"><i aria-hidden="true" class="icon material-icons">home</i></div>
+          <div class="list__tile__content">
+            <div class="list__tile__title">
+              Manage Companies
+            </div>
+          </div>
+        </router-link>
         <router-link to="/containers" class="list__tile list__tile--link">
           <div class="list__tile__action"><i aria-hidden="true" class="icon material-icons">home</i></div>
           <div class="list__tile__content">

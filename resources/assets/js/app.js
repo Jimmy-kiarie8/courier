@@ -12,7 +12,7 @@ import VueRouter from 'vue-router'
 import 'w3-css/w3.css';
 import Vuetify from 'vuetify'
 import Print from 'vue-print-nb'
-import * as VueGoogleMaps from 'vue2-google-maps'
+// import * as VueGoogleMaps from 'vue2-google-maps'
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 
@@ -21,12 +21,12 @@ import { Bar, Line } from 'vue-chartjs'
 
 Vue.use(VueChartkick, {adapter: Chart})
  
-Vue.use(VueGoogleMaps, {
+/*Vue.use(VueGoogleMaps, {
   load: {
     // key: 'AIzaSyBNzKeF6ZwxlAOUCyeH8UxvvYRHP_w_Guk',
     libraries: 'places',
   },
-})
+})*/
  
 Vue.use(Print); 
 Vue.use(Vuetify)
@@ -49,6 +49,7 @@ let myContainer = require('./components/containers/Container.vue');
 let myMap = require('./components/reports/Map.vue');
 let myBranch = require('./components/branches/Branch.vue');
 let myProfile = require('./components/users/Profile.vue');
+let myCompany = require('./components/company/Company.vue');
 
 const routes = [
 {path: '/', component: dashboard },
@@ -59,6 +60,7 @@ const routes = [
 {path: '/containers', component: myContainer },
 {path: '/branches', component: myBranch },
 {path: '/profile', component: myProfile },
+{path: '/companies', component: myCompany },
 ]
 const router = new VueRouter({
 // mode: 'history',
@@ -70,7 +72,7 @@ const app = new Vue({
     router,
     components: {
     	myHeader, myUser, myRole, myShipment, myScanner, myContainer, myMap,
-        myBranch, myProfile
+        myBranch, myProfile, myCompany
     },
     data: {
     shipments: [],

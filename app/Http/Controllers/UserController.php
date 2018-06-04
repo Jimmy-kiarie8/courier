@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller {
 	public function getUsers() {
-		return User::with(['roles'])->get();
+		return User::with(['roles'])->where('company_id', Auth::user()->company_id)->get();
 	}
 	/**
 	 * Store a newly created resource in storage.

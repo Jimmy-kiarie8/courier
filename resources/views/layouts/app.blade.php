@@ -26,7 +26,7 @@
     <script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
  {{--    <script src="https://unpkg.com/chart.js@2.7.2/dist/Chart.bundle.js"></script>
     <script src="https://unpkg.com/vue-chartkick@0.3.1"></script> --}}
-      {{-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzKeF6ZwxlAOUCyeH8UxvvYRHP_w_Guk&callback=initMap" 
+      {{-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNzKeF6ZwxlAOUCyeH8UxvvYRHP_w_Guk&callback=initMap"
   type="text/javascript"></script>--}}
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -39,7 +39,7 @@
         <main class="py-4">
             @yield('content')
         </main>
-    </div>  
+    </div>
 
 <script src="{{ asset('vuetify/js/vuetify.js') }}"></script>
 </body>

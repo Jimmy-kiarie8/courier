@@ -3,7 +3,7 @@
     <v-dialog v-model="openAddRequest" persistent max-width="700px">
       <v-card>
         <v-card-title fixed>
-          <span class="headline">Add Branch</span>
+          <span class="headline">Add Company</span>
         </v-card-title>
         <v-card-text>
           <v-container grid-list-md>
@@ -13,10 +13,10 @@
                   <v-layout wrap>
                     <v-flex xs12 sm6>
                       <v-text-field
-                      v-model="form.branch_name"
+                      v-model="form.company_name"
                       :rules="rules.name"
                       color="blue darken-2"
-                      label="Branch name"
+                      label="Company name"
                       required
                       ></v-text-field>
                     </v-flex>
@@ -25,7 +25,7 @@
                       v-model="form.address"
                       :rules="rules.name"
                       color="blue darken-2"
-                      label="Branch Address"
+                      label="Company Address"
                       required
                       ></v-text-field>
                     </v-flex>
@@ -43,10 +43,43 @@
                       v-model="form.email"
                       :rules="rules.name"
                       color="blue darken-2"
-                      label="Branch Email"
+                      label="Company Email"
                       required
                       ></v-text-field>
                     </v-flex>
+
+                    <!-- Location -->
+                    <div class="flex xs12 sm6">
+                      <div class="input-group input-group--required input-group--text-field blue--text text--darken-2">
+                        <div class="input-group__input">
+                          <vue-google-autocomplete
+                          ref="address"
+                          id="map"
+                          placeholder="Company Location"
+                          v-on:placechanged="getAddressData"
+                          country="ke"
+                          aria-label="Company Address"
+                          tabindex="0"
+                          ></vue-google-autocomplete>
+                        </div>
+                        <div class="input-group__details"><!----></div>
+                      </div>
+                    </div>
+                    <!-- Location -->
+
+                       <v-flex xs4 sm3>
+                         <v-select
+                          :items="compAdmin"
+                          v-model="form.admin"
+                          label="Select"
+                          single-line
+                          item-text="name"
+                          item-value="id"
+                          return-object
+                          persistent-hint
+                        ></v-select>
+                      </v-flex>
+
                   </v-layout>
                 </v-container>
                 <v-card-actions>
@@ -54,7 +87,6 @@
                   <v-btn flat @click="close">Close</v-btn>
                   <v-spacer></v-spacer>
                   <v-btn
-                  :disabled="!formIsValid"
                   flat
                   color="primary"
                   @click="save"
@@ -70,18 +102,24 @@
 </template>
 
 <script>
+import VueGoogleAutocomplete from 'vue-google-autocomplete'
 export default {
-  props: ['openAddRequest'],
+  props: ['openAddRequest', 'compAdmin'],
+  components: {
+    VueGoogleAutocomplete
+  },
   data() {
     const defaultForm = Object.freeze({
-      branch_name: '',
+      company_name: '',
       email: '',
       phone: '',
       address: '',
+      admin: '',
     })
     return{
       defaultForm,
       e1: false,
+      address: '',
       form: Object.assign({}, defaultForm),
       rules: {
         name: [val => (val || '').length > 0 || 'This field is required']
@@ -90,13 +128,13 @@ export default {
   },
   methods: {
     save() {
-      axios.post('/branches', this.$data.form).
+      axios.post('/companies', {data: this.$data.form, location: this.address}).
       then((response) => {
         console.log(response);
-        this.$parent.AllBranches.push(response.data) 
-        this.close;
-        this.resetForm();
-        this.$emit('closeRequest');
+        // this.$parent.AllCompanies.push(response.data) 
+        // this.close;
+        // this.resetForm();
+        // this.$emit('closeRequest');
         this.$emit('alertRequest');
 
       })
@@ -112,11 +150,15 @@ export default {
     close() {
       this.$emit('closeRequest')
     },
+
+    getAddressData: function (addressData, placeResultData, id) {
+      this.address = addressData;
+    }
   },
   computed: {
    formIsValid () {
      return (
-       this.form.branch_name &&
+       this.form.company_name &&
        this.form.email &&
        this.form.phone &&
        this.form.address
@@ -124,7 +166,7 @@ export default {
    },
  },
  mounted() {
-
- }
+  this.$refs.address.focus();
+}
 }
 </script>

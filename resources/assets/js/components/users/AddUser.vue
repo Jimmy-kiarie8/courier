@@ -104,6 +104,13 @@
                       <option value="3">Customer</option>
                       <option value="4">Driver</option>
                     </select>
+                    <!-- <select class="custom-select" name="company_id">
+                      <option value="0" selected>Select Company</option>                      
+                      <option data-subtext="" v-for="company, key in companies" 
+                        :key="company.id"
+                        value="company.id">{{$company->company_name}}
+                      </option>
+                    </select> -->
               </v-layout>
             </v-container>
             <v-card-actions>
@@ -145,6 +152,7 @@ export default {
         country: '',
       })
     return{
+      companies: {},
       defaultForm,
       loader: false,
       e1: false,
@@ -186,6 +194,24 @@ export default {
       this.$emit('closeRequest')
     },
   },
+    mounted() {
+    axios.post('getCompanyAdmin')
+    .then((response) => {
+      this.Allusers = response.data
+    })
+    .catch((error) => {
+        this.errors = error.response.data.errors
+      })
+
+
+      axios.post('getCompanies')
+      .then((response) => {
+        this.companies = response.data
+      })
+      .catch((error) => {
+        this.errors = error.response.data.errors
+      })
+    },
   computed: {
    formIsValid () {
      return (

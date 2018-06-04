@@ -3,7 +3,7 @@
     <v-dialog v-model="openEditRequest" persistent max-width="700px">
       <v-card>
         <v-card-title fixed>
-          <span class="headline">Add Branch</span>
+          <span class="headline">Add User</span>
         </v-card-title>
         <v-card-text>
           <v-container grid-list-md>

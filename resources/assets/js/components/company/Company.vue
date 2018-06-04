@@ -9,7 +9,7 @@
       <v-dialog v-model="editModal" persistent max-width="700px">
         <v-card>
           <v-card-title fixed>
-            <span class="headline">Add A Branch</span>
+            <span class="headline">Add A Company</span>
           </v-card-title>
           <v-card-text>
             <v-container grid-list-md>
@@ -22,26 +22,34 @@
                     <v-layout wrap>
                       <v-flex xs12 sm6>
                         <v-text-field
-                        v-model="editedItem.branch_name"
+                          v-model="editedItem.company_name"
+                          :rules="rules.name"
+                          color="blue darken-2"
+                          label="Company name"
+                          required
+                        ></v-text-field>
+                      </v-flex>
+                      <!-- <v-flex xs12 sm6>
+                        <v-text-field
+                        v-model="editedItem.admin"
                         :rules="rules.name"
                         color="blue darken-2"
                         label="Branch name"
                         required
                         ></v-text-field>
-                      </v-flex>
+                      </v-flex> -->
                       <v-flex xs12 sm6>
                         <v-text-field
                         v-model="editedItem.address"
                         :rules="rules.name"
                         color="blue darken-2"
-                        label="Branch Address"
+                        label="Company Address"
                         required
                         ></v-text-field>
                       </v-flex>
                       <v-flex xs12 sm6>
                         <v-text-field
                         v-model="editedItem.phone"
-                        :rules="rules.name"
                         color="blue darken-2"
                         label="Telephone Number"
                         required
@@ -56,6 +64,40 @@
                         required
                         ></v-text-field>
                       </v-flex>
+
+                    <!-- Location -->
+                    <div class="flex xs12 sm6">
+                      <div class="input-group input-group--required input-group--text-field blue--text text--darken-2">
+                        <div class="input-group__input">
+                          <vue-google-autocomplete
+                          ref="address"
+                          id="map"
+                          placeholder="Company Location"
+                          v-on:placechanged="getAddressData"
+                          country="ke"
+                          aria-label="Company Address"
+                          tabindex="0"
+                          ></vue-google-autocomplete>
+                        </div>
+                        <div class="input-group__details"><!----></div>
+                      </div>
+                    </div>
+                    <!-- Location -->
+
+
+                       <v-flex xs4 sm3>
+                         <v-select
+                          :items="Allusers"
+                          v-model="editedItem.admin"
+                          label="Select"
+                          single-line
+                          item-text="name"
+                          item-value="id"
+                          return-object
+                          persistent-hint
+                        ></v-select>
+                      </v-flex>
+
                     </v-layout>
                   </v-container>
                   <v-card-actions>
@@ -82,8 +124,8 @@
           <!-- <v-btn @click="openAdd" color="primary">Add A Branch</v-btn> -->
           <div v-show="!loader">
            <v-card-title>
-            <v-btn color="primary" flat @click="openAdd">Add A Branch</v-btn>
-            Branchs
+            <v-btn color="primary" raised @click="openAdd">Add Company</v-btn>
+            Companies
             <v-spacer></v-spacer>
             <v-text-field
             v-model="search"
@@ -95,13 +137,13 @@
           </v-card-title>
           <v-data-table
             :headers="headers"
-            :items="AllBranches"
+            :items="AllCompanies"
             :search="search"
             counter
             class="elevation-1"
           >
           <template slot="items" slot-scope="props">
-          <td>{{ props.item.branch_name }}</td>
+          <td>{{ props.item.company_name }}</td>
           <td class="text-xs-right">{{ props.item.phone }}</td>
           <td class="text-xs-right">{{ props.item.email }}</td>
           <td class="text-xs-right">{{ props.item.address }}</td>
@@ -126,7 +168,7 @@
 </v-layout>
 </v-container>
 </v-content>
-<AddBranch :openAddRequest="OpenAdd" @closeRequest="close" @alertRequest="alert"></AddBranch>
+<AddCompany :openAddRequest="OpenAdd" :compAdmin='Allusers' @closeRequest="close" @alertRequest="alert"></AddCompany>
 <v-snackbar
 :timeout="timeout"
 :bottom="y === 'bottom'"
@@ -141,14 +183,22 @@ v-model="snackbar"
 </template>
 
 <script>
-let AddBranch = require('./AddBranch')
+let AddCompany = require('./AddCompany')
+import VueGoogleAutocomplete from 'vue-google-autocomplete'
 export default {
   props: ['user', 'role'],
   components: {
-    AddBranch
+    AddCompany, VueGoogleAutocomplete
   },
   data () {
     return{
+      select: {},
+      /*items: [
+        { state: 'Admin', abbr: 'Admin' },
+        { state: 'company Admin', abbr: 'companyAdmin' },
+        { state: 'Customers', abbr: 'Customer' },
+        { state: 'Drivers', abbr: 'Driver' },
+      ],*/
       OpenAdd: false,
       search: '',
       snackbar: false,
@@ -160,9 +210,9 @@ export default {
       dialog: false,
       headers: [
       {
-        text: 'Branch Name',
+        text: 'Company Name',
         align: 'left',
-        value: 'branch_name'
+        value: 'company_name'
       },
       { text: 'Telephone Number', value: 'phone' },
       { text: 'Email', value: 'email' },
@@ -174,12 +224,14 @@ export default {
       loader: false,
       Editloader: false,
       editModal: false,
-      AllBranches: [],
+      AllCompanies: [],
+      address: '',
       editedItem: {
-        branch_name: '',
+        company_name: '',
         email: '',
         phone: '',
         address: '',
+        admin: '',
       },
       emailRules: [
         v => {
@@ -209,18 +261,18 @@ export default {
   methods: { 
     editItem (item) {
       this.editModal = true
-      this.editedIndex = this.AllBranches.indexOf(item)
+      this.editedIndex = this.AllCompanies.indexOf(item)
       this.editedItem = Object.assign({}, item)
     },
     save () {
       this.Editloader = true
-      axios.patch(`/branches/${this.editedItem.id}`, this.$data.editedItem)
+      axios.patch(`/companies/${this.editedItem.id}`, {data: this.$data.editedItem, location: this.address})
       .then((response) => {
         console.log(response);
-        // this.AllBranches.push(this.editedItem)
-        Object.assign(this.AllBranches[this.editedIndex], this.editedItem)
+        // this.AllCompanies.push(this.editedItem)
+        Object.assign(this.AllCompanies[this.editedIndex], this.editedItem)
         this.Editloader = false
-        this.close()
+        // this.close()
         this.color = 'black'
         this.message = 'Branch Updated'
         this.snackbar = true
@@ -228,7 +280,7 @@ export default {
       .catch((error) => {
         this.errors = error.response.data.errors
         this.Editloader = false
-        this.close()
+        // this.close()
         this.color = 'red'
         this.message = 'Something went wrong'
         this.snackbar = true
@@ -239,7 +291,7 @@ export default {
     },
 
       deleteItem (item) {
-        const index = this.AllBranches.indexOf(item)
+        const index = this.AllCompanies.indexOf(item)
         confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
       },
 
@@ -259,12 +311,26 @@ export default {
         this.form = Object.assign({}, this.defaultForm)
         this.$refs.form.reset()
       },
+
+      getAddressData: function (addressData, placeResultData, id) {
+        this.address = addressData;
+      }
     },
     mounted() {
-      this.loader=true
-      axios.post('getBranch')
+    this.$refs.address.focus();
+    this.loader=true
+    axios.post('getCompanyAdmin')
+    .then((response) => {
+      this.Allusers = response.data
+    })
+    .catch((error) => {
+        this.errors = error.response.data.errors
+      })
+
+
+      axios.post('getCompanies')
       .then((response) => {
-        this.AllBranches = response.data
+        this.AllCompanies = response.data
         this.loader=false
       })
       .catch((error) => {
@@ -275,12 +341,22 @@ export default {
     computed: {
      formIsValid () {
        return (
-         this.editedItem.branch_name &&
+         this.editedItem.company_name &&
          this.editedItem.email &&
          this.editedItem.phone &&
          this.editedItem.address
          )
     },
  },
+
+ beforeRouteEnter(to, from, next) {
+   next(vm => {
+    if (vm.role === 'Admin') {
+      next(); 
+    } else {
+      next('/');
+    }
+  })
+ }
   }
   </script>

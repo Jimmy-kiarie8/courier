@@ -5,10 +5,8 @@ Courier
 @endsection
 
 @section('content')
-{{-- <transition name="fade"> --}}
-<my-header></my-header>
-{{-- <router-view :user="{{ Auth::user() }}"}}"></router-view> --}}
-{{-- <router-view :user="{{ Auth::user() }}" :rolename="{{ json_encode($rolename) }}"></router-view> --}}
-<router-view :user="{{ Auth::user() }}" :rolename="{{ json_encode($rolename) }}"></router-view>
-{{-- </transition> --}}
+<my-header :user="{{ Auth::user() }}" :role="{{ json_encode($rolename) }}"></my-header>
+<transition name="fade">
+<router-view :user="{{ Auth::user() }}" :role="{{ json_encode($rolename) }}"></router-view>
+</transition>
 @endsection

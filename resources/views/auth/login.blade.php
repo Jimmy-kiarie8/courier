@@ -71,6 +71,24 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Company') }}</label>
+                            <div class="col-md-6">
+                                <select class="custom-select" name="company_id">
+                                  <option value="0" selected>Select Company</option>
+                                  @foreach ($company as $element)
+                                      <option data-subtext="" value="{{ $element->id }}">{{$element->company_name}}</option>
+                                  @endforeach
+                                </select>
+
+                                @if ($errors->has('company'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('company') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="checkbox">
                                     <label>

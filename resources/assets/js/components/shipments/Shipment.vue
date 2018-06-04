@@ -337,28 +337,28 @@
       <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs8>
-              <v-container fill-height>
-                <v-layout align-center>
-                  <v-flex>
-                    <GmapMap
-                      :center="{lat:-1.2808685, lng:36.73657560000004}"
-                      :zoom="7"
-                      map-type-id="terrain"
-                      style="width: 700px; height: 400px"
-                    >
-                      <GmapMarker
-                        :position="markers.position"
-                        :clickable="true"
-                        :draggable="true"
-                        @click="center=markers.position"
-                      />
-                    </GmapMap>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-          </v-flex>
-          <v-flex xs4>
-            <v-card>
+            <v-container fill-height>
+              <v-layout align-center>
+                <v-flex>
+                  <!-- <GmapMap
+                  :center="{lat:-1.2808685, lng:36.73657560000004}"
+                  :zoom="7"
+                  map-type-id="terrain"
+                  style="width: 700px; height: 400px"
+                  >
+                  <GmapMarker
+                  :position="markers.position"
+                  :clickable="true"
+                  :draggable="true"
+                  @click="center=markers.position"
+                  />
+                </GmapMap> -->
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-flex>
+        <v-flex xs4>
+          <v-card>
               <!-- <v-flex xs12 sm12>
                 <v-text-field
                 v-model="updateitedItem.client_city"
@@ -369,12 +369,12 @@
                 ></v-text-field>
               </v-flex> -->
               <vue-google-autocomplete
-                ref="address"
-                id="map"
-                classname="form-control"
-                placeholder="Please type your address"
-                v-on:placechanged="getAddressData"
-                country="ke"
+              ref="address"
+              id="map"
+              classname="form-control"
+              placeholder="Please type your address"
+              v-on:placechanged="getAddressData"
+              country="ke"
               ></vue-google-autocomplete>
               <select class="custom-select custom-select-sm col-md-12" v-model="updateitedItem.status">
                 <!-- <option selected>Insurance Status</option> -->
@@ -683,34 +683,34 @@ class="elevation-1"
    <v-icon color="blue darken-2">visibility</v-icon>
  </v-btn>
  
-                 </td> 
-               </template>
-               <v-alert slot="no-results" :value="true" color="error" icon="warning">
-                Your search for "{{ search }}" found no results.
-              </v-alert>
-              <template slot="pageText" slot-scope="{ pageStart, pageStop }">
-                From {{ pageStart }} to {{ pageStop }}
-              </template>
-            </v-data-table>
-          </div>
-        </div>
-        <!-- Data table -->
-      </v-layout>
-    </v-container>
-  </v-content>
-  <AddShipment :addShipment="dialog" @closeRequest="close"></AddShipment>
-  <EditShipment :EditShipment="dialog1" @closeRequest="close"></EditShipment>
-  <!-- <UpdateShipment :UpdateShipment="dialog1" @closeRequest="close"></UpdateShipment> -->
-    <v-snackbar
-    :timeout="timeout"
-    :bottom="y === 'bottom'"
-    :color="color"
-    :left="x === 'left'"
-    v-model="snackbar"
-    >
-    {{ message }}
-    <v-btn flat color="white">Close</v-btn>
-  </v-snackbar>
+</td> 
+</template>
+<v-alert slot="no-results" :value="true" color="error" icon="warning">
+  Your search for "{{ search }}" found no results.
+</v-alert>
+<template slot="pageText" slot-scope="{ pageStart, pageStop }">
+  From {{ pageStart }} to {{ pageStop }}
+</template>
+</v-data-table>
+</div>
+</div>
+<!-- Data table -->
+</v-layout>
+</v-container>
+</v-content>
+<AddShipment :addShipment="dialog" @closeRequest="close"></AddShipment>
+<EditShipment :EditShipment="dialog1" @closeRequest="close"></EditShipment>
+<!-- <UpdateShipment :UpdateShipment="dialog1" @closeRequest="close"></UpdateShipment> -->
+<v-snackbar
+:timeout="timeout"
+:bottom="y === 'bottom'"
+:color="color"
+:left="x === 'left'"
+v-model="snackbar"
+>
+{{ message }}
+<v-btn flat color="white">Close</v-btn>
+</v-snackbar>
 </div>
 </template>
 
@@ -719,11 +719,11 @@ import VueBarcode from 'vue-barcode';
 let AddShipment = require('./AddShipment')
 let EditShipment = require('./EditShipment')
 // let UpdateShipment = require('./UpdateShipment')
-  import VueGoogleAutocomplete from 'vue-google-autocomplete'
+import VueGoogleAutocomplete from 'vue-google-autocomplete'
 export default {
   props: ['user', 'role'],
- components: {
-  AddShipment, EditShipment, 'barcode': VueBarcode, VueGoogleAutocomplete
+  components: {
+    AddShipment, EditShipment, 'barcode': VueBarcode, VueGoogleAutocomplete
       // , UpdateShipment
     },
     data () {
@@ -812,38 +812,38 @@ export default {
           derivery_time: null,
         },
         headers: [
-          { text: 'Airwaybill', value: 'airway_bill_no' },
-          { text: 'Barcode', value: 'bar_code' },
-          { text: 'Client', value: 'client_name' },
-          { text: 'From', value: 'sender_name' },
-          { text: 'To', value: 'client_city' },
-          { text: 'Booked on', value: 'booking_date' },
-          { text: 'Status', value: 'status' },
+        { text: 'Airwaybill', value: 'airway_bill_no' },
+        { text: 'Barcode', value: 'bar_code' },
+        { text: 'Client', value: 'client_name' },
+        { text: 'From', value: 'sender_name' },
+        { text: 'To', value: 'client_city' },
+        { text: 'Booked on', value: 'booking_date' },
+        { text: 'Status', value: 'status' },
         ],
-      emailRules: [
-      v => {
-        return !!v || 'E-mail is required'
-      },
-      v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
-      ],
-      rules: {
-        name: [val => (val || '').length > 0 || 'This field is required']
-      },
-      direction: 'left',
-      fab: false,
-      fling: false,
-      hover: false,
-      tabs: null,
-      bottom: true,
-      left: true,
-      transition: 'slide-y-reverse-transition'
-    }
-  },
-  methods: {
-   openShipment() {
-    this.dialog = true
-  },
-  addProduct() {
+        emailRules: [
+        v => {
+          return !!v || 'E-mail is required'
+        },
+        v => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v) || 'E-mail must be valid'
+        ],
+        rules: {
+          name: [val => (val || '').length > 0 || 'This field is required']
+        },
+        direction: 'left',
+        fab: false,
+        fling: false,
+        hover: false,
+        tabs: null,
+        bottom: true,
+        left: true,
+        transition: 'slide-y-reverse-transition'
+      }
+    },
+    methods: {
+     openShipment() {
+      this.dialog = true
+    },
+    addProduct() {
     // alert(this.updateitedItem.id);
     axios.post(`/productAdd/${this.updateitedItem.id}`, this.$data.form)
     .then((response) => {
@@ -876,7 +876,7 @@ export default {
       .then((response) => {
         console.log(response);            
         this.markers.push(response.data)
-     })
+      })
     },
     initialize () {
       this.AllShipments
@@ -884,9 +884,9 @@ export default {
 
     UpdateItem (item) {
       axios.post(`/getcoordinatesArray/${item.id}`)
-        .then((response) => this.markers.position = response.data)
-        .catch((error) => this.errors = error.response.data.errors)
-        console.log(this.coordinatesArr);
+      .then((response) => this.markers.position = response.data)
+      .catch((error) => this.errors = error.response.data.errors)
+      console.log(this.coordinatesArr);
       
       this.updateitedItem = Object.assign({}, item)
       this.updatedIndex = this.AllShipments.indexOf(item)
@@ -944,9 +944,9 @@ export default {
         this.editedIndex = -1
       }, 300)
     },
-      getAddressData: function (addressData, placeResultData, id) {
-        this.address = addressData;
-      }
+    getAddressData: function (addressData, placeResultData, id) {
+      this.address = addressData;
+    }
       /*save () {
         if (this.editedIndex > -1) {
           Object.assign(this.AllShipments[this.editedIndex], this.editedItem)
@@ -962,7 +962,7 @@ export default {
     },
     mounted() {
 
-            this.$refs.address.focus();
+      this.$refs.address.focus();
       this.loader=true
       axios.post('/getShipments')
       .then((response) => {
