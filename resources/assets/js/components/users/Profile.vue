@@ -198,7 +198,7 @@ export default {
       let form = new FormData();
       form.append('image', image);
       this.file = form
-      // console.log(e.target.files);
+      console.log(e.target.files);
     },
 
     upload() {

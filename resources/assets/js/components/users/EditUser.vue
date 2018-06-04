@@ -98,6 +98,12 @@
                       required
                       ></v-text-field>
                     </v-flex>
+                    <select class="custom-select custom-select-md col-md-3" v-model="form.role_id">
+                      <option value="1">Admin</option>
+                      <option value="2">Company Admin</option>
+                      <option value="3">Customer</option>
+                      <option value="4">Driver</option>
+                    </select>
               </v-layout>
             </v-container>
             <v-card-actions>

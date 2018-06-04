@@ -143,6 +143,7 @@ v-model="snackbar"
 <script>
 let AddBranch = require('./AddBranch')
 export default {
+  props: ['user', 'role'],
   components: {
     AddBranch
   },

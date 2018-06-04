@@ -174,6 +174,7 @@ v-model="snackbar"
 
 <script>
 export default {
+  props: ['user', 'role'],
   data () {
     return{
       items: [

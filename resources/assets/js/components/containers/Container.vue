@@ -412,6 +412,7 @@ let AddContainer = require('./AddContainer')
 let EditContainer = require('./EditContainer')
 // let UpdateContainer = require('./UpdateContainer')
 export default {
+  props: ['user', 'role'],
  components: {
   AddContainer, EditContainer, 'barcode': VueBarcode
       // , UpdateContainer

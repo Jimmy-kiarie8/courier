@@ -721,6 +721,7 @@ let EditShipment = require('./EditShipment')
 // let UpdateShipment = require('./UpdateShipment')
   import VueGoogleAutocomplete from 'vue-google-autocomplete'
 export default {
+  props: ['user', 'role'],
  components: {
   AddShipment, EditShipment, 'barcode': VueBarcode, VueGoogleAutocomplete
       // , UpdateShipment

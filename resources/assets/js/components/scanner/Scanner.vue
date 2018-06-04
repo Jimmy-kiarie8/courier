@@ -76,6 +76,7 @@
 <script>
 import VueBarcode from 'vue-barcode';
 export default {
+  props: ['user', 'role'],
  components: {
     'barcode': VueBarcode
      // , UpdateShipment

@@ -94,6 +94,7 @@ let AddUser = require('./AddUser.vue')
 let ShowUser = require('./ShowUser.vue')
 let EditUser = require('./EditUser.vue')
 export default {
+  props: ['user', 'role'],
  components: {
   AddUser, ShowUser, EditUser
 }, 
@@ -156,11 +157,11 @@ methods: {
         this.loader = true
         axios.delete(`/users/${id}`)
         .then((response) => {
+          this.Allusers.splice(index, 1)
           this.loader = false
           this.message = 'deleted successifully'
           this.color = 'red'
           this.snackbar = true
-          this.Allusers.splice(index, 1)
         })
         .catch((error) => {
           this.errors = error.response.data.errors

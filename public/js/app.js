@@ -1902,7 +1902,7 @@
             try {
                 oldLocale = globalLocale._abbr;
                 var aliasedRequire = require;
-                __webpack_require__(312)("./" + name);
+                __webpack_require__(317)("./" + name);
                 getSetGlobalLocale(oldLocale);
             } catch (e) {}
         }
@@ -4584,9 +4584,9 @@
 
 
 module.exports = __webpack_require__(23);
-module.exports.easing = __webpack_require__(286);
-module.exports.canvas = __webpack_require__(287);
-module.exports.options = __webpack_require__(288);
+module.exports.easing = __webpack_require__(291);
+module.exports.canvas = __webpack_require__(292);
+module.exports.options = __webpack_require__(293);
 
 
 /***/ }),
@@ -5446,10 +5446,10 @@ function toComment(sourceMap) {
 
 
 module.exports = {};
-module.exports.Arc = __webpack_require__(294);
-module.exports.Line = __webpack_require__(295);
-module.exports.Point = __webpack_require__(296);
-module.exports.Rectangle = __webpack_require__(297);
+module.exports.Arc = __webpack_require__(299);
+module.exports.Line = __webpack_require__(300);
+module.exports.Point = __webpack_require__(301);
+module.exports.Rectangle = __webpack_require__(302);
 
 
 /***/ }),
@@ -6407,7 +6407,7 @@ module.exports = {
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var JsBarcode = __webpack_require__(362);
+var JsBarcode = __webpack_require__(367);
 
 var VueBarcode = {
   template: '<div>' +
@@ -7610,8 +7610,8 @@ exports.default = {
 
 "use strict";
 /* unused harmony export VueCharts */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_index_js__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseCharts__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_index_js__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseCharts__ = __webpack_require__(337);
 /* unused harmony reexport Bar */
 /* unused harmony reexport HorizontalBar */
 /* unused harmony reexport Doughnut */
@@ -21327,12 +21327,12 @@ exports.default = function (input) {
 /**
  * @namespace Chart
  */
-var Chart = __webpack_require__(285)();
+var Chart = __webpack_require__(290)();
 
 Chart.helpers = __webpack_require__(1);
 
 // @todo dispatch these helpers into appropriated helpers/helpers.* file and write unit tests!
-__webpack_require__(289)(Chart);
+__webpack_require__(294)(Chart);
 
 Chart.defaults = __webpack_require__(2);
 Chart.Element = __webpack_require__(7);
@@ -21343,40 +21343,40 @@ Chart.platform = __webpack_require__(57);
 Chart.plugins = __webpack_require__(58);
 Chart.Ticks = __webpack_require__(15);
 
-__webpack_require__(300)(Chart);
-__webpack_require__(301)(Chart);
-__webpack_require__(302)(Chart);
-__webpack_require__(303)(Chart);
-__webpack_require__(304)(Chart);
 __webpack_require__(305)(Chart);
-
 __webpack_require__(306)(Chart);
 __webpack_require__(307)(Chart);
 __webpack_require__(308)(Chart);
 __webpack_require__(309)(Chart);
 __webpack_require__(310)(Chart);
-__webpack_require__(311)(Chart);
 
-// Controllers must be loaded after elements
-// See Chart.core.datasetController.dataElementType
+__webpack_require__(311)(Chart);
+__webpack_require__(312)(Chart);
 __webpack_require__(313)(Chart);
 __webpack_require__(314)(Chart);
 __webpack_require__(315)(Chart);
 __webpack_require__(316)(Chart);
-__webpack_require__(317)(Chart);
+
+// Controllers must be loaded after elements
+// See Chart.core.datasetController.dataElementType
 __webpack_require__(318)(Chart);
 __webpack_require__(319)(Chart);
-
 __webpack_require__(320)(Chart);
 __webpack_require__(321)(Chart);
 __webpack_require__(322)(Chart);
 __webpack_require__(323)(Chart);
 __webpack_require__(324)(Chart);
+
 __webpack_require__(325)(Chart);
 __webpack_require__(326)(Chart);
+__webpack_require__(327)(Chart);
+__webpack_require__(328)(Chart);
+__webpack_require__(329)(Chart);
+__webpack_require__(330)(Chart);
+__webpack_require__(331)(Chart);
 
 // Loading built-it plugins
-var plugins = __webpack_require__(327);
+var plugins = __webpack_require__(332);
 for (var k in plugins) {
 	if (plugins.hasOwnProperty(k)) {
 		Chart.plugins.register(plugins[k]);
@@ -21453,8 +21453,8 @@ Chart.layoutService = Chart.layouts;
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var convert = __webpack_require__(290);
-var string = __webpack_require__(292);
+var convert = __webpack_require__(295);
+var string = __webpack_require__(297);
 
 var Color = function (obj) {
 	if (obj instanceof Color) {
@@ -22284,8 +22284,8 @@ module.exports = {
 
 
 var helpers = __webpack_require__(1);
-var basic = __webpack_require__(298);
-var dom = __webpack_require__(299);
+var basic = __webpack_require__(303);
+var dom = __webpack_require__(304);
 
 // @TODO Make possible to select another platform at build time.
 var implementation = dom._enabled ? dom : basic;
@@ -35106,7 +35106,7 @@ exports.NoElementException = NoElementException;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(189);
-module.exports = __webpack_require__(424);
+module.exports = __webpack_require__(440);
 
 
 /***/ }),
@@ -35124,7 +35124,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_print_nb___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_print_nb__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue2_google_maps__ = __webpack_require__(255);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue2_google_maps___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue2_google_maps__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_chartkick__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_chartkick__ = __webpack_require__(285);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_chart_js__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_chart_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_vue_chartjs__ = __webpack_require__(34);
@@ -35168,17 +35168,17 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-var dashboard = __webpack_require__(333);
+var dashboard = __webpack_require__(338);
 
-var myHeader = __webpack_require__(338);
-var myUser = __webpack_require__(341);
-var myRole = __webpack_require__(355);
-var myShipment = __webpack_require__(358);
-var myScanner = __webpack_require__(406);
-var myContainer = __webpack_require__(411);
-var myMap = __webpack_require__(422);
-var myBranch = __webpack_require__(433);
-var myProfile = __webpack_require__(439);
+var myHeader = __webpack_require__(343);
+var myUser = __webpack_require__(346);
+var myRole = __webpack_require__(360);
+var myShipment = __webpack_require__(363);
+var myScanner = __webpack_require__(411);
+var myContainer = __webpack_require__(416);
+var myMap = __webpack_require__(427);
+var myBranch = __webpack_require__(431);
+var myProfile = __webpack_require__(437);
 
 var routes = [{ path: '/', component: dashboard }, { path: '/users', component: myUser }, { path: '/roles', component: myRole }, { path: '/shipments', component: myShipment }, { path: '/scanner', component: myScanner }, { path: '/containers', component: myContainer }, { path: '/branches', component: myBranch }, { path: '/profile', component: myProfile }];
 var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
@@ -91827,6 +91827,2429 @@ if (false) {
 
 /***/ }),
 /* 285 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chartkick__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deep_equal__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deep_equal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deep_equal__);
+/*
+ * Vue Chartkick
+ * Create beautiful JavaScript charts with one line of Vue
+ * https://github.com/ankane/vue-chartkick
+ * v0.3.2
+ * MIT License
+ */
+
+
+
+
+var chartId = 1;
+
+var createComponent = function(Vue, tagName, chartType) {
+  var chartProps = [
+    "colors", "curve", "decimal", "discrete", "donut", "download", "label",
+    "legend", "library", "max", "messages", "min", "points", "prefix", "refresh",
+    "stacked", "suffix", "thousands", "title", "xtitle", "xtype", "ytitle"
+  ];
+  Vue.component(tagName, {
+    props: ["data", "id", "width", "height"].concat(chartProps),
+    render: function(createElement) {
+      return createElement(
+        "div",
+        {
+          attrs: {
+            id: this.chartId
+          },
+          style: this.chartStyle
+        },
+        ["Loading..."]
+      )
+    },
+    data: function() {
+      return {
+        chartId: null
+      }
+    },
+    computed: {
+      chartStyle: function() {
+        // hack to watch data and options
+        this.data;
+        this.chartOptions;
+
+        return {
+          height: this.height || "300px",
+          lineHeight: this.height || "300px",
+          width: this.width || "100%",
+          textAlign: "center",
+          color: "#999",
+          fontSize: "14px",
+          fontFamily: "'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif"
+        }
+      },
+      chartOptions: function() {
+        var this$1 = this;
+
+        var options = {};
+        var props = chartProps;
+        for (var i = 0; i < props.length; i++) {
+          var prop = props[i];
+          if (this$1[prop] !== undefined) {
+            options[prop] = this$1[prop];
+          }
+        }
+        return options
+      }
+    },
+    created: function() {
+      this.chartId = this.chartId || this.id || ("chart-" + chartId++);
+    },
+    mounted: function() {
+      this.chart = new chartType(this.chartId, this.data, this.chartOptions);
+      this.savedState = this.currentState();
+    },
+    updated: function() {
+      // avoid updates when literal objects are used as props
+      // see https://github.com/ankane/vue-chartkick/pull/52
+      // and https://github.com/vuejs/vue/issues/4060
+      var currentState = this.currentState();
+      if (!__WEBPACK_IMPORTED_MODULE_1_deep_equal___default()(currentState, this.savedState)) {
+        this.chart.updateData(this.data, this.chartOptions);
+        this.savedState = currentState;
+      }
+    },
+    beforeDestroy: function() {
+      if (this.chart) {
+        this.chart.destroy();
+      }
+    },
+    methods: {
+      currentState: function() {
+        return {
+          data: this.data,
+          chartOptions: this.chartOptions
+        }
+      }
+    }
+  });
+};
+
+var VueChartkick = {
+  version: "0.3.2",
+  install: function(Vue, options) {
+    if (options && options.adapter) {
+      __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].addAdapter(options.adapter);
+    }
+    createComponent(Vue, "line-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].LineChart);
+    createComponent(Vue, "pie-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].PieChart);
+    createComponent(Vue, "column-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].ColumnChart);
+    createComponent(Vue, "bar-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].BarChart);
+    createComponent(Vue, "area-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].AreaChart);
+    createComponent(Vue, "scatter-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].ScatterChart);
+    createComponent(Vue, "geo-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].GeoChart);
+    createComponent(Vue, "timeline", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].Timeline);
+  },
+  addAdapter: function(library) {
+    __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].addAdapter(library);
+  }
+};
+
+// in browser
+if (typeof window !== "undefined" && window.Vue) {
+  window.Vue.use(VueChartkick);
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (VueChartkick);
+
+
+/***/ }),
+/* 286 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/*
+ * Chartkick.js
+ * Create beautiful charts with one line of JavaScript
+ * https://github.com/ankane/chartkick.js
+ * v2.3.5
+ * MIT License
+ */
+
+function isArray(variable) {
+  return Object.prototype.toString.call(variable) === "[object Array]";
+}
+
+function isFunction(variable) {
+  return variable instanceof Function;
+}
+
+function isPlainObject(variable) {
+  return !isFunction(variable) && variable instanceof Object;
+}
+
+// https://github.com/madrobby/zepto/blob/master/src/zepto.js
+function extend(target, source) {
+  var key;
+  for (key in source) {
+    if (isPlainObject(source[key]) || isArray(source[key])) {
+      if (isPlainObject(source[key]) && !isPlainObject(target[key])) {
+        target[key] = {};
+      }
+      if (isArray(source[key]) && !isArray(target[key])) {
+        target[key] = [];
+      }
+      extend(target[key], source[key]);
+    } else if (source[key] !== undefined) {
+      target[key] = source[key];
+    }
+  }
+}
+
+function merge(obj1, obj2) {
+  var target = {};
+  extend(target, obj1);
+  extend(target, obj2);
+  return target;
+}
+
+var DATE_PATTERN = /^(\d\d\d\d)(-)?(\d\d)(-)?(\d\d)$/i;
+
+// https://github.com/Do/iso8601.js
+var ISO8601_PATTERN = /(\d\d\d\d)(-)?(\d\d)(-)?(\d\d)(T)?(\d\d)(:)?(\d\d)?(:)?(\d\d)?([.,]\d+)?($|Z|([+-])(\d\d)(:)?(\d\d)?)/i;
+var DECIMAL_SEPARATOR = String(1.5).charAt(1);
+
+function parseISO8601(input) {
+  var day, hour, matches, milliseconds, minutes, month, offset, result, seconds, type, year;
+  type = Object.prototype.toString.call(input);
+  if (type === "[object Date]") {
+    return input;
+  }
+  if (type !== "[object String]") {
+    return;
+  }
+  matches = input.match(ISO8601_PATTERN);
+  if (matches) {
+    year = parseInt(matches[1], 10);
+    month = parseInt(matches[3], 10) - 1;
+    day = parseInt(matches[5], 10);
+    hour = parseInt(matches[7], 10);
+    minutes = matches[9] ? parseInt(matches[9], 10) : 0;
+    seconds = matches[11] ? parseInt(matches[11], 10) : 0;
+    milliseconds = matches[12] ? parseFloat(DECIMAL_SEPARATOR + matches[12].slice(1)) * 1000 : 0;
+    result = Date.UTC(year, month, day, hour, minutes, seconds, milliseconds);
+    if (matches[13] && matches[14]) {
+      offset = matches[15] * 60;
+      if (matches[17]) {
+        offset += parseInt(matches[17], 10);
+      }
+      offset *= matches[14] === "-" ? -1 : 1;
+      result -= offset * 60 * 1000;
+    }
+    return new Date(result);
+  }
+}
+// end iso8601.js
+
+function negativeValues(series) {
+  var i, j, data;
+  for (i = 0; i < series.length; i++) {
+    data = series[i].data;
+    for (j = 0; j < data.length; j++) {
+      if (data[j][1] < 0) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function toStr(n) {
+  return "" + n;
+}
+
+function toFloat(n) {
+  return parseFloat(n);
+}
+
+function toDate(n) {
+  var matches, year, month, day;
+  if (typeof n !== "object") {
+    if (typeof n === "number") {
+      n = new Date(n * 1000); // ms
+    } else {
+      n = toStr(n);
+      if ((matches = n.match(DATE_PATTERN))) {
+      year = parseInt(matches[1], 10);
+      month = parseInt(matches[3], 10) - 1;
+      day = parseInt(matches[5], 10);
+      return new Date(year, month, day);
+      } else { // str
+        // try our best to get the str into iso8601
+        // TODO be smarter about this
+        var str = n.replace(/ /, "T").replace(" ", "").replace("UTC", "Z");
+        n = parseISO8601(str) || new Date(n);
+      }
+    }
+  }
+  return n;
+}
+
+function toArr(n) {
+  if (!isArray(n)) {
+    var arr = [], i;
+    for (i in n) {
+      if (n.hasOwnProperty(i)) {
+        arr.push([i, n[i]]);
+      }
+    }
+    n = arr;
+  }
+  return n;
+}
+
+function jsOptionsFunc(defaultOptions, hideLegend, setTitle, setMin, setMax, setStacked, setXtitle, setYtitle) {
+  return function (chart, opts, chartOptions) {
+    var series = chart.data;
+    var options = merge({}, defaultOptions);
+    options = merge(options, chartOptions || {});
+
+    if (chart.hideLegend || "legend" in opts) {
+      hideLegend(options, opts.legend, chart.hideLegend);
+    }
+
+    if (opts.title) {
+      setTitle(options, opts.title);
+    }
+
+    // min
+    if ("min" in opts) {
+      setMin(options, opts.min);
+    } else if (!negativeValues(series)) {
+      setMin(options, 0);
+    }
+
+    // max
+    if (opts.max) {
+      setMax(options, opts.max);
+    }
+
+    if ("stacked" in opts) {
+      setStacked(options, opts.stacked);
+    }
+
+    if (opts.colors) {
+      options.colors = opts.colors;
+    }
+
+    if (opts.xtitle) {
+      setXtitle(options, opts.xtitle);
+    }
+
+    if (opts.ytitle) {
+      setYtitle(options, opts.ytitle);
+    }
+
+    // merge library last
+    options = merge(options, opts.library || {});
+
+    return options;
+  };
+}
+
+function sortByTime(a, b) {
+  return a[0].getTime() - b[0].getTime();
+}
+
+function sortByNumberSeries(a, b) {
+  return a[0] - b[0];
+}
+
+function sortByNumber(a, b) {
+  return a - b;
+}
+
+function isMinute(d) {
+  return d.getMilliseconds() === 0 && d.getSeconds() === 0;
+}
+
+function isHour(d) {
+  return isMinute(d) && d.getMinutes() === 0;
+}
+
+function isDay(d) {
+  return isHour(d) && d.getHours() === 0;
+}
+
+function isWeek(d, dayOfWeek) {
+  return isDay(d) && d.getDay() === dayOfWeek;
+}
+
+function isMonth(d) {
+  return isDay(d) && d.getDate() === 1;
+}
+
+function isYear(d) {
+  return isMonth(d) && d.getMonth() === 0;
+}
+
+function isDate(obj) {
+  return !isNaN(toDate(obj)) && toStr(obj).length >= 6;
+}
+
+function formatValue(pre, value, options) {
+  pre = pre || "";
+  if (options.prefix) {
+    if (value < 0) {
+      value = value * -1;
+      pre += "-";
+    }
+    pre += options.prefix;
+  }
+
+  if (options.thousands || options.decimal) {
+    value = toStr(value);
+    var parts = value.split(".");
+    value = parts[0];
+    if (options.thousands) {
+      value = value.replace(/\B(?=(\d{3})+(?!\d))/g, options.thousands);
+    }
+    if (parts.length > 1) {
+      value += (options.decimal || ".") + parts[1];
+    }
+  }
+
+  return pre + value + (options.suffix || "");
+}
+
+function allZeros(data) {
+  var i, j, d;
+  for (i = 0; i < data.length; i++) {
+    d = data[i].data;
+    for (j = 0; j < d.length; j++) {
+      if (d[j][1] != 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+var baseOptions = {
+  maintainAspectRatio: false,
+  animation: false,
+  tooltips: {
+    displayColors: false,
+    callbacks: {}
+  },
+  legend: {},
+  title: {fontSize: 20, fontColor: "#333"}
+};
+
+var defaultOptions = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          maxTicksLimit: 4
+        },
+        scaleLabel: {
+          fontSize: 16,
+          // fontStyle: "bold",
+          fontColor: "#333"
+        }
+      }
+    ],
+    xAxes: [
+      {
+        gridLines: {
+          drawOnChartArea: false
+        },
+        scaleLabel: {
+          fontSize: 16,
+          // fontStyle: "bold",
+          fontColor: "#333"
+        },
+        time: {},
+        ticks: {}
+      }
+    ]
+  }
+};
+
+// http://there4.io/2012/05/02/google-chart-color-list/
+var defaultColors = [
+  "#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#3B3EAC", "#0099C6",
+  "#DD4477", "#66AA00", "#B82E2E", "#316395", "#994499", "#22AA99", "#AAAA11",
+  "#6633CC", "#E67300", "#8B0707", "#329262", "#5574A6", "#651067"
+];
+
+var hideLegend = function (options, legend, hideLegend) {
+  if (legend !== undefined) {
+    options.legend.display = !!legend;
+    if (legend && legend !== true) {
+      options.legend.position = legend;
+    }
+  } else if (hideLegend) {
+    options.legend.display = false;
+  }
+};
+
+var setTitle = function (options, title) {
+  options.title.display = true;
+  options.title.text = title;
+};
+
+var setMin = function (options, min) {
+  if (min !== null) {
+    options.scales.yAxes[0].ticks.min = toFloat(min);
+  }
+};
+
+var setMax = function (options, max) {
+  options.scales.yAxes[0].ticks.max = toFloat(max);
+};
+
+var setBarMin = function (options, min) {
+  if (min !== null) {
+    options.scales.xAxes[0].ticks.min = toFloat(min);
+  }
+};
+
+var setBarMax = function (options, max) {
+  options.scales.xAxes[0].ticks.max = toFloat(max);
+};
+
+var setStacked = function (options, stacked) {
+  options.scales.xAxes[0].stacked = !!stacked;
+  options.scales.yAxes[0].stacked = !!stacked;
+};
+
+var setXtitle = function (options, title) {
+  options.scales.xAxes[0].scaleLabel.display = true;
+  options.scales.xAxes[0].scaleLabel.labelString = title;
+};
+
+var setYtitle = function (options, title) {
+  options.scales.yAxes[0].scaleLabel.display = true;
+  options.scales.yAxes[0].scaleLabel.labelString = title;
+};
+
+// http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+var addOpacity = function(hex, opacity) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? "rgba(" + parseInt(result[1], 16) + ", " + parseInt(result[2], 16) + ", " + parseInt(result[3], 16) + ", " + opacity + ")" : hex;
+};
+
+var setLabelSize = function (chart, data, options) {
+  var maxLabelSize = Math.ceil(chart.element.offsetWidth / 4.0 / data.labels.length);
+  if (maxLabelSize > 25) {
+    maxLabelSize = 25;
+  }
+  options.scales.xAxes[0].ticks.callback = function (value) {
+    value = toStr(value);
+    if (value.length > maxLabelSize) {
+      return value.substring(0, maxLabelSize - 2) + "...";
+    } else {
+      return value;
+    }
+  };
+};
+
+var setFormatOptions = function(chart, options, chartType) {
+  var formatOptions = {
+    prefix: chart.options.prefix,
+    suffix: chart.options.suffix,
+    thousands: chart.options.thousands,
+    decimal: chart.options.decimal
+  };
+
+  if (formatOptions.prefix || formatOptions.suffix || formatOptions.thousands || formatOptions.decimal) {
+    if (chartType !== "pie") {
+      var myAxes = options.scales.yAxes;
+      if (chartType === "bar") {
+        myAxes = options.scales.xAxes;
+      }
+
+      if (!myAxes[0].ticks.callback) {
+        myAxes[0].ticks.callback = function (value) {
+          return formatValue("", value, formatOptions);
+        };
+      }
+    }
+
+    if (!options.tooltips.callbacks.label) {
+      if (chartType !== "pie") {
+        var valueLabel = chartType === "bar" ? "xLabel" : "yLabel";
+        options.tooltips.callbacks.label = function (tooltipItem, data) {
+          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+          if (label) {
+            label += ': ';
+          }
+          return formatValue(label, tooltipItem[valueLabel], formatOptions);
+        };
+      } else {
+        // need to use separate label for pie charts
+        options.tooltips.callbacks.label = function (tooltipItem, data) {
+          var dataLabel = data.labels[tooltipItem.index];
+          var value = ': ';
+
+          if (isArray(dataLabel)) {
+            // show value on first line of multiline label
+            // need to clone because we are changing the value
+            dataLabel = dataLabel.slice();
+            dataLabel[0] += value;
+          } else {
+            dataLabel += value;
+          }
+
+          return formatValue(dataLabel, data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index], formatOptions);
+        };
+      }
+    }
+  }
+};
+
+var jsOptions = jsOptionsFunc(merge(baseOptions, defaultOptions), hideLegend, setTitle, setMin, setMax, setStacked, setXtitle, setYtitle);
+
+var createDataTable = function (chart, options, chartType) {
+  var datasets = [];
+  var labels = [];
+
+  var colors = chart.options.colors || defaultColors;
+
+  var day = true;
+  var week = true;
+  var dayOfWeek;
+  var month = true;
+  var year = true;
+  var hour = true;
+  var minute = true;
+  var detectType = (chartType === "line" || chartType === "area") && !chart.discrete;
+
+  var series = chart.data;
+
+  var sortedLabels = [];
+
+  var i, j, s, d, key, rows = [];
+  for (i = 0; i < series.length; i++) {
+    s = series[i];
+
+    for (j = 0; j < s.data.length; j++) {
+      d = s.data[j];
+      key = detectType ? d[0].getTime() : d[0];
+      if (!rows[key]) {
+        rows[key] = new Array(series.length);
+      }
+      rows[key][i] = toFloat(d[1]);
+      if (sortedLabels.indexOf(key) === -1) {
+        sortedLabels.push(key);
+      }
+    }
+  }
+
+  if (detectType || chart.options.xtype === "number") {
+    sortedLabels.sort(sortByNumber);
+  }
+
+  var rows2 = [];
+  for (j = 0; j < series.length; j++) {
+    rows2.push([]);
+  }
+
+  var value;
+  var k;
+  for (k = 0; k < sortedLabels.length; k++) {
+    i = sortedLabels[k];
+    if (detectType) {
+      value = new Date(toFloat(i));
+      // TODO make this efficient
+      day = day && isDay(value);
+      if (!dayOfWeek) {
+        dayOfWeek = value.getDay();
+      }
+      week = week && isWeek(value, dayOfWeek);
+      month = month && isMonth(value);
+      year = year && isYear(value);
+      hour = hour && isHour(value);
+      minute = minute && isMinute(value);
+    } else {
+      value = i;
+    }
+    labels.push(value);
+    for (j = 0; j < series.length; j++) {
+      // Chart.js doesn't like undefined
+      rows2[j].push(rows[i][j] === undefined ? null : rows[i][j]);
+    }
+  }
+
+  for (i = 0; i < series.length; i++) {
+    s = series[i];
+
+    var color = s.color || colors[i];
+    var backgroundColor = chartType !== "line" ? addOpacity(color, 0.5) : color;
+
+    var dataset = {
+      label: s.name,
+      data: rows2[i],
+      fill: chartType === "area",
+      borderColor: color,
+      backgroundColor: backgroundColor,
+      pointBackgroundColor: color,
+      borderWidth: 2
+    };
+
+    if (s.stack) {
+      dataset.stack = s.stack;
+    }
+
+    if (chart.options.curve === false) {
+      dataset.lineTension = 0;
+    }
+
+    if (chart.options.points === false) {
+      dataset.pointRadius = 0;
+      dataset.pointHitRadius = 5;
+    }
+
+    datasets.push(merge(dataset, s.library || {}));
+  }
+
+  if (detectType && labels.length > 0) {
+    var minTime = labels[0].getTime();
+    var maxTime = labels[0].getTime();
+    for (i = 1; i < labels.length; i++) {
+      value = labels[i].getTime();
+      if (value < minTime) {
+        minTime = value;
+      }
+      if (value > maxTime) {
+        maxTime = value;
+      }
+    }
+
+    var timeDiff = (maxTime - minTime) / (86400 * 1000.0);
+
+    if (!options.scales.xAxes[0].time.unit) {
+      var step;
+      if (year || timeDiff > 365 * 10) {
+        options.scales.xAxes[0].time.unit = "year";
+        step = 365;
+      } else if (month || timeDiff > 30 * 10) {
+        options.scales.xAxes[0].time.unit = "month";
+        step = 30;
+      } else if (day || timeDiff > 10) {
+        options.scales.xAxes[0].time.unit = "day";
+        step = 1;
+      } else if (hour || timeDiff > 0.5) {
+        options.scales.xAxes[0].time.displayFormats = {hour: "MMM D, h a"};
+        options.scales.xAxes[0].time.unit = "hour";
+        step = 1 / 24.0;
+      } else if (minute) {
+        options.scales.xAxes[0].time.displayFormats = {minute: "h:mm a"};
+        options.scales.xAxes[0].time.unit = "minute";
+        step = 1 / 24.0 / 60.0;
+      }
+
+      if (step && timeDiff > 0) {
+        var unitStepSize = Math.ceil(timeDiff / step / (chart.element.offsetWidth / 100.0));
+        if (week && step === 1) {
+          unitStepSize = Math.ceil(unitStepSize / 7.0) * 7;
+        }
+        options.scales.xAxes[0].time.unitStepSize = unitStepSize;
+      }
+    }
+
+    if (!options.scales.xAxes[0].time.tooltipFormat) {
+      if (day) {
+        options.scales.xAxes[0].time.tooltipFormat = "ll";
+      } else if (hour) {
+        options.scales.xAxes[0].time.tooltipFormat = "MMM D, h a";
+      } else if (minute) {
+        options.scales.xAxes[0].time.tooltipFormat = "h:mm a";
+      }
+    }
+  }
+
+  var data = {
+    labels: labels,
+    datasets: datasets
+  };
+
+  return data;
+};
+
+var defaultExport = function defaultExport(library) {
+  this.name = "chartjs";
+  this.library = library;
+};
+
+defaultExport.prototype.renderLineChart = function renderLineChart (chart, chartType) {
+  if (chart.options.xtype === "number") {
+    return this.renderScatterChart(chart, chartType, true);
+  }
+
+  var chartOptions = {};
+  // fix for https://github.com/chartjs/Chart.js/issues/2441
+  if (!chart.options.max && allZeros(chart.data)) {
+    chartOptions.max = 1;
+  }
+
+  var options = jsOptions(chart, merge(chartOptions, chart.options));
+  setFormatOptions(chart, options, chartType);
+
+  var data = createDataTable(chart, options, chartType || "line");
+
+  options.scales.xAxes[0].type = chart.discrete ? "category" : "time";
+
+  this.drawChart(chart, "line", data, options);
+};
+
+defaultExport.prototype.renderPieChart = function renderPieChart (chart) {
+  var options = merge({}, baseOptions);
+  if (chart.options.donut) {
+    options.cutoutPercentage = 50;
+  }
+
+  if ("legend" in chart.options) {
+    hideLegend(options, chart.options.legend);
+  }
+
+  if (chart.options.title) {
+    setTitle(options, chart.options.title);
+  }
+
+  options = merge(options, chart.options.library || {});
+  setFormatOptions(chart, options, "pie");
+
+  var labels = [];
+  var values = [];
+  for (var i = 0; i < chart.data.length; i++) {
+    var point = chart.data[i];
+    labels.push(point[0]);
+    values.push(point[1]);
+  }
+
+  var data = {
+    labels: labels,
+    datasets: [
+      {
+        data: values,
+        backgroundColor: chart.options.colors || defaultColors
+      }
+    ]
+  };
+
+  this.drawChart(chart, "pie", data, options);
+};
+
+defaultExport.prototype.renderColumnChart = function renderColumnChart (chart, chartType) {
+  var options;
+  if (chartType === "bar") {
+    options = jsOptionsFunc(merge(baseOptions, defaultOptions), hideLegend, setTitle, setBarMin, setBarMax, setStacked, setXtitle, setYtitle)(chart, chart.options);
+  } else {
+    options = jsOptions(chart, chart.options);
+  }
+  setFormatOptions(chart, options, chartType);
+  var data = createDataTable(chart, options, "column");
+  if (chartType !== "bar") {
+    setLabelSize(chart, data, options);
+  }
+  this.drawChart(chart, (chartType === "bar" ? "horizontalBar" : "bar"), data, options);
+};
+
+defaultExport.prototype.renderAreaChart = function renderAreaChart (chart) {
+  this.renderLineChart(chart, "area");
+};
+
+defaultExport.prototype.renderBarChart = function renderBarChart (chart) {
+  this.renderColumnChart(chart, "bar");
+};
+
+defaultExport.prototype.renderScatterChart = function renderScatterChart (chart, chartType, lineChart) {
+  chartType = chartType || "line";
+
+  var options = jsOptions(chart, chart.options);
+  if (!lineChart) {
+    setFormatOptions(chart, options, chartType);
+  }
+
+  var colors = chart.options.colors || defaultColors;
+
+  var datasets = [];
+  var series = chart.data;
+  for (var i = 0; i < series.length; i++) {
+    var s = series[i];
+    var d = [];
+    for (var j = 0; j < s.data.length; j++) {
+      var point = {
+        x: toFloat(s.data[j][0]),
+        y: toFloat(s.data[j][1])
+      };
+      if (chartType === "bubble") {
+        point.r = toFloat(s.data[j][2]);
+      }
+      d.push(point);
+    }
+
+    var color = s.color || colors[i];
+    var backgroundColor = chartType === "area" ? addOpacity(color, 0.5) : color;
+
+    datasets.push({
+      label: s.name,
+      showLine: lineChart || false,
+      data: d,
+      borderColor: color,
+      backgroundColor: backgroundColor,
+      pointBackgroundColor: color,
+      fill: chartType === "area"
+    });
+  }
+
+  if (chartType === "area") {
+    chartType = "line";
+  }
+
+  var data = {datasets: datasets};
+
+  options.scales.xAxes[0].type = "linear";
+  options.scales.xAxes[0].position = "bottom";
+
+  this.drawChart(chart, chartType, data, options);
+};
+
+defaultExport.prototype.renderBubbleChart = function renderBubbleChart (chart) {
+  this.renderScatterChart(chart, "bubble");
+};
+
+defaultExport.prototype.drawChart = function drawChart (chart, type, data, options) {
+  if (chart.chart) {
+    chart.chart.destroy();
+  }
+
+  chart.element.innerHTML = "<canvas></canvas>";
+  var ctx = chart.element.getElementsByTagName("CANVAS")[0];
+  chart.chart = new this.library(ctx, {
+    type: type,
+    data: data,
+    options: options
+  });
+};
+
+var defaultOptions$1 = {
+  chart: {},
+  xAxis: {
+    title: {
+      text: null
+    },
+    labels: {
+      style: {
+        fontSize: "12px"
+      }
+    }
+  },
+  yAxis: {
+    title: {
+      text: null
+    },
+    labels: {
+      style: {
+        fontSize: "12px"
+      }
+    }
+  },
+  title: {
+    text: null
+  },
+  credits: {
+    enabled: false
+  },
+  legend: {
+    borderWidth: 0
+  },
+  tooltip: {
+    style: {
+      fontSize: "12px"
+    }
+  },
+  plotOptions: {
+    areaspline: {},
+    series: {
+      marker: {}
+    }
+  }
+};
+
+var hideLegend$1 = function (options, legend, hideLegend) {
+  if (legend !== undefined) {
+    options.legend.enabled = !!legend;
+    if (legend && legend !== true) {
+      if (legend === "top" || legend === "bottom") {
+        options.legend.verticalAlign = legend;
+      } else {
+        options.legend.layout = "vertical";
+        options.legend.verticalAlign = "middle";
+        options.legend.align = legend;
+      }
+    }
+  } else if (hideLegend) {
+    options.legend.enabled = false;
+  }
+};
+
+var setTitle$1 = function (options, title) {
+  options.title.text = title;
+};
+
+var setMin$1 = function (options, min) {
+  options.yAxis.min = min;
+};
+
+var setMax$1 = function (options, max) {
+  options.yAxis.max = max;
+};
+
+var setStacked$1 = function (options, stacked) {
+  options.plotOptions.series.stacking = stacked ? (stacked === true ? "normal" : stacked) : null;
+};
+
+var setXtitle$1 = function (options, title) {
+  options.xAxis.title.text = title;
+};
+
+var setYtitle$1 = function (options, title) {
+  options.yAxis.title.text = title;
+};
+
+var jsOptions$1 = jsOptionsFunc(defaultOptions$1, hideLegend$1, setTitle$1, setMin$1, setMax$1, setStacked$1, setXtitle$1, setYtitle$1);
+
+var setFormatOptions$1 = function(chart, options, chartType) {
+  var formatOptions = {
+    prefix: chart.options.prefix,
+    suffix: chart.options.suffix,
+    thousands: chart.options.thousands,
+    decimal: chart.options.decimal
+  };
+
+  if (formatOptions.prefix || formatOptions.suffix || formatOptions.thousands || formatOptions.decimal) {
+    if (chartType !== "pie" && !options.yAxis.labels.formatter) {
+      options.yAxis.labels.formatter = function () {
+        return formatValue("", this.value, formatOptions);
+      };
+    }
+
+    if (!options.tooltip.pointFormatter) {
+      options.tooltip.pointFormatter = function () {
+        return '<span style="color:' + this.color + '>\u25CF</span> ' + formatValue(this.series.name + ': <b>', this.y, formatOptions) + '</b><br/>';
+      };
+    }
+  }
+};
+
+var defaultExport$1 = function defaultExport(library) {
+  this.name = "highcharts";
+  this.library = library;
+};
+
+defaultExport$1.prototype.renderLineChart = function renderLineChart (chart, chartType) {
+  chartType = chartType || "spline";
+  var chartOptions = {};
+  if (chartType === "areaspline") {
+    chartOptions = {
+      plotOptions: {
+        areaspline: {
+          stacking: "normal"
+        },
+        area: {
+          stacking: "normal"
+        },
+        series: {
+          marker: {
+            enabled: false
+          }
+        }
+      }
+    };
+  }
+
+  if (chart.options.curve === false) {
+    if (chartType === "areaspline") {
+      chartType = "area";
+    } else if (chartType === "spline") {
+      chartType = "line";
+    }
+  }
+
+  var options = jsOptions$1(chart, chart.options, chartOptions), data, i, j;
+  options.xAxis.type = chart.discrete ? "category" : "datetime";
+  if (!options.chart.type) {
+    options.chart.type = chartType;
+  }
+  setFormatOptions$1(chart, options, chartType);
+
+  var series = chart.data;
+  for (i = 0; i < series.length; i++) {
+    data = series[i].data;
+    if (!chart.discrete) {
+      for (j = 0; j < data.length; j++) {
+        data[j][0] = data[j][0].getTime();
+      }
+    }
+    series[i].marker = {symbol: "circle"};
+    if (chart.options.points === false) {
+      series[i].marker.enabled = false;
+    }
+  }
+
+  this.drawChart(chart, series, options);
+};
+
+defaultExport$1.prototype.renderScatterChart = function renderScatterChart (chart) {
+  var options = jsOptions$1(chart, chart.options, {});
+  options.chart.type = "scatter";
+  this.drawChart(chart, chart.data, options);
+};
+
+defaultExport$1.prototype.renderPieChart = function renderPieChart (chart) {
+  var chartOptions = merge(defaultOptions$1, {});
+
+  if (chart.options.colors) {
+    chartOptions.colors = chart.options.colors;
+  }
+  if (chart.options.donut) {
+    chartOptions.plotOptions = {pie: {innerSize: "50%"}};
+  }
+
+  if ("legend" in chart.options) {
+    hideLegend$1(chartOptions, chart.options.legend);
+  }
+
+  if (chart.options.title) {
+    setTitle$1(chartOptions, chart.options.title);
+  }
+
+  var options = merge(chartOptions, chart.options.library || {});
+  setFormatOptions$1(chart, options, "pie");
+  var series = [{
+    type: "pie",
+    name: chart.options.label || "Value",
+    data: chart.data
+  }];
+
+  this.drawChart(chart, series, options);
+};
+
+defaultExport$1.prototype.renderColumnChart = function renderColumnChart (chart, chartType) {
+  chartType = chartType || "column";
+  var series = chart.data;
+  var options = jsOptions$1(chart, chart.options), i, j, s, d, rows = [], categories = [];
+  options.chart.type = chartType;
+  setFormatOptions$1(chart, options, chartType);
+
+  for (i = 0; i < series.length; i++) {
+    s = series[i];
+
+    for (j = 0; j < s.data.length; j++) {
+      d = s.data[j];
+      if (!rows[d[0]]) {
+        rows[d[0]] = new Array(series.length);
+        categories.push(d[0]);
+      }
+      rows[d[0]][i] = d[1];
+    }
+  }
+
+  if (chart.options.xtype === "number") {
+    categories.sort(sortByNumber);
+  }
+
+  options.xAxis.categories = categories;
+
+  var newSeries = [], d2;
+  for (i = 0; i < series.length; i++) {
+    d = [];
+    for (j = 0; j < categories.length; j++) {
+      d.push(rows[categories[j]][i] || 0);
+    }
+
+    d2 = {
+      name: series[i].name,
+      data: d
+    };
+    if (series[i].stack) {
+      d2.stack = series[i].stack;
+    }
+
+    newSeries.push(d2);
+  }
+
+  this.drawChart(chart, newSeries, options);
+};
+
+defaultExport$1.prototype.renderBarChart = function renderBarChart (chart) {
+  this.renderColumnChart(chart, "bar");
+};
+
+defaultExport$1.prototype.renderAreaChart = function renderAreaChart (chart) {
+  this.renderLineChart(chart, "areaspline");
+};
+
+defaultExport$1.prototype.drawChart = function drawChart (chart, data, options) {
+  if (chart.chart) {
+    chart.chart.destroy();
+  }
+
+  options.chart.renderTo = chart.element.id;
+  options.series = data;
+  chart.chart = new this.library.Chart(options);
+};
+
+var loaded = {};
+var callbacks = [];
+
+// Set chart options
+var defaultOptions$2 = {
+  chartArea: {},
+  fontName: "'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif",
+  pointSize: 6,
+  legend: {
+    textStyle: {
+      fontSize: 12,
+      color: "#444"
+    },
+    alignment: "center",
+    position: "right"
+  },
+  curveType: "function",
+  hAxis: {
+    textStyle: {
+      color: "#666",
+      fontSize: 12
+    },
+    titleTextStyle: {},
+    gridlines: {
+      color: "transparent"
+    },
+    baselineColor: "#ccc",
+    viewWindow: {}
+  },
+  vAxis: {
+    textStyle: {
+      color: "#666",
+      fontSize: 12
+    },
+    titleTextStyle: {},
+    baselineColor: "#ccc",
+    viewWindow: {}
+  },
+  tooltip: {
+    textStyle: {
+      color: "#666",
+      fontSize: 12
+    }
+  }
+};
+
+var hideLegend$2 = function (options, legend, hideLegend) {
+  if (legend !== undefined) {
+    var position;
+    if (!legend) {
+      position = "none";
+    } else if (legend === true) {
+      position = "right";
+    } else {
+      position = legend;
+    }
+    options.legend.position = position;
+  } else if (hideLegend) {
+    options.legend.position = "none";
+  }
+};
+
+var setTitle$2 = function (options, title) {
+  options.title = title;
+  options.titleTextStyle = {color: "#333", fontSize: "20px"};
+};
+
+var setMin$2 = function (options, min) {
+  options.vAxis.viewWindow.min = min;
+};
+
+var setMax$2 = function (options, max) {
+  options.vAxis.viewWindow.max = max;
+};
+
+var setBarMin$1 = function (options, min) {
+  options.hAxis.viewWindow.min = min;
+};
+
+var setBarMax$1 = function (options, max) {
+  options.hAxis.viewWindow.max = max;
+};
+
+var setStacked$2 = function (options, stacked) {
+  options.isStacked = stacked ? stacked : false;
+};
+
+var setXtitle$2 = function (options, title) {
+  options.hAxis.title = title;
+  options.hAxis.titleTextStyle.italic = false;
+};
+
+var setYtitle$2 = function (options, title) {
+  options.vAxis.title = title;
+  options.vAxis.titleTextStyle.italic = false;
+};
+
+var jsOptions$2 = jsOptionsFunc(defaultOptions$2, hideLegend$2, setTitle$2, setMin$2, setMax$2, setStacked$2, setXtitle$2, setYtitle$2);
+
+var resize = function (callback) {
+  if (window.attachEvent) {
+    window.attachEvent("onresize", callback);
+  } else if (window.addEventListener) {
+    window.addEventListener("resize", callback, true);
+  }
+  callback();
+};
+
+var defaultExport$2 = function defaultExport(library) {
+  this.name = "google";
+  this.library = library;
+};
+
+defaultExport$2.prototype.renderLineChart = function renderLineChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var chartOptions = {};
+
+    if (chart.options.curve === false) {
+      chartOptions.curveType = "none";
+    }
+
+    if (chart.options.points === false) {
+      chartOptions.pointSize = 0;
+    }
+
+    var options = jsOptions$2(chart, chart.options, chartOptions);
+    var columnType = chart.discrete ? "string" : "datetime";
+    if (chart.options.xtype === "number") {
+      columnType = "number";
+    }
+    var data = this$1.createDataTable(chart.data, columnType);
+
+    this$1.drawChart(chart, this$1.library.visualization.LineChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderPieChart = function renderPieChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var chartOptions = {
+      chartArea: {
+        top: "10%",
+        height: "80%"
+      },
+      legend: {}
+    };
+    if (chart.options.colors) {
+      chartOptions.colors = chart.options.colors;
+    }
+    if (chart.options.donut) {
+      chartOptions.pieHole = 0.5;
+    }
+    if ("legend" in chart.options) {
+      hideLegend$2(chartOptions, chart.options.legend);
+    }
+    if (chart.options.title) {
+      setTitle$2(chartOptions, chart.options.title);
+    }
+    var options = merge(merge(defaultOptions$2, chartOptions), chart.options.library || {});
+
+    var data = new this$1.library.visualization.DataTable();
+    data.addColumn("string", "");
+    data.addColumn("number", "Value");
+    data.addRows(chart.data);
+
+    this$1.drawChart(chart, this$1.library.visualization.PieChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderColumnChart = function renderColumnChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var options = jsOptions$2(chart, chart.options);
+    var data = this$1.createDataTable(chart.data, "string", chart.options.xtype);
+
+    this$1.drawChart(chart, this$1.library.visualization.ColumnChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderBarChart = function renderBarChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var chartOptions = {
+      hAxis: {
+        gridlines: {
+          color: "#ccc"
+        }
+      }
+    };
+    var options = jsOptionsFunc(defaultOptions$2, hideLegend$2, setTitle$2, setBarMin$1, setBarMax$1, setStacked$2, setXtitle$2, setYtitle$2)(chart, chart.options, chartOptions);
+    var data = this$1.createDataTable(chart.data, "string", chart.options.xtype);
+
+    this$1.drawChart(chart, this$1.library.visualization.BarChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderAreaChart = function renderAreaChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var chartOptions = {
+      isStacked: true,
+      pointSize: 0,
+      areaOpacity: 0.5
+    };
+
+    var options = jsOptions$2(chart, chart.options, chartOptions);
+    var columnType = chart.discrete ? "string" : "datetime";
+    if (chart.options.xtype === "number") {
+      columnType = "number";
+    }
+    var data = this$1.createDataTable(chart.data, columnType);
+
+    this$1.drawChart(chart, this$1.library.visualization.AreaChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderGeoChart = function renderGeoChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var chartOptions = {
+      legend: "none",
+      colorAxis: {
+        colors: chart.options.colors || ["#f6c7b6", "#ce502d"]
+      }
+    };
+    var options = merge(merge(defaultOptions$2, chartOptions), chart.options.library || {});
+
+    var data = new this$1.library.visualization.DataTable();
+    data.addColumn("string", "");
+    data.addColumn("number", chart.options.label || "Value");
+    data.addRows(chart.data);
+
+    this$1.drawChart(chart, this$1.library.visualization.GeoChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderScatterChart = function renderScatterChart (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, function () {
+    var chartOptions = {};
+    var options = jsOptions$2(chart, chart.options, chartOptions);
+
+    var series = chart.data, rows2 = [], i, j, data, d;
+    for (i = 0; i < series.length; i++) {
+      d = series[i].data;
+      for (j = 0; j < d.length; j++) {
+        var row = new Array(series.length + 1);
+        row[0] = d[j][0];
+        row[i + 1] = d[j][1];
+        rows2.push(row);
+      }
+    }
+
+    data = new this$1.library.visualization.DataTable();
+    data.addColumn("number", "");
+    for (i = 0; i < series.length; i++) {
+      data.addColumn("number", series[i].name);
+    }
+    data.addRows(rows2);
+
+    this$1.drawChart(chart, this$1.library.visualization.ScatterChart, data, options);
+  });
+};
+
+defaultExport$2.prototype.renderTimeline = function renderTimeline (chart) {
+    var this$1 = this;
+
+  this.waitForLoaded(chart, "timeline", function () {
+    var chartOptions = {
+      legend: "none"
+    };
+
+    if (chart.options.colors) {
+      chartOptions.colors = chart.options.colors;
+    }
+    var options = merge(merge(defaultOptions$2, chartOptions), chart.options.library || {});
+
+    var data = new this$1.library.visualization.DataTable();
+    data.addColumn({type: "string", id: "Name"});
+    data.addColumn({type: "date", id: "Start"});
+    data.addColumn({type: "date", id: "End"});
+    data.addRows(chart.data);
+
+    chart.element.style.lineHeight = "normal";
+
+    this$1.drawChart(chart, this$1.library.visualization.Timeline, data, options);
+  });
+};
+
+defaultExport$2.prototype.drawChart = function drawChart (chart, type, data, options) {
+  if (chart.chart) {
+    chart.chart.clearChart();
+  }
+
+  chart.chart = new type(chart.element);
+  resize(function () {
+    chart.chart.draw(data, options);
+  });
+};
+
+defaultExport$2.prototype.waitForLoaded = function waitForLoaded (chart, pack, callback) {
+    var this$1 = this;
+
+  if (!callback) {
+    callback = pack;
+    pack = "corechart";
+  }
+
+  callbacks.push({pack: pack, callback: callback});
+
+  if (loaded[pack]) {
+    this.runCallbacks();
+  } else {
+    loaded[pack] = true;
+
+    // https://groups.google.com/forum/#!topic/google-visualization-api/fMKJcyA2yyI
+    var loadOptions = {
+      packages: [pack],
+      callback: function () { this$1.runCallbacks(); }
+    };
+    var config = chart.__config();
+    if (config.language) {
+      loadOptions.language = config.language;
+    }
+    if (pack === "corechart" && config.mapsApiKey) {
+      loadOptions.mapsApiKey = config.mapsApiKey;
+    }
+
+    if (this.library.setOnLoadCallback) {
+      this.library.load("visualization", "1", loadOptions);
+    } else {
+      this.library.charts.load("current", loadOptions);
+    }
+  }
+};
+
+defaultExport$2.prototype.runCallbacks = function runCallbacks () {
+    var this$1 = this;
+
+  var cb, call;
+  for (var i = 0; i < callbacks.length; i++) {
+    cb = callbacks[i];
+    call = this$1.library.visualization && ((cb.pack === "corechart" && this$1.library.visualization.LineChart) || (cb.pack === "timeline" && this$1.library.visualization.Timeline));
+    if (call) {
+      cb.callback();
+      callbacks.splice(i, 1);
+      i--;
+    }
+  }
+};
+
+// cant use object as key
+defaultExport$2.prototype.createDataTable = function createDataTable (series, columnType, xtype) {
+  var i, j, s, d, key, rows = [], sortedLabels = [];
+  for (i = 0; i < series.length; i++) {
+    s = series[i];
+
+    for (j = 0; j < s.data.length; j++) {
+      d = s.data[j];
+      key = (columnType === "datetime") ? d[0].getTime() : d[0];
+      if (!rows[key]) {
+        rows[key] = new Array(series.length);
+        sortedLabels.push(key);
+      }
+      rows[key][i] = toFloat(d[1]);
+    }
+  }
+
+  var rows2 = [];
+  var day = true;
+  var value;
+  for (j = 0; j < sortedLabels.length; j++) {
+    i = sortedLabels[j];
+    if (columnType === "datetime") {
+      value = new Date(toFloat(i));
+      day = day && isDay(value);
+    } else if (columnType === "number") {
+      value = toFloat(i);
+    } else {
+      value = i;
+    }
+    rows2.push([value].concat(rows[i]));
+  }
+  if (columnType === "datetime") {
+    rows2.sort(sortByTime);
+  } else if (columnType === "number") {
+    rows2.sort(sortByNumberSeries);
+  }
+
+  if (xtype === "number") {
+    rows2.sort(sortByNumberSeries);
+
+    for (i = 0; i < rows2.length; i++) {
+      rows2[i][0] = toStr(rows2[i][0]);
+    }
+  }
+
+  // create datatable
+  var data = new this.library.visualization.DataTable();
+  columnType = columnType === "datetime" && day ? "date" : columnType;
+  data.addColumn(columnType, "");
+  for (i = 0; i < series.length; i++) {
+    data.addColumn("number", series[i].name);
+  }
+  data.addRows(rows2);
+
+  return data;
+};
+
+var pendingRequests = [], runningRequests = 0, maxRequests = 4;
+
+function pushRequest(url, success, error) {
+  pendingRequests.push([url, success, error]);
+  runNext();
+}
+
+function runNext() {
+  if (runningRequests < maxRequests) {
+    var request = pendingRequests.shift();
+    if (request) {
+      runningRequests++;
+      getJSON(request[0], request[1], request[2]);
+      runNext();
+    }
+  }
+}
+
+function requestComplete() {
+  runningRequests--;
+  runNext();
+}
+
+function getJSON(url, success, error) {
+  ajaxCall(url, success, function (jqXHR, textStatus, errorThrown) {
+    var message = (typeof errorThrown === "string") ? errorThrown : errorThrown.message;
+    error(message);
+  });
+}
+
+function ajaxCall(url, success, error) {
+  var $ = window.jQuery || window.Zepto || window.$;
+
+  if ($) {
+    $.ajax({
+      dataType: "json",
+      url: url,
+      success: success,
+      error: error,
+      complete: requestComplete
+    });
+  } else {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onload = function () {
+      requestComplete();
+      if (xhr.status === 200) {
+        success(JSON.parse(xhr.responseText), xhr.statusText, xhr);
+      } else {
+        error(xhr, "error", xhr.statusText);
+      }
+    };
+    xhr.send();
+  }
+}
+
+var config = (typeof window !== "undefined" && window.Chartkick) || {};
+var adapters = [];
+
+// helpers
+
+function setText(element, text) {
+  if (document.body.innerText) {
+    element.innerText = text;
+  } else {
+    element.textContent = text;
+  }
+}
+
+function chartError(element, message) {
+  setText(element, "Error Loading Chart: " + message);
+  element.style.color = "#ff0000";
+}
+
+function errorCatcher(chart) {
+  try {
+    chart.__render();
+  } catch (err) {
+    chartError(chart.element, err.message);
+    throw err;
+  }
+}
+
+function fetchDataSource(chart, dataSource) {
+  if (typeof dataSource === "string") {
+    pushRequest(dataSource, function (data) {
+      chart.rawData = data;
+      errorCatcher(chart);
+    }, function (message) {
+      chartError(chart.element, message);
+    });
+  } else {
+    chart.rawData = dataSource;
+    errorCatcher(chart);
+  }
+}
+
+function addDownloadButton(chart) {
+  var element = chart.element;
+  var link = document.createElement("a");
+  link.download = chart.options.download === true ? "chart.png" : chart.options.download; // http://caniuse.com/download
+  link.style.position = "absolute";
+  link.style.top = "20px";
+  link.style.right = "20px";
+  link.style.zIndex = 1000;
+  link.style.lineHeight = "20px";
+  link.target = "_blank"; // for safari
+  var image = document.createElement("img");
+  image.alt = "Download";
+  image.style.border = "none";
+  // icon from font-awesome
+  // http://fa2png.io/
+  image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABCFBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMywEsqxAAAAV3RSTlMAAQIDBggJCgsMDQ4PERQaHB0eISIjJCouLzE0OTo/QUJHSUpLTU5PUllhYmltcHh5foWLjI+SlaCio6atr7S1t7m6vsHHyM7R2tze5Obo7fHz9ff5+/1hlxK2AAAA30lEQVQYGUXBhVYCQQBA0TdYWAt2d3d3YWAHyur7/z9xgD16Lw0DW+XKx+1GgX+FRzM3HWQWrHl5N/oapW5RPe0PkBu+UYeICvozTWZVK23Ao04B79oJrOsJDOoxkZoQPWgX29pHpCZEk7rEvQYiNSFq1UMqvlCjJkRBS1R8hb00Vb/TajtBL7nTHE1X1vyMQF732dQhyF2o6SAwrzP06iUQzvwsArlnzcOdrgBhJyHa1QOgO9U1GsKuvjUTjavliZYQ8nNPapG6sap/3nrIdJ6bOWzmX/fy0XVpfzZP3S8OJT3g9EEiJwAAAABJRU5ErkJggg==";
+  link.appendChild(image);
+  element.style.position = "relative";
+
+  chart.downloadAttached = true;
+
+  // mouseenter
+  addEvent(element, "mouseover", function(e) {
+    var related = e.relatedTarget;
+    // check download option again to ensure it wasn't changed
+    if (!related || (related !== this && !childOf(this, related)) && chart.options.download) {
+      link.href = chart.toImage();
+      element.appendChild(link);
+    }
+  });
+
+  // mouseleave
+  addEvent(element, "mouseout", function(e) {
+    var related = e.relatedTarget;
+    if (!related || (related !== this && !childOf(this, related))) {
+      if (link.parentNode) {
+        link.parentNode.removeChild(link);
+      }
+    }
+  });
+}
+
+// http://stackoverflow.com/questions/10149963/adding-event-listener-cross-browser
+function addEvent(elem, event, fn) {
+  if (elem.addEventListener) {
+    elem.addEventListener(event, fn, false);
+  } else {
+    elem.attachEvent("on" + event, function() {
+      // set the this pointer same as addEventListener when fn is called
+      return(fn.call(elem, window.event));
+    });
+  }
+}
+
+// https://gist.github.com/shawnbot/4166283
+function childOf(p, c) {
+  if (p === c) { return false; }
+  while (c && c !== p) { c = c.parentNode; }
+  return c === p;
+}
+
+function getAdapterType(library) {
+  if (library) {
+    if (library.product === "Highcharts") {
+      return defaultExport$1;
+    } else if (library.setOnLoadCallback || library.charts) {
+      return defaultExport$2;
+    } else if (isFunction(library)) {
+      return defaultExport;
+    }
+  }
+  throw new Error("Unknown adapter");
+}
+
+function addAdapter(library) {
+  var adapterType = getAdapterType(library);
+  var adapter = new adapterType(library);
+
+  if (adapters.indexOf(adapter) === -1) {
+    adapters.push(adapter);
+  }
+}
+
+function loadAdapters() {
+  if ("Chart" in window) {
+    addAdapter(window.Chart);
+  }
+
+  if ("Highcharts" in window) {
+    addAdapter(window.Highcharts);
+  }
+
+  if (window.google && (window.google.setOnLoadCallback || window.google.charts)) {
+    addAdapter(window.google);
+  }
+}
+
+function dataEmpty(data, chartType) {
+  if (chartType === "PieChart" || chartType === "GeoChart" || chartType === "Timeline") {
+    return data.length === 0;
+  } else {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].data.length > 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+function renderChart(chartType, chart) {
+  if (chart.options.messages && chart.options.messages.empty && dataEmpty(chart.data, chartType)) {
+    setText(chart.element, chart.options.messages.empty);
+  } else {
+    callAdapter(chartType, chart);
+    if (chart.options.download && !chart.downloadAttached && chart.adapter === "chartjs") {
+      addDownloadButton(chart);
+    }
+  }
+}
+
+// TODO remove chartType if cross-browser way
+// to get the name of the chart class
+function callAdapter(chartType, chart) {
+  var i, adapter, fnName, adapterName;
+  fnName = "render" + chartType;
+  adapterName = chart.options.adapter;
+
+  loadAdapters();
+
+  for (i = 0; i < adapters.length; i++) {
+    adapter = adapters[i];
+    if ((!adapterName || adapterName === adapter.name) && isFunction(adapter[fnName])) {
+      chart.adapter = adapter.name;
+      return adapter[fnName](chart);
+    }
+  }
+
+  if (adapters.length > 0) {
+    throw new Error("No charting library found for " + chartType);
+  } else {
+    throw new Error("No charting libraries found - be sure to include one before your charts");
+  }
+}
+
+// process data
+
+var toFormattedKey = function (key, keyType) {
+  if (keyType === "number") {
+    key = toFloat(key);
+  } else if (keyType === "datetime") {
+    key = toDate(key);
+  } else {
+    key = toStr(key);
+  }
+  return key;
+};
+
+var formatSeriesData = function (data, keyType) {
+  var r = [], key, j;
+  for (j = 0; j < data.length; j++) {
+    if (keyType === "bubble") {
+      r.push([toFloat(data[j][0]), toFloat(data[j][1]), toFloat(data[j][2])]);
+    } else {
+      key = toFormattedKey(data[j][0], keyType);
+      r.push([key, toFloat(data[j][1])]);
+    }
+  }
+  if (keyType === "datetime") {
+    r.sort(sortByTime);
+  } else if (keyType === "number") {
+    r.sort(sortByNumberSeries);
+  }
+  return r;
+};
+
+function detectDiscrete(series) {
+  var i, j, data;
+  for (i = 0; i < series.length; i++) {
+    data = toArr(series[i].data);
+    for (j = 0; j < data.length; j++) {
+      if (!isDate(data[j][0])) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+// creates a shallow copy of each element of the array
+// elements are expected to be objects
+function copySeries(series) {
+  var newSeries = [], i, j;
+  for (i = 0; i < series.length; i++) {
+    var copy = {};
+    for (j in series[i]) {
+      if (series[i].hasOwnProperty(j)) {
+        copy[j] = series[i][j];
+      }
+    }
+    newSeries.push(copy);
+  }
+  return newSeries;
+}
+
+function processSeries(chart, keyType) {
+  var i;
+
+  var opts = chart.options;
+  var series = chart.rawData;
+
+  // see if one series or multiple
+  if (!isArray(series) || typeof series[0] !== "object" || isArray(series[0])) {
+    series = [{name: opts.label || "Value", data: series}];
+    chart.hideLegend = true;
+  } else {
+    chart.hideLegend = false;
+  }
+  if ((opts.discrete === null || opts.discrete === undefined) && keyType !== "bubble" && keyType !== "number") {
+    chart.discrete = detectDiscrete(series);
+  } else {
+    chart.discrete = opts.discrete;
+  }
+  if (chart.discrete) {
+    keyType = "string";
+  }
+  if (chart.options.xtype) {
+    keyType = chart.options.xtype;
+  }
+
+  // right format
+  series = copySeries(series);
+  for (i = 0; i < series.length; i++) {
+    series[i].data = formatSeriesData(toArr(series[i].data), keyType);
+  }
+
+  return series;
+}
+
+function processSimple(chart) {
+  var perfectData = toArr(chart.rawData), i;
+  for (i = 0; i < perfectData.length; i++) {
+    perfectData[i] = [toStr(perfectData[i][0]), toFloat(perfectData[i][1])];
+  }
+  return perfectData;
+}
+
+// define classes
+
+var Chart = function Chart(element, dataSource, options) {
+  var elementId;
+  if (typeof element === "string") {
+    elementId = element;
+    element = document.getElementById(element);
+    if (!element) {
+      throw new Error("No element with id " + elementId);
+    }
+  }
+  this.element = element;
+  this.options = merge(Chartkick.options, options || {});
+  this.dataSource = dataSource;
+
+  Chartkick.charts[element.id] = this;
+
+  fetchDataSource(this, dataSource);
+
+  if (this.options.refresh) {
+    this.startRefresh();
+  }
+};
+
+Chart.prototype.getElement = function getElement () {
+  return this.element;
+};
+
+Chart.prototype.getDataSource = function getDataSource () {
+  return this.dataSource;
+};
+
+Chart.prototype.getData = function getData () {
+  return this.data;
+};
+
+Chart.prototype.getOptions = function getOptions () {
+  return this.options;
+};
+
+Chart.prototype.getChartObject = function getChartObject () {
+  return this.chart;
+};
+
+Chart.prototype.getAdapter = function getAdapter () {
+  return this.adapter;
+};
+
+Chart.prototype.updateData = function updateData (dataSource, options) {
+  this.dataSource = dataSource;
+  if (options) {
+    this.__updateOptions(options);
+  }
+  fetchDataSource(this, dataSource);
+};
+
+Chart.prototype.setOptions = function setOptions (options) {
+  this.__updateOptions(options);
+  this.redraw();
+};
+
+Chart.prototype.redraw = function redraw () {
+  fetchDataSource(this, this.rawData);
+};
+
+Chart.prototype.refreshData = function refreshData () {
+  if (typeof this.dataSource === "string") {
+    // prevent browser from caching
+    var sep = this.dataSource.indexOf("?") === -1 ? "?" : "&";
+    var url = this.dataSource + sep + "_=" + (new Date()).getTime();
+    fetchDataSource(this, url);
+  }
+};
+
+Chart.prototype.startRefresh = function startRefresh () {
+    var this$1 = this;
+
+  var refresh = this.options.refresh;
+
+  if (!this.intervalId) {
+    if (refresh) {
+      this.intervalId = setInterval( function () {
+        this$1.refreshData();
+      }, refresh * 1000);
+    } else {
+      throw new Error("No refresh interval");
+    }
+  }
+};
+
+Chart.prototype.stopRefresh = function stopRefresh () {
+  if (this.intervalId) {
+    clearInterval(this.intervalId);
+    this.intervalId = null;
+  }
+};
+
+Chart.prototype.toImage = function toImage () {
+  if (this.adapter === "chartjs") {
+    return this.chart.toBase64Image();
+  } else {
+    return null;
+  }
+};
+
+Chart.prototype.__updateOptions = function __updateOptions (options) {
+  var updateRefresh = options.refresh && options.refresh !== this.options.refresh;
+  this.options = merge(Chartkick.options, options);
+  if (updateRefresh) {
+    this.stopRefresh();
+    this.startRefresh();
+  }
+};
+
+Chart.prototype.__render = function __render () {
+  this.data = this.__processData();
+  renderChart(this.__chartName(), this);
+};
+
+Chart.prototype.__config = function __config () {
+  return config;
+};
+
+var LineChart = (function (Chart) {
+  function LineChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) LineChart.__proto__ = Chart;
+  LineChart.prototype = Object.create( Chart && Chart.prototype );
+  LineChart.prototype.constructor = LineChart;
+
+  LineChart.prototype.__processData = function __processData () {
+    return processSeries(this, "datetime");
+  };
+
+  LineChart.prototype.__chartName = function __chartName () {
+    return "LineChart";
+  };
+
+  return LineChart;
+}(Chart));
+
+var PieChart = (function (Chart) {
+  function PieChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) PieChart.__proto__ = Chart;
+  PieChart.prototype = Object.create( Chart && Chart.prototype );
+  PieChart.prototype.constructor = PieChart;
+
+  PieChart.prototype.__processData = function __processData () {
+    return processSimple(this);
+  };
+
+  PieChart.prototype.__chartName = function __chartName () {
+    return "PieChart";
+  };
+
+  return PieChart;
+}(Chart));
+
+var ColumnChart = (function (Chart) {
+  function ColumnChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) ColumnChart.__proto__ = Chart;
+  ColumnChart.prototype = Object.create( Chart && Chart.prototype );
+  ColumnChart.prototype.constructor = ColumnChart;
+
+  ColumnChart.prototype.__processData = function __processData () {
+    return processSeries(this, "string");
+  };
+
+  ColumnChart.prototype.__chartName = function __chartName () {
+    return "ColumnChart";
+  };
+
+  return ColumnChart;
+}(Chart));
+
+var BarChart = (function (Chart) {
+  function BarChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) BarChart.__proto__ = Chart;
+  BarChart.prototype = Object.create( Chart && Chart.prototype );
+  BarChart.prototype.constructor = BarChart;
+
+  BarChart.prototype.__processData = function __processData () {
+    return processSeries(this, "string");
+  };
+
+  BarChart.prototype.__chartName = function __chartName () {
+    return "BarChart";
+  };
+
+  return BarChart;
+}(Chart));
+
+var AreaChart = (function (Chart) {
+  function AreaChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) AreaChart.__proto__ = Chart;
+  AreaChart.prototype = Object.create( Chart && Chart.prototype );
+  AreaChart.prototype.constructor = AreaChart;
+
+  AreaChart.prototype.__processData = function __processData () {
+    return processSeries(this, "datetime");
+  };
+
+  AreaChart.prototype.__chartName = function __chartName () {
+    return "AreaChart";
+  };
+
+  return AreaChart;
+}(Chart));
+
+var GeoChart = (function (Chart) {
+  function GeoChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) GeoChart.__proto__ = Chart;
+  GeoChart.prototype = Object.create( Chart && Chart.prototype );
+  GeoChart.prototype.constructor = GeoChart;
+
+  GeoChart.prototype.__processData = function __processData () {
+    return processSimple(this);
+  };
+
+  GeoChart.prototype.__chartName = function __chartName () {
+    return "GeoChart";
+  };
+
+  return GeoChart;
+}(Chart));
+
+var ScatterChart = (function (Chart) {
+  function ScatterChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) ScatterChart.__proto__ = Chart;
+  ScatterChart.prototype = Object.create( Chart && Chart.prototype );
+  ScatterChart.prototype.constructor = ScatterChart;
+
+  ScatterChart.prototype.__processData = function __processData () {
+    return processSeries(this, "number");
+  };
+
+  ScatterChart.prototype.__chartName = function __chartName () {
+    return "ScatterChart";
+  };
+
+  return ScatterChart;
+}(Chart));
+
+var BubbleChart = (function (Chart) {
+  function BubbleChart () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) BubbleChart.__proto__ = Chart;
+  BubbleChart.prototype = Object.create( Chart && Chart.prototype );
+  BubbleChart.prototype.constructor = BubbleChart;
+
+  BubbleChart.prototype.__processData = function __processData () {
+    return processSeries(this, "bubble");
+  };
+
+  BubbleChart.prototype.__chartName = function __chartName () {
+    return "BubbleChart";
+  };
+
+  return BubbleChart;
+}(Chart));
+
+var Timeline = (function (Chart) {
+  function Timeline () {
+    Chart.apply(this, arguments);
+  }
+
+  if ( Chart ) Timeline.__proto__ = Chart;
+  Timeline.prototype = Object.create( Chart && Chart.prototype );
+  Timeline.prototype.constructor = Timeline;
+
+  Timeline.prototype.__processData = function __processData () {
+    var i, data = this.rawData;
+    for (i = 0; i < data.length; i++) {
+      data[i][1] = toDate(data[i][1]);
+      data[i][2] = toDate(data[i][2]);
+    }
+    return data;
+  };
+
+  Timeline.prototype.__chartName = function __chartName () {
+    return "Timeline";
+  };
+
+  return Timeline;
+}(Chart));
+
+var Chartkick = {
+  LineChart: LineChart,
+  PieChart: PieChart,
+  ColumnChart: ColumnChart,
+  BarChart: BarChart,
+  AreaChart: AreaChart,
+  GeoChart: GeoChart,
+  ScatterChart: ScatterChart,
+  BubbleChart: BubbleChart,
+  Timeline: Timeline,
+  charts: {},
+  configure: function (options) {
+    for (var key in options) {
+      if (options.hasOwnProperty(key)) {
+        config[key] = options[key];
+      }
+    }
+  },
+  eachChart: function (callback) {
+    for (var chartId in Chartkick.charts) {
+      if (Chartkick.charts.hasOwnProperty(chartId)) {
+        callback(Chartkick.charts[chartId]);
+      }
+    }
+  },
+  config: config,
+  options: {},
+  adapters: adapters,
+  addAdapter: addAdapter
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Chartkick);
+
+
+/***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var pSlice = Array.prototype.slice;
+var objectKeys = __webpack_require__(288);
+var isArguments = __webpack_require__(289);
+
+var deepEqual = module.exports = function (actual, expected, opts) {
+  if (!opts) opts = {};
+  // 7.1. All identical values are equivalent, as determined by ===.
+  if (actual === expected) {
+    return true;
+
+  } else if (actual instanceof Date && expected instanceof Date) {
+    return actual.getTime() === expected.getTime();
+
+  // 7.3. Other pairs that do not both pass typeof value == 'object',
+  // equivalence is determined by ==.
+  } else if (!actual || !expected || typeof actual != 'object' && typeof expected != 'object') {
+    return opts.strict ? actual === expected : actual == expected;
+
+  // 7.4. For all other Object pairs, including Array objects, equivalence is
+  // determined by having the same number of owned properties (as verified
+  // with Object.prototype.hasOwnProperty.call), the same set of keys
+  // (although not necessarily the same order), equivalent values for every
+  // corresponding key, and an identical 'prototype' property. Note: this
+  // accounts for both named and indexed properties on Arrays.
+  } else {
+    return objEquiv(actual, expected, opts);
+  }
+}
+
+function isUndefinedOrNull(value) {
+  return value === null || value === undefined;
+}
+
+function isBuffer (x) {
+  if (!x || typeof x !== 'object' || typeof x.length !== 'number') return false;
+  if (typeof x.copy !== 'function' || typeof x.slice !== 'function') {
+    return false;
+  }
+  if (x.length > 0 && typeof x[0] !== 'number') return false;
+  return true;
+}
+
+function objEquiv(a, b, opts) {
+  var i, key;
+  if (isUndefinedOrNull(a) || isUndefinedOrNull(b))
+    return false;
+  // an identical 'prototype' property.
+  if (a.prototype !== b.prototype) return false;
+  //~~~I've managed to break Object.keys through screwy arguments passing.
+  //   Converting to array solves the problem.
+  if (isArguments(a)) {
+    if (!isArguments(b)) {
+      return false;
+    }
+    a = pSlice.call(a);
+    b = pSlice.call(b);
+    return deepEqual(a, b, opts);
+  }
+  if (isBuffer(a)) {
+    if (!isBuffer(b)) {
+      return false;
+    }
+    if (a.length !== b.length) return false;
+    for (i = 0; i < a.length; i++) {
+      if (a[i] !== b[i]) return false;
+    }
+    return true;
+  }
+  try {
+    var ka = objectKeys(a),
+        kb = objectKeys(b);
+  } catch (e) {//happens when one is a string literal and the other isn't
+    return false;
+  }
+  // having the same number of owned properties (keys incorporates
+  // hasOwnProperty)
+  if (ka.length != kb.length)
+    return false;
+  //the same set of keys (although not necessarily the same order),
+  ka.sort();
+  kb.sort();
+  //~~~cheap key test
+  for (i = ka.length - 1; i >= 0; i--) {
+    if (ka[i] != kb[i])
+      return false;
+  }
+  //equivalent values for every corresponding key, and
+  //~~~possibly expensive deep test
+  for (i = ka.length - 1; i >= 0; i--) {
+    key = ka[i];
+    if (!deepEqual(a[key], b[key], opts)) return false;
+  }
+  return typeof a === typeof b;
+}
+
+
+/***/ }),
+/* 288 */
+/***/ (function(module, exports) {
+
+exports = module.exports = typeof Object.keys === 'function'
+  ? Object.keys : shim;
+
+exports.shim = shim;
+function shim (obj) {
+  var keys = [];
+  for (var key in obj) keys.push(key);
+  return keys;
+}
+
+
+/***/ }),
+/* 289 */
+/***/ (function(module, exports) {
+
+var supportsArgumentsClass = (function(){
+  return Object.prototype.toString.call(arguments)
+})() == '[object Arguments]';
+
+exports = module.exports = supportsArgumentsClass ? supported : unsupported;
+
+exports.supported = supported;
+function supported(object) {
+  return Object.prototype.toString.call(object) == '[object Arguments]';
+};
+
+exports.unsupported = unsupported;
+function unsupported(object){
+  return object &&
+    typeof object == 'object' &&
+    typeof object.length == 'number' &&
+    Object.prototype.hasOwnProperty.call(object, 'callee') &&
+    !Object.prototype.propertyIsEnumerable.call(object, 'callee') ||
+    false;
+};
+
+
+/***/ }),
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -91882,7 +94305,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 286 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -92139,7 +94562,7 @@ helpers.easingEffects = effects;
 
 
 /***/ }),
-/* 287 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -92360,7 +94783,7 @@ helpers.drawRoundedRectangle = function(ctx) {
 
 
 /***/ }),
-/* 288 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -92463,7 +94886,7 @@ module.exports = {
 
 
 /***/ }),
-/* 289 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -93081,10 +95504,10 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 290 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var conversions = __webpack_require__(291);
+var conversions = __webpack_require__(296);
 
 var convert = function() {
    return new Converter();
@@ -93178,7 +95601,7 @@ Converter.prototype.getValues = function(space) {
 module.exports = convert;
 
 /***/ }),
-/* 291 */
+/* 296 */
 /***/ (function(module, exports) {
 
 /* MIT license */
@@ -93882,11 +96305,11 @@ for (var key in cssKeywords) {
 
 
 /***/ }),
-/* 292 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* MIT license */
-var colorNames = __webpack_require__(293);
+var colorNames = __webpack_require__(298);
 
 module.exports = {
    getRgba: getRgba,
@@ -94109,7 +96532,7 @@ for (var name in colorNames) {
 
 
 /***/ }),
-/* 293 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94268,7 +96691,7 @@ module.exports = {
 
 
 /***/ }),
-/* 294 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94382,7 +96805,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 295 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94480,7 +96903,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 296 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94593,7 +97016,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 297 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -94817,7 +97240,7 @@ module.exports = Element.extend({
 
 
 /***/ }),
-/* 298 */
+/* 303 */
 /***/ (function(module, exports) {
 
 /**
@@ -94838,7 +97261,7 @@ module.exports = {
 
 
 /***/ }),
-/* 299 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95302,7 +97725,7 @@ helpers.removeEvent = removeEventListener;
 
 
 /***/ }),
-/* 300 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95481,7 +97904,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 301 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96435,7 +98858,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 302 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96772,7 +99195,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 303 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -96825,7 +99248,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 304 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -97768,7 +100191,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 305 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98723,7 +101146,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 306 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -98916,7 +101339,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 307 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -99056,7 +101479,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 308 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -99254,7 +101677,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 309 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -99608,7 +102031,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 310 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100144,7 +102567,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 311 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100934,7 +103357,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 312 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -101199,10 +103622,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 312;
+webpackContext.id = 317;
 
 /***/ }),
-/* 313 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101713,7 +104136,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 314 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101900,7 +104323,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 315 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102206,7 +104629,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 316 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102546,7 +104969,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 317 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102775,7 +105198,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 318 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102950,7 +105373,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 319 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -102999,7 +105422,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 320 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103017,7 +105440,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 321 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103034,7 +105457,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 322 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103052,7 +105475,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 323 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103070,7 +105493,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 324 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103088,7 +105511,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 325 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103106,7 +105529,7 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 326 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103121,20 +105544,20 @@ module.exports = function(Chart) {
 
 
 /***/ }),
-/* 327 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 module.exports = {};
-module.exports.filler = __webpack_require__(328);
-module.exports.legend = __webpack_require__(329);
-module.exports.title = __webpack_require__(330);
+module.exports.filler = __webpack_require__(333);
+module.exports.legend = __webpack_require__(334);
+module.exports.title = __webpack_require__(335);
 
 
 /***/ }),
-/* 328 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -103459,7 +105882,7 @@ module.exports = {
 
 
 /***/ }),
-/* 329 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104042,7 +106465,7 @@ module.exports = {
 
 
 /***/ }),
-/* 330 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -104301,7 +106724,7 @@ module.exports = {
 
 
 /***/ }),
-/* 331 */
+/* 336 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104389,7 +106812,7 @@ var reactiveProp = {
 });
 
 /***/ }),
-/* 332 */
+/* 337 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104496,19 +106919,19 @@ var Scatter = generateChart('scatter-chart', 'scatter');
 });
 
 /***/ }),
-/* 333 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(334)
+  __webpack_require__(339)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(336)
+var __vue_script__ = __webpack_require__(341)
 /* template */
-var __vue_template__ = __webpack_require__(337)
+var __vue_template__ = __webpack_require__(342)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -104547,13 +106970,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 334 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(335);
+var content = __webpack_require__(340);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -104573,7 +106996,7 @@ if(false) {
 }
 
 /***/ }),
-/* 335 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -104587,7 +107010,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 
 /***/ }),
-/* 336 */
+/* 341 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104862,7 +107285,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 337 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -105587,15 +108010,15 @@ if (false) {
 }
 
 /***/ }),
-/* 338 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(339)
+var __vue_script__ = __webpack_require__(344)
 /* template */
-var __vue_template__ = __webpack_require__(340)
+var __vue_template__ = __webpack_require__(345)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -105634,7 +108057,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 339 */
+/* 344 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -105815,6 +108238,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['user', 'role'],
   data: function data() {
     return {
       items: [{ color: 'red', text: 'Red' }, { color: 'green', text: 'Green' }, { color: 'grey', text: 'grey' }, { color: 'orange', text: 'Orange' }, { color: 'purple', text: 'purple' }, { color: 'blue', text: 'blue' }, { color: 'indigo', text: 'indigo' }, { color: 'pink', text: 'pink' }, { color: 'cyan', text: 'cyan' }],
@@ -105843,7 +108267,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 340 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -106345,19 +108769,19 @@ if (false) {
 }
 
 /***/ }),
-/* 341 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(342)
+  __webpack_require__(347)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(344)
+var __vue_script__ = __webpack_require__(349)
 /* template */
-var __vue_template__ = __webpack_require__(354)
+var __vue_template__ = __webpack_require__(359)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -106396,13 +108820,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 342 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(343);
+var content = __webpack_require__(348);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -106422,7 +108846,7 @@ if(false) {
 }
 
 /***/ }),
-/* 343 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -106436,7 +108860,7 @@ exports.push([module.i, "\n.content--wrap[data-v-d0ee1f54]{\r\n margin-top: -100
 
 
 /***/ }),
-/* 344 */
+/* 349 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106533,10 +108957,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var AddUser = __webpack_require__(345);
-var ShowUser = __webpack_require__(348);
-var EditUser = __webpack_require__(351);
+var AddUser = __webpack_require__(350);
+var ShowUser = __webpack_require__(353);
+var EditUser = __webpack_require__(356);
 /* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user', 'role'],
    components: {
       AddUser: AddUser, ShowUser: ShowUser, EditUser: EditUser
    },
@@ -106598,11 +109023,11 @@ var EditUser = __webpack_require__(351);
          if (confirm('Are you sure you want to delete this item?')) {
             this.loader = true;
             axios.delete('/users/' + id).then(function (response) {
+               _this2.Allusers.splice(index, 1);
                _this2.loader = false;
                _this2.message = 'deleted successifully';
                _this2.color = 'red';
                _this2.snackbar = true;
-               _this2.Allusers.splice(index, 1);
             }).catch(function (error) {
                _this2.errors = error.response.data.errors;
                _this2.loader = false;
@@ -106631,15 +109056,15 @@ var EditUser = __webpack_require__(351);
 });
 
 /***/ }),
-/* 345 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(346)
+var __vue_script__ = __webpack_require__(351)
 /* template */
-var __vue_template__ = __webpack_require__(347)
+var __vue_template__ = __webpack_require__(352)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -106678,11 +109103,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 346 */
+/* 351 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -106876,7 +109307,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 347 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -106935,7 +109366,6 @@ var render = function() {
                               on: {
                                 submit: function($event) {
                                   $event.preventDefault()
-                                  return _vm.submit($event)
                                 }
                               }
                             },
@@ -107184,6 +109614,72 @@ var render = function() {
                                           })
                                         ],
                                         1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.form.role_id,
+                                              expression: "form.role_id"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "custom-select custom-select-md col-md-3",
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.form,
+                                                "role_id",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "1" } },
+                                            [_vm._v("Admin")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "2" } },
+                                            [_vm._v("Company Admin")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "3" } },
+                                            [_vm._v("Customer")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "4" } },
+                                            [_vm._v("Driver")]
+                                          )
+                                        ]
                                       )
                                     ],
                                     1
@@ -107285,15 +109781,15 @@ if (false) {
 }
 
 /***/ }),
-/* 348 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(349)
+var __vue_script__ = __webpack_require__(354)
 /* template */
-var __vue_template__ = __webpack_require__(350)
+var __vue_template__ = __webpack_require__(355)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -107332,7 +109828,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 349 */
+/* 354 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107404,7 +109900,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 350 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -107556,15 +110052,15 @@ if (false) {
 }
 
 /***/ }),
-/* 351 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(352)
+var __vue_script__ = __webpack_require__(357)
 /* template */
-var __vue_template__ = __webpack_require__(353)
+var __vue_template__ = __webpack_require__(358)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -107603,11 +110099,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 352 */
+/* 357 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -107801,7 +110303,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 353 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -108109,6 +110611,72 @@ var render = function() {
                                           })
                                         ],
                                         1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "select",
+                                        {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.form.role_id,
+                                              expression: "form.role_id"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "custom-select custom-select-md col-md-3",
+                                          on: {
+                                            change: function($event) {
+                                              var $$selectedVal = Array.prototype.filter
+                                                .call(
+                                                  $event.target.options,
+                                                  function(o) {
+                                                    return o.selected
+                                                  }
+                                                )
+                                                .map(function(o) {
+                                                  var val =
+                                                    "_value" in o
+                                                      ? o._value
+                                                      : o.value
+                                                  return val
+                                                })
+                                              _vm.$set(
+                                                _vm.form,
+                                                "role_id",
+                                                $event.target.multiple
+                                                  ? $$selectedVal
+                                                  : $$selectedVal[0]
+                                              )
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "1" } },
+                                            [_vm._v("Admin")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "2" } },
+                                            [_vm._v("Company Admin")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "3" } },
+                                            [_vm._v("Customer")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "option",
+                                            { attrs: { value: "4" } },
+                                            [_vm._v("Driver")]
+                                          )
+                                        ]
                                       )
                                     ],
                                     1
@@ -108210,7 +110778,7 @@ if (false) {
 }
 
 /***/ }),
-/* 354 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -108547,15 +111115,15 @@ if (false) {
 }
 
 /***/ }),
-/* 355 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(356)
+var __vue_script__ = __webpack_require__(361)
 /* template */
-var __vue_template__ = __webpack_require__(357)
+var __vue_template__ = __webpack_require__(362)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -108594,7 +111162,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 356 */
+/* 361 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108785,7 +111353,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 357 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -109180,19 +111748,19 @@ if (false) {
 }
 
 /***/ }),
-/* 358 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(359)
+  __webpack_require__(364)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(361)
+var __vue_script__ = __webpack_require__(366)
 /* template */
-var __vue_template__ = __webpack_require__(405)
+var __vue_template__ = __webpack_require__(410)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -109231,13 +111799,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 359 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(360);
+var content = __webpack_require__(365);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -109257,7 +111825,7 @@ if(false) {
 }
 
 /***/ }),
-/* 360 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -109265,20 +111833,20 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* This is for documentation purposes and will not be needed in your application */\n#create .speed-dial {\r\n  position: absolute;\n}\n#create .btn--floating {\r\n  position: relative;\n}\n.btn__content i{\r\n  color: #fff !important;\r\n  width: 50px;\n}\n.speed-dial__list i{\r\n  color: #fff !important;\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* This is for documentation purposes and will not be needed in your application */\n#create .speed-dial {\r\n  position: absolute;\n}\n#create .btn--floating {\r\n  position: relative;\n}\n.btn__content i{\r\n  color: #fff !important;\r\n  width: 50px;\n}\n.speed-dial__list i{\r\n  color: #fff !important;\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 361 */
+/* 366 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_barcode__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_barcode___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_barcode__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_google_autocomplete__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_google_autocomplete__ = __webpack_require__(407);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_google_autocomplete___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_google_autocomplete__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -110000,11 +112568,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
-var AddShipment = __webpack_require__(396);
-var EditShipment = __webpack_require__(399);
+var AddShipment = __webpack_require__(401);
+var EditShipment = __webpack_require__(404);
 // let UpdateShipment = require('./UpdateShipment')
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['user', 'role'],
   components: {
     AddShipment: AddShipment, EditShipment: EditShipment, 'barcode': __WEBPACK_IMPORTED_MODULE_0_vue_barcode___default.a, VueGoogleAutocomplete: __WEBPACK_IMPORTED_MODULE_1_vue_google_autocomplete___default.a
     // , UpdateShipment
@@ -110307,13 +112876,13 @@ var EditShipment = __webpack_require__(399);
 });
 
 /***/ }),
-/* 362 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _barcodes = __webpack_require__(363);
+var _barcodes = __webpack_require__(368);
 
 var _barcodes2 = _interopRequireDefault(_barcodes);
 
@@ -110321,15 +112890,15 @@ var _merge = __webpack_require__(26);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _linearizeEncodings = __webpack_require__(387);
+var _linearizeEncodings = __webpack_require__(392);
 
 var _linearizeEncodings2 = _interopRequireDefault(_linearizeEncodings);
 
-var _fixOptions = __webpack_require__(388);
+var _fixOptions = __webpack_require__(393);
 
 var _fixOptions2 = _interopRequireDefault(_fixOptions);
 
-var _getRenderProperties = __webpack_require__(389);
+var _getRenderProperties = __webpack_require__(394);
 
 var _getRenderProperties2 = _interopRequireDefault(_getRenderProperties);
 
@@ -110337,7 +112906,7 @@ var _optionsFromStrings = __webpack_require__(184);
 
 var _optionsFromStrings2 = _interopRequireDefault(_optionsFromStrings);
 
-var _ErrorHandler = __webpack_require__(395);
+var _ErrorHandler = __webpack_require__(400);
 
 var _ErrorHandler2 = _interopRequireDefault(_ErrorHandler);
 
@@ -110565,7 +113134,7 @@ if (typeof jQuery !== 'undefined') {
 module.exports = JsBarcode;
 
 /***/ }),
-/* 363 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110575,23 +113144,23 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _CODE = __webpack_require__(364);
+var _CODE = __webpack_require__(369);
 
-var _CODE2 = __webpack_require__(365);
+var _CODE2 = __webpack_require__(370);
 
-var _EAN_UPC = __webpack_require__(371);
+var _EAN_UPC = __webpack_require__(376);
 
-var _ITF = __webpack_require__(377);
+var _ITF = __webpack_require__(382);
 
-var _ITF2 = __webpack_require__(378);
+var _ITF2 = __webpack_require__(383);
 
-var _MSI = __webpack_require__(379);
+var _MSI = __webpack_require__(384);
 
-var _pharmacode = __webpack_require__(384);
+var _pharmacode = __webpack_require__(389);
 
-var _codabar = __webpack_require__(385);
+var _codabar = __webpack_require__(390);
 
-var _GenericBarcode = __webpack_require__(386);
+var _GenericBarcode = __webpack_require__(391);
 
 exports.default = {
 	CODE39: _CODE.CODE39,
@@ -110606,7 +113175,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 364 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110717,7 +113286,7 @@ function mod43checksum(data) {
 exports.CODE39 = CODE39;
 
 /***/ }),
-/* 365 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110728,19 +113297,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CODE128C = exports.CODE128B = exports.CODE128A = exports.CODE128 = undefined;
 
-var _CODE128_AUTO = __webpack_require__(366);
+var _CODE128_AUTO = __webpack_require__(371);
 
 var _CODE128_AUTO2 = _interopRequireDefault(_CODE128_AUTO);
 
-var _CODE128A = __webpack_require__(368);
+var _CODE128A = __webpack_require__(373);
 
 var _CODE128A2 = _interopRequireDefault(_CODE128A);
 
-var _CODE128B = __webpack_require__(369);
+var _CODE128B = __webpack_require__(374);
 
 var _CODE128B2 = _interopRequireDefault(_CODE128B);
 
-var _CODE128C = __webpack_require__(370);
+var _CODE128C = __webpack_require__(375);
 
 var _CODE128C2 = _interopRequireDefault(_CODE128C);
 
@@ -110752,7 +113321,7 @@ exports.CODE128B = _CODE128B2.default;
 exports.CODE128C = _CODE128C2.default;
 
 /***/ }),
-/* 366 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110766,7 +113335,7 @@ var _CODE2 = __webpack_require__(24);
 
 var _CODE3 = _interopRequireDefault(_CODE2);
 
-var _auto = __webpack_require__(367);
+var _auto = __webpack_require__(372);
 
 var _auto2 = _interopRequireDefault(_auto);
 
@@ -110799,7 +113368,7 @@ var CODE128AUTO = function (_CODE) {
 exports.default = CODE128AUTO;
 
 /***/ }),
-/* 367 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110878,7 +113447,7 @@ exports.default = function (string) {
 };
 
 /***/ }),
-/* 368 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110926,7 +113495,7 @@ var CODE128A = function (_CODE) {
 exports.default = CODE128A;
 
 /***/ }),
-/* 369 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -110974,7 +113543,7 @@ var CODE128B = function (_CODE) {
 exports.default = CODE128B;
 
 /***/ }),
-/* 370 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111022,7 +113591,7 @@ var CODE128C = function (_CODE) {
 exports.default = CODE128C;
 
 /***/ }),
-/* 371 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111033,19 +113602,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.UPCE = exports.UPC = exports.EAN2 = exports.EAN5 = exports.EAN8 = exports.EAN13 = undefined;
 
-var _EAN = __webpack_require__(372);
+var _EAN = __webpack_require__(377);
 
 var _EAN2 = _interopRequireDefault(_EAN);
 
-var _EAN3 = __webpack_require__(373);
+var _EAN3 = __webpack_require__(378);
 
 var _EAN4 = _interopRequireDefault(_EAN3);
 
-var _EAN5 = __webpack_require__(374);
+var _EAN5 = __webpack_require__(379);
 
 var _EAN6 = _interopRequireDefault(_EAN5);
 
-var _EAN7 = __webpack_require__(375);
+var _EAN7 = __webpack_require__(380);
 
 var _EAN8 = _interopRequireDefault(_EAN7);
 
@@ -111053,7 +113622,7 @@ var _UPC = __webpack_require__(183);
 
 var _UPC2 = _interopRequireDefault(_UPC);
 
-var _UPCE = __webpack_require__(376);
+var _UPCE = __webpack_require__(381);
 
 var _UPCE2 = _interopRequireDefault(_UPCE);
 
@@ -111067,7 +113636,7 @@ exports.UPC = _UPC2.default;
 exports.UPCE = _UPCE2.default;
 
 /***/ }),
-/* 372 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111192,7 +113761,7 @@ var EAN13 = function (_EAN) {
 exports.default = EAN13;
 
 /***/ }),
-/* 373 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111279,7 +113848,7 @@ var EAN8 = function (_EAN) {
 exports.default = EAN8;
 
 /***/ }),
-/* 374 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111350,7 +113919,7 @@ var EAN5 = function (_Barcode) {
 exports.default = EAN5;
 
 /***/ }),
-/* 375 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111414,7 +113983,7 @@ var EAN2 = function (_Barcode) {
 exports.default = EAN2;
 
 /***/ }),
-/* 376 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111605,7 +114174,7 @@ function expandToUPCA(middleDigits, numberSystem) {
 exports.default = UPCE;
 
 /***/ }),
-/* 377 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111721,7 +114290,7 @@ function checksum(data) {
 exports.ITF14 = ITF14;
 
 /***/ }),
-/* 378 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111820,7 +114389,7 @@ var ITF = function (_Barcode) {
 exports.ITF = ITF;
 
 /***/ }),
-/* 379 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111835,19 +114404,19 @@ var _MSI = __webpack_require__(20);
 
 var _MSI2 = _interopRequireDefault(_MSI);
 
-var _MSI3 = __webpack_require__(380);
+var _MSI3 = __webpack_require__(385);
 
 var _MSI4 = _interopRequireDefault(_MSI3);
 
-var _MSI5 = __webpack_require__(381);
+var _MSI5 = __webpack_require__(386);
 
 var _MSI6 = _interopRequireDefault(_MSI5);
 
-var _MSI7 = __webpack_require__(382);
+var _MSI7 = __webpack_require__(387);
 
 var _MSI8 = _interopRequireDefault(_MSI7);
 
-var _MSI9 = __webpack_require__(383);
+var _MSI9 = __webpack_require__(388);
 
 var _MSI10 = _interopRequireDefault(_MSI9);
 
@@ -111860,7 +114429,7 @@ exports.MSI1010 = _MSI8.default;
 exports.MSI1110 = _MSI10.default;
 
 /***/ }),
-/* 380 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111899,7 +114468,7 @@ var MSI10 = function (_MSI) {
 exports.default = MSI10;
 
 /***/ }),
-/* 381 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111938,7 +114507,7 @@ var MSI11 = function (_MSI) {
 exports.default = MSI11;
 
 /***/ }),
-/* 382 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -111979,7 +114548,7 @@ var MSI1010 = function (_MSI) {
 exports.default = MSI1010;
 
 /***/ }),
-/* 383 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112020,7 +114589,7 @@ var MSI1110 = function (_MSI) {
 exports.default = MSI1110;
 
 /***/ }),
-/* 384 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112099,7 +114668,7 @@ var pharmacode = function (_Barcode) {
 exports.pharmacode = pharmacode;
 
 /***/ }),
-/* 385 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112197,7 +114766,7 @@ var codabar = function (_Barcode) {
 exports.codabar = codabar;
 
 /***/ }),
-/* 386 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112258,7 +114827,7 @@ var GenericBarcode = function (_Barcode) {
 exports.GenericBarcode = GenericBarcode;
 
 /***/ }),
-/* 387 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112291,7 +114860,7 @@ function linearizeEncodings(encodings) {
 }
 
 /***/ }),
-/* 388 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112314,7 +114883,7 @@ function fixOptions(options) {
 }
 
 /***/ }),
-/* 389 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112328,11 +114897,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 /* global HTMLCanvasElement */
 /* global SVGElement */
 
-var _getOptionsFromElement = __webpack_require__(390);
+var _getOptionsFromElement = __webpack_require__(395);
 
 var _getOptionsFromElement2 = _interopRequireDefault(_getOptionsFromElement);
 
-var _renderers = __webpack_require__(391);
+var _renderers = __webpack_require__(396);
 
 var _renderers2 = _interopRequireDefault(_renderers);
 
@@ -112428,7 +114997,7 @@ function newCanvasRenderProperties(imgElement) {
 exports.default = getRenderProperties;
 
 /***/ }),
-/* 390 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112475,7 +115044,7 @@ function getOptionsFromElement(element) {
 exports.default = getOptionsFromElement;
 
 /***/ }),
-/* 391 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112485,15 +115054,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _canvas = __webpack_require__(392);
+var _canvas = __webpack_require__(397);
 
 var _canvas2 = _interopRequireDefault(_canvas);
 
-var _svg = __webpack_require__(393);
+var _svg = __webpack_require__(398);
 
 var _svg2 = _interopRequireDefault(_svg);
 
-var _object = __webpack_require__(394);
+var _object = __webpack_require__(399);
 
 var _object2 = _interopRequireDefault(_object);
 
@@ -112502,7 +115071,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = { CanvasRenderer: _canvas2.default, SVGRenderer: _svg2.default, ObjectRenderer: _object2.default };
 
 /***/ }),
-/* 392 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112666,7 +115235,7 @@ var CanvasRenderer = function () {
 exports.default = CanvasRenderer;
 
 /***/ }),
-/* 393 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112861,7 +115430,7 @@ var SVGRenderer = function () {
 exports.default = SVGRenderer;
 
 /***/ }),
-/* 394 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112897,7 +115466,7 @@ var ObjectRenderer = function () {
 exports.default = ObjectRenderer;
 
 /***/ }),
-/* 395 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -112957,15 +115526,15 @@ var ErrorHandler = function () {
 exports.default = ErrorHandler;
 
 /***/ }),
-/* 396 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(397)
+var __vue_script__ = __webpack_require__(402)
 /* template */
-var __vue_template__ = __webpack_require__(398)
+var __vue_template__ = __webpack_require__(403)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -113004,7 +115573,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 397 */
+/* 402 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113321,7 +115890,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 398 */
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -114129,15 +116698,15 @@ if (false) {
 }
 
 /***/ }),
-/* 399 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(400)
+var __vue_script__ = __webpack_require__(405)
 /* template */
-var __vue_template__ = __webpack_require__(401)
+var __vue_template__ = __webpack_require__(406)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -114176,7 +116745,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 400 */
+/* 405 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -114421,7 +116990,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 401 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -115180,15 +117749,15 @@ if (false) {
 }
 
 /***/ }),
-/* 402 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(403)
+var __vue_script__ = __webpack_require__(408)
 /* template */
-var __vue_template__ = __webpack_require__(404)
+var __vue_template__ = __webpack_require__(409)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -115227,7 +117796,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 403 */
+/* 408 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115645,7 +118214,7 @@ var REGIONS_TYPE = ['locality', 'sublocality', 'postal_code', 'country', 'admini
 });
 
 /***/ }),
-/* 404 */
+/* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -115695,7 +118264,7 @@ if (false) {
 }
 
 /***/ }),
-/* 405 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -118619,19 +121188,19 @@ if (false) {
 }
 
 /***/ }),
-/* 406 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(407)
+  __webpack_require__(412)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(409)
+var __vue_script__ = __webpack_require__(414)
 /* template */
-var __vue_template__ = __webpack_require__(410)
+var __vue_template__ = __webpack_require__(415)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -118670,13 +121239,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 407 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(408);
+var content = __webpack_require__(413);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -118696,7 +121265,7 @@ if(false) {
 }
 
 /***/ }),
-/* 408 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -118704,13 +121273,13 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 409 */
+/* 414 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118795,6 +121364,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+   props: ['user', 'role'],
    components: {
       'barcode': __WEBPACK_IMPORTED_MODULE_0_vue_barcode___default.a
       // , UpdateShipment
@@ -118904,7 +121474,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 410 */
+/* 415 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -119162,19 +121732,19 @@ if (false) {
 }
 
 /***/ }),
-/* 411 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(412)
+  __webpack_require__(417)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(414)
+var __vue_script__ = __webpack_require__(419)
 /* template */
-var __vue_template__ = __webpack_require__(421)
+var __vue_template__ = __webpack_require__(426)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -119213,13 +121783,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 412 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(413);
+var content = __webpack_require__(418);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -119239,7 +121809,7 @@ if(false) {
 }
 
 /***/ }),
-/* 413 */
+/* 418 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(8)(false);
@@ -119247,13 +121817,13 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* This is for documentation purposes and will not be needed in your application */\n#create .speed-dial {\r\n  position: absolute;\n}\n#create .btn--floating {\r\n  position: relative;\n}\n.btn__content i{\r\n  color: #fff !important;\r\n  width: 50px;\n}\n.speed-dial__list i{\r\n  color: #fff !important;\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* This is for documentation purposes and will not be needed in your application */\n#create .speed-dial {\r\n  position: absolute;\n}\n#create .btn--floating {\r\n  position: relative;\n}\n.btn__content i{\r\n  color: #fff !important;\r\n  width: 50px;\n}\n.speed-dial__list i{\r\n  color: #fff !important;\n}\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 414 */
+/* 419 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -119672,10 +122242,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 
 
-var AddContainer = __webpack_require__(415);
-var EditContainer = __webpack_require__(418);
+var AddContainer = __webpack_require__(420);
+var EditContainer = __webpack_require__(423);
 // let UpdateContainer = require('./UpdateContainer')
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['user', 'role'],
   components: {
     AddContainer: AddContainer, EditContainer: EditContainer, 'barcode': __WEBPACK_IMPORTED_MODULE_0_vue_barcode___default.a
     // , UpdateContainer
@@ -119951,15 +122522,15 @@ var EditContainer = __webpack_require__(418);
 });
 
 /***/ }),
-/* 415 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(416)
+var __vue_script__ = __webpack_require__(421)
 /* template */
-var __vue_template__ = __webpack_require__(417)
+var __vue_template__ = __webpack_require__(422)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -119998,7 +122569,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 416 */
+/* 421 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -120194,7 +122765,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 417 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -120640,15 +123211,15 @@ if (false) {
 }
 
 /***/ }),
-/* 418 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(419)
+var __vue_script__ = __webpack_require__(424)
 /* template */
-var __vue_template__ = __webpack_require__(420)
+var __vue_template__ = __webpack_require__(425)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -120687,7 +123258,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 419 */
+/* 424 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -120932,7 +123503,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 420 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -121691,7 +124262,7 @@ if (false) {
 }
 
 /***/ }),
-/* 421 */
+/* 426 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -123686,15 +126257,15 @@ if (false) {
 }
 
 /***/ }),
-/* 422 */
+/* 427 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(423)
+var __vue_script__ = __webpack_require__(428)
 /* template */
-var __vue_template__ = __webpack_require__(432)
+var __vue_template__ = __webpack_require__(430)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -123733,12 +126304,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 423 */
+/* 428 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Map_js__ = __webpack_require__(431);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Map_js__ = __webpack_require__(429);
 //
 //
 //
@@ -123754,2437 +126325,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 424 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 425 */,
-/* 426 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_chartkick__ = __webpack_require__(427);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deep_equal__ = __webpack_require__(428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_deep_equal___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_deep_equal__);
-/*
- * Vue Chartkick
- * Create beautiful JavaScript charts with one line of Vue
- * https://github.com/ankane/vue-chartkick
- * v0.3.2
- * MIT License
- */
-
-
-
-
-var chartId = 1;
-
-var createComponent = function(Vue, tagName, chartType) {
-  var chartProps = [
-    "colors", "curve", "decimal", "discrete", "donut", "download", "label",
-    "legend", "library", "max", "messages", "min", "points", "prefix", "refresh",
-    "stacked", "suffix", "thousands", "title", "xtitle", "xtype", "ytitle"
-  ];
-  Vue.component(tagName, {
-    props: ["data", "id", "width", "height"].concat(chartProps),
-    render: function(createElement) {
-      return createElement(
-        "div",
-        {
-          attrs: {
-            id: this.chartId
-          },
-          style: this.chartStyle
-        },
-        ["Loading..."]
-      )
-    },
-    data: function() {
-      return {
-        chartId: null
-      }
-    },
-    computed: {
-      chartStyle: function() {
-        // hack to watch data and options
-        this.data;
-        this.chartOptions;
-
-        return {
-          height: this.height || "300px",
-          lineHeight: this.height || "300px",
-          width: this.width || "100%",
-          textAlign: "center",
-          color: "#999",
-          fontSize: "14px",
-          fontFamily: "'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif"
-        }
-      },
-      chartOptions: function() {
-        var this$1 = this;
-
-        var options = {};
-        var props = chartProps;
-        for (var i = 0; i < props.length; i++) {
-          var prop = props[i];
-          if (this$1[prop] !== undefined) {
-            options[prop] = this$1[prop];
-          }
-        }
-        return options
-      }
-    },
-    created: function() {
-      this.chartId = this.chartId || this.id || ("chart-" + chartId++);
-    },
-    mounted: function() {
-      this.chart = new chartType(this.chartId, this.data, this.chartOptions);
-      this.savedState = this.currentState();
-    },
-    updated: function() {
-      // avoid updates when literal objects are used as props
-      // see https://github.com/ankane/vue-chartkick/pull/52
-      // and https://github.com/vuejs/vue/issues/4060
-      var currentState = this.currentState();
-      if (!__WEBPACK_IMPORTED_MODULE_1_deep_equal___default()(currentState, this.savedState)) {
-        this.chart.updateData(this.data, this.chartOptions);
-        this.savedState = currentState;
-      }
-    },
-    beforeDestroy: function() {
-      if (this.chart) {
-        this.chart.destroy();
-      }
-    },
-    methods: {
-      currentState: function() {
-        return {
-          data: this.data,
-          chartOptions: this.chartOptions
-        }
-      }
-    }
-  });
-};
-
-var VueChartkick = {
-  version: "0.3.2",
-  install: function(Vue, options) {
-    if (options && options.adapter) {
-      __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].addAdapter(options.adapter);
-    }
-    createComponent(Vue, "line-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].LineChart);
-    createComponent(Vue, "pie-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].PieChart);
-    createComponent(Vue, "column-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].ColumnChart);
-    createComponent(Vue, "bar-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].BarChart);
-    createComponent(Vue, "area-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].AreaChart);
-    createComponent(Vue, "scatter-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].ScatterChart);
-    createComponent(Vue, "geo-chart", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].GeoChart);
-    createComponent(Vue, "timeline", __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].Timeline);
-  },
-  addAdapter: function(library) {
-    __WEBPACK_IMPORTED_MODULE_0_chartkick__["a" /* default */].addAdapter(library);
-  }
-};
-
-// in browser
-if (typeof window !== "undefined" && window.Vue) {
-  window.Vue.use(VueChartkick);
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (VueChartkick);
-
-
-/***/ }),
-/* 427 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/*
- * Chartkick.js
- * Create beautiful charts with one line of JavaScript
- * https://github.com/ankane/chartkick.js
- * v2.3.5
- * MIT License
- */
-
-function isArray(variable) {
-  return Object.prototype.toString.call(variable) === "[object Array]";
-}
-
-function isFunction(variable) {
-  return variable instanceof Function;
-}
-
-function isPlainObject(variable) {
-  return !isFunction(variable) && variable instanceof Object;
-}
-
-// https://github.com/madrobby/zepto/blob/master/src/zepto.js
-function extend(target, source) {
-  var key;
-  for (key in source) {
-    if (isPlainObject(source[key]) || isArray(source[key])) {
-      if (isPlainObject(source[key]) && !isPlainObject(target[key])) {
-        target[key] = {};
-      }
-      if (isArray(source[key]) && !isArray(target[key])) {
-        target[key] = [];
-      }
-      extend(target[key], source[key]);
-    } else if (source[key] !== undefined) {
-      target[key] = source[key];
-    }
-  }
-}
-
-function merge(obj1, obj2) {
-  var target = {};
-  extend(target, obj1);
-  extend(target, obj2);
-  return target;
-}
-
-var DATE_PATTERN = /^(\d\d\d\d)(-)?(\d\d)(-)?(\d\d)$/i;
-
-// https://github.com/Do/iso8601.js
-var ISO8601_PATTERN = /(\d\d\d\d)(-)?(\d\d)(-)?(\d\d)(T)?(\d\d)(:)?(\d\d)?(:)?(\d\d)?([.,]\d+)?($|Z|([+-])(\d\d)(:)?(\d\d)?)/i;
-var DECIMAL_SEPARATOR = String(1.5).charAt(1);
-
-function parseISO8601(input) {
-  var day, hour, matches, milliseconds, minutes, month, offset, result, seconds, type, year;
-  type = Object.prototype.toString.call(input);
-  if (type === "[object Date]") {
-    return input;
-  }
-  if (type !== "[object String]") {
-    return;
-  }
-  matches = input.match(ISO8601_PATTERN);
-  if (matches) {
-    year = parseInt(matches[1], 10);
-    month = parseInt(matches[3], 10) - 1;
-    day = parseInt(matches[5], 10);
-    hour = parseInt(matches[7], 10);
-    minutes = matches[9] ? parseInt(matches[9], 10) : 0;
-    seconds = matches[11] ? parseInt(matches[11], 10) : 0;
-    milliseconds = matches[12] ? parseFloat(DECIMAL_SEPARATOR + matches[12].slice(1)) * 1000 : 0;
-    result = Date.UTC(year, month, day, hour, minutes, seconds, milliseconds);
-    if (matches[13] && matches[14]) {
-      offset = matches[15] * 60;
-      if (matches[17]) {
-        offset += parseInt(matches[17], 10);
-      }
-      offset *= matches[14] === "-" ? -1 : 1;
-      result -= offset * 60 * 1000;
-    }
-    return new Date(result);
-  }
-}
-// end iso8601.js
-
-function negativeValues(series) {
-  var i, j, data;
-  for (i = 0; i < series.length; i++) {
-    data = series[i].data;
-    for (j = 0; j < data.length; j++) {
-      if (data[j][1] < 0) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-function toStr(n) {
-  return "" + n;
-}
-
-function toFloat(n) {
-  return parseFloat(n);
-}
-
-function toDate(n) {
-  var matches, year, month, day;
-  if (typeof n !== "object") {
-    if (typeof n === "number") {
-      n = new Date(n * 1000); // ms
-    } else {
-      n = toStr(n);
-      if ((matches = n.match(DATE_PATTERN))) {
-      year = parseInt(matches[1], 10);
-      month = parseInt(matches[3], 10) - 1;
-      day = parseInt(matches[5], 10);
-      return new Date(year, month, day);
-      } else { // str
-        // try our best to get the str into iso8601
-        // TODO be smarter about this
-        var str = n.replace(/ /, "T").replace(" ", "").replace("UTC", "Z");
-        n = parseISO8601(str) || new Date(n);
-      }
-    }
-  }
-  return n;
-}
-
-function toArr(n) {
-  if (!isArray(n)) {
-    var arr = [], i;
-    for (i in n) {
-      if (n.hasOwnProperty(i)) {
-        arr.push([i, n[i]]);
-      }
-    }
-    n = arr;
-  }
-  return n;
-}
-
-function jsOptionsFunc(defaultOptions, hideLegend, setTitle, setMin, setMax, setStacked, setXtitle, setYtitle) {
-  return function (chart, opts, chartOptions) {
-    var series = chart.data;
-    var options = merge({}, defaultOptions);
-    options = merge(options, chartOptions || {});
-
-    if (chart.hideLegend || "legend" in opts) {
-      hideLegend(options, opts.legend, chart.hideLegend);
-    }
-
-    if (opts.title) {
-      setTitle(options, opts.title);
-    }
-
-    // min
-    if ("min" in opts) {
-      setMin(options, opts.min);
-    } else if (!negativeValues(series)) {
-      setMin(options, 0);
-    }
-
-    // max
-    if (opts.max) {
-      setMax(options, opts.max);
-    }
-
-    if ("stacked" in opts) {
-      setStacked(options, opts.stacked);
-    }
-
-    if (opts.colors) {
-      options.colors = opts.colors;
-    }
-
-    if (opts.xtitle) {
-      setXtitle(options, opts.xtitle);
-    }
-
-    if (opts.ytitle) {
-      setYtitle(options, opts.ytitle);
-    }
-
-    // merge library last
-    options = merge(options, opts.library || {});
-
-    return options;
-  };
-}
-
-function sortByTime(a, b) {
-  return a[0].getTime() - b[0].getTime();
-}
-
-function sortByNumberSeries(a, b) {
-  return a[0] - b[0];
-}
-
-function sortByNumber(a, b) {
-  return a - b;
-}
-
-function isMinute(d) {
-  return d.getMilliseconds() === 0 && d.getSeconds() === 0;
-}
-
-function isHour(d) {
-  return isMinute(d) && d.getMinutes() === 0;
-}
-
-function isDay(d) {
-  return isHour(d) && d.getHours() === 0;
-}
-
-function isWeek(d, dayOfWeek) {
-  return isDay(d) && d.getDay() === dayOfWeek;
-}
-
-function isMonth(d) {
-  return isDay(d) && d.getDate() === 1;
-}
-
-function isYear(d) {
-  return isMonth(d) && d.getMonth() === 0;
-}
-
-function isDate(obj) {
-  return !isNaN(toDate(obj)) && toStr(obj).length >= 6;
-}
-
-function formatValue(pre, value, options) {
-  pre = pre || "";
-  if (options.prefix) {
-    if (value < 0) {
-      value = value * -1;
-      pre += "-";
-    }
-    pre += options.prefix;
-  }
-
-  if (options.thousands || options.decimal) {
-    value = toStr(value);
-    var parts = value.split(".");
-    value = parts[0];
-    if (options.thousands) {
-      value = value.replace(/\B(?=(\d{3})+(?!\d))/g, options.thousands);
-    }
-    if (parts.length > 1) {
-      value += (options.decimal || ".") + parts[1];
-    }
-  }
-
-  return pre + value + (options.suffix || "");
-}
-
-function allZeros(data) {
-  var i, j, d;
-  for (i = 0; i < data.length; i++) {
-    d = data[i].data;
-    for (j = 0; j < d.length; j++) {
-      if (d[j][1] != 0) {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-
-var baseOptions = {
-  maintainAspectRatio: false,
-  animation: false,
-  tooltips: {
-    displayColors: false,
-    callbacks: {}
-  },
-  legend: {},
-  title: {fontSize: 20, fontColor: "#333"}
-};
-
-var defaultOptions = {
-  scales: {
-    yAxes: [
-      {
-        ticks: {
-          maxTicksLimit: 4
-        },
-        scaleLabel: {
-          fontSize: 16,
-          // fontStyle: "bold",
-          fontColor: "#333"
-        }
-      }
-    ],
-    xAxes: [
-      {
-        gridLines: {
-          drawOnChartArea: false
-        },
-        scaleLabel: {
-          fontSize: 16,
-          // fontStyle: "bold",
-          fontColor: "#333"
-        },
-        time: {},
-        ticks: {}
-      }
-    ]
-  }
-};
-
-// http://there4.io/2012/05/02/google-chart-color-list/
-var defaultColors = [
-  "#3366CC", "#DC3912", "#FF9900", "#109618", "#990099", "#3B3EAC", "#0099C6",
-  "#DD4477", "#66AA00", "#B82E2E", "#316395", "#994499", "#22AA99", "#AAAA11",
-  "#6633CC", "#E67300", "#8B0707", "#329262", "#5574A6", "#651067"
-];
-
-var hideLegend = function (options, legend, hideLegend) {
-  if (legend !== undefined) {
-    options.legend.display = !!legend;
-    if (legend && legend !== true) {
-      options.legend.position = legend;
-    }
-  } else if (hideLegend) {
-    options.legend.display = false;
-  }
-};
-
-var setTitle = function (options, title) {
-  options.title.display = true;
-  options.title.text = title;
-};
-
-var setMin = function (options, min) {
-  if (min !== null) {
-    options.scales.yAxes[0].ticks.min = toFloat(min);
-  }
-};
-
-var setMax = function (options, max) {
-  options.scales.yAxes[0].ticks.max = toFloat(max);
-};
-
-var setBarMin = function (options, min) {
-  if (min !== null) {
-    options.scales.xAxes[0].ticks.min = toFloat(min);
-  }
-};
-
-var setBarMax = function (options, max) {
-  options.scales.xAxes[0].ticks.max = toFloat(max);
-};
-
-var setStacked = function (options, stacked) {
-  options.scales.xAxes[0].stacked = !!stacked;
-  options.scales.yAxes[0].stacked = !!stacked;
-};
-
-var setXtitle = function (options, title) {
-  options.scales.xAxes[0].scaleLabel.display = true;
-  options.scales.xAxes[0].scaleLabel.labelString = title;
-};
-
-var setYtitle = function (options, title) {
-  options.scales.yAxes[0].scaleLabel.display = true;
-  options.scales.yAxes[0].scaleLabel.labelString = title;
-};
-
-// http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
-var addOpacity = function(hex, opacity) {
-  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result ? "rgba(" + parseInt(result[1], 16) + ", " + parseInt(result[2], 16) + ", " + parseInt(result[3], 16) + ", " + opacity + ")" : hex;
-};
-
-var setLabelSize = function (chart, data, options) {
-  var maxLabelSize = Math.ceil(chart.element.offsetWidth / 4.0 / data.labels.length);
-  if (maxLabelSize > 25) {
-    maxLabelSize = 25;
-  }
-  options.scales.xAxes[0].ticks.callback = function (value) {
-    value = toStr(value);
-    if (value.length > maxLabelSize) {
-      return value.substring(0, maxLabelSize - 2) + "...";
-    } else {
-      return value;
-    }
-  };
-};
-
-var setFormatOptions = function(chart, options, chartType) {
-  var formatOptions = {
-    prefix: chart.options.prefix,
-    suffix: chart.options.suffix,
-    thousands: chart.options.thousands,
-    decimal: chart.options.decimal
-  };
-
-  if (formatOptions.prefix || formatOptions.suffix || formatOptions.thousands || formatOptions.decimal) {
-    if (chartType !== "pie") {
-      var myAxes = options.scales.yAxes;
-      if (chartType === "bar") {
-        myAxes = options.scales.xAxes;
-      }
-
-      if (!myAxes[0].ticks.callback) {
-        myAxes[0].ticks.callback = function (value) {
-          return formatValue("", value, formatOptions);
-        };
-      }
-    }
-
-    if (!options.tooltips.callbacks.label) {
-      if (chartType !== "pie") {
-        var valueLabel = chartType === "bar" ? "xLabel" : "yLabel";
-        options.tooltips.callbacks.label = function (tooltipItem, data) {
-          var label = data.datasets[tooltipItem.datasetIndex].label || '';
-          if (label) {
-            label += ': ';
-          }
-          return formatValue(label, tooltipItem[valueLabel], formatOptions);
-        };
-      } else {
-        // need to use separate label for pie charts
-        options.tooltips.callbacks.label = function (tooltipItem, data) {
-          var dataLabel = data.labels[tooltipItem.index];
-          var value = ': ';
-
-          if (isArray(dataLabel)) {
-            // show value on first line of multiline label
-            // need to clone because we are changing the value
-            dataLabel = dataLabel.slice();
-            dataLabel[0] += value;
-          } else {
-            dataLabel += value;
-          }
-
-          return formatValue(dataLabel, data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index], formatOptions);
-        };
-      }
-    }
-  }
-};
-
-var jsOptions = jsOptionsFunc(merge(baseOptions, defaultOptions), hideLegend, setTitle, setMin, setMax, setStacked, setXtitle, setYtitle);
-
-var createDataTable = function (chart, options, chartType) {
-  var datasets = [];
-  var labels = [];
-
-  var colors = chart.options.colors || defaultColors;
-
-  var day = true;
-  var week = true;
-  var dayOfWeek;
-  var month = true;
-  var year = true;
-  var hour = true;
-  var minute = true;
-  var detectType = (chartType === "line" || chartType === "area") && !chart.discrete;
-
-  var series = chart.data;
-
-  var sortedLabels = [];
-
-  var i, j, s, d, key, rows = [];
-  for (i = 0; i < series.length; i++) {
-    s = series[i];
-
-    for (j = 0; j < s.data.length; j++) {
-      d = s.data[j];
-      key = detectType ? d[0].getTime() : d[0];
-      if (!rows[key]) {
-        rows[key] = new Array(series.length);
-      }
-      rows[key][i] = toFloat(d[1]);
-      if (sortedLabels.indexOf(key) === -1) {
-        sortedLabels.push(key);
-      }
-    }
-  }
-
-  if (detectType || chart.options.xtype === "number") {
-    sortedLabels.sort(sortByNumber);
-  }
-
-  var rows2 = [];
-  for (j = 0; j < series.length; j++) {
-    rows2.push([]);
-  }
-
-  var value;
-  var k;
-  for (k = 0; k < sortedLabels.length; k++) {
-    i = sortedLabels[k];
-    if (detectType) {
-      value = new Date(toFloat(i));
-      // TODO make this efficient
-      day = day && isDay(value);
-      if (!dayOfWeek) {
-        dayOfWeek = value.getDay();
-      }
-      week = week && isWeek(value, dayOfWeek);
-      month = month && isMonth(value);
-      year = year && isYear(value);
-      hour = hour && isHour(value);
-      minute = minute && isMinute(value);
-    } else {
-      value = i;
-    }
-    labels.push(value);
-    for (j = 0; j < series.length; j++) {
-      // Chart.js doesn't like undefined
-      rows2[j].push(rows[i][j] === undefined ? null : rows[i][j]);
-    }
-  }
-
-  for (i = 0; i < series.length; i++) {
-    s = series[i];
-
-    var color = s.color || colors[i];
-    var backgroundColor = chartType !== "line" ? addOpacity(color, 0.5) : color;
-
-    var dataset = {
-      label: s.name,
-      data: rows2[i],
-      fill: chartType === "area",
-      borderColor: color,
-      backgroundColor: backgroundColor,
-      pointBackgroundColor: color,
-      borderWidth: 2
-    };
-
-    if (s.stack) {
-      dataset.stack = s.stack;
-    }
-
-    if (chart.options.curve === false) {
-      dataset.lineTension = 0;
-    }
-
-    if (chart.options.points === false) {
-      dataset.pointRadius = 0;
-      dataset.pointHitRadius = 5;
-    }
-
-    datasets.push(merge(dataset, s.library || {}));
-  }
-
-  if (detectType && labels.length > 0) {
-    var minTime = labels[0].getTime();
-    var maxTime = labels[0].getTime();
-    for (i = 1; i < labels.length; i++) {
-      value = labels[i].getTime();
-      if (value < minTime) {
-        minTime = value;
-      }
-      if (value > maxTime) {
-        maxTime = value;
-      }
-    }
-
-    var timeDiff = (maxTime - minTime) / (86400 * 1000.0);
-
-    if (!options.scales.xAxes[0].time.unit) {
-      var step;
-      if (year || timeDiff > 365 * 10) {
-        options.scales.xAxes[0].time.unit = "year";
-        step = 365;
-      } else if (month || timeDiff > 30 * 10) {
-        options.scales.xAxes[0].time.unit = "month";
-        step = 30;
-      } else if (day || timeDiff > 10) {
-        options.scales.xAxes[0].time.unit = "day";
-        step = 1;
-      } else if (hour || timeDiff > 0.5) {
-        options.scales.xAxes[0].time.displayFormats = {hour: "MMM D, h a"};
-        options.scales.xAxes[0].time.unit = "hour";
-        step = 1 / 24.0;
-      } else if (minute) {
-        options.scales.xAxes[0].time.displayFormats = {minute: "h:mm a"};
-        options.scales.xAxes[0].time.unit = "minute";
-        step = 1 / 24.0 / 60.0;
-      }
-
-      if (step && timeDiff > 0) {
-        var unitStepSize = Math.ceil(timeDiff / step / (chart.element.offsetWidth / 100.0));
-        if (week && step === 1) {
-          unitStepSize = Math.ceil(unitStepSize / 7.0) * 7;
-        }
-        options.scales.xAxes[0].time.unitStepSize = unitStepSize;
-      }
-    }
-
-    if (!options.scales.xAxes[0].time.tooltipFormat) {
-      if (day) {
-        options.scales.xAxes[0].time.tooltipFormat = "ll";
-      } else if (hour) {
-        options.scales.xAxes[0].time.tooltipFormat = "MMM D, h a";
-      } else if (minute) {
-        options.scales.xAxes[0].time.tooltipFormat = "h:mm a";
-      }
-    }
-  }
-
-  var data = {
-    labels: labels,
-    datasets: datasets
-  };
-
-  return data;
-};
-
-var defaultExport = function defaultExport(library) {
-  this.name = "chartjs";
-  this.library = library;
-};
-
-defaultExport.prototype.renderLineChart = function renderLineChart (chart, chartType) {
-  if (chart.options.xtype === "number") {
-    return this.renderScatterChart(chart, chartType, true);
-  }
-
-  var chartOptions = {};
-  // fix for https://github.com/chartjs/Chart.js/issues/2441
-  if (!chart.options.max && allZeros(chart.data)) {
-    chartOptions.max = 1;
-  }
-
-  var options = jsOptions(chart, merge(chartOptions, chart.options));
-  setFormatOptions(chart, options, chartType);
-
-  var data = createDataTable(chart, options, chartType || "line");
-
-  options.scales.xAxes[0].type = chart.discrete ? "category" : "time";
-
-  this.drawChart(chart, "line", data, options);
-};
-
-defaultExport.prototype.renderPieChart = function renderPieChart (chart) {
-  var options = merge({}, baseOptions);
-  if (chart.options.donut) {
-    options.cutoutPercentage = 50;
-  }
-
-  if ("legend" in chart.options) {
-    hideLegend(options, chart.options.legend);
-  }
-
-  if (chart.options.title) {
-    setTitle(options, chart.options.title);
-  }
-
-  options = merge(options, chart.options.library || {});
-  setFormatOptions(chart, options, "pie");
-
-  var labels = [];
-  var values = [];
-  for (var i = 0; i < chart.data.length; i++) {
-    var point = chart.data[i];
-    labels.push(point[0]);
-    values.push(point[1]);
-  }
-
-  var data = {
-    labels: labels,
-    datasets: [
-      {
-        data: values,
-        backgroundColor: chart.options.colors || defaultColors
-      }
-    ]
-  };
-
-  this.drawChart(chart, "pie", data, options);
-};
-
-defaultExport.prototype.renderColumnChart = function renderColumnChart (chart, chartType) {
-  var options;
-  if (chartType === "bar") {
-    options = jsOptionsFunc(merge(baseOptions, defaultOptions), hideLegend, setTitle, setBarMin, setBarMax, setStacked, setXtitle, setYtitle)(chart, chart.options);
-  } else {
-    options = jsOptions(chart, chart.options);
-  }
-  setFormatOptions(chart, options, chartType);
-  var data = createDataTable(chart, options, "column");
-  if (chartType !== "bar") {
-    setLabelSize(chart, data, options);
-  }
-  this.drawChart(chart, (chartType === "bar" ? "horizontalBar" : "bar"), data, options);
-};
-
-defaultExport.prototype.renderAreaChart = function renderAreaChart (chart) {
-  this.renderLineChart(chart, "area");
-};
-
-defaultExport.prototype.renderBarChart = function renderBarChart (chart) {
-  this.renderColumnChart(chart, "bar");
-};
-
-defaultExport.prototype.renderScatterChart = function renderScatterChart (chart, chartType, lineChart) {
-  chartType = chartType || "line";
-
-  var options = jsOptions(chart, chart.options);
-  if (!lineChart) {
-    setFormatOptions(chart, options, chartType);
-  }
-
-  var colors = chart.options.colors || defaultColors;
-
-  var datasets = [];
-  var series = chart.data;
-  for (var i = 0; i < series.length; i++) {
-    var s = series[i];
-    var d = [];
-    for (var j = 0; j < s.data.length; j++) {
-      var point = {
-        x: toFloat(s.data[j][0]),
-        y: toFloat(s.data[j][1])
-      };
-      if (chartType === "bubble") {
-        point.r = toFloat(s.data[j][2]);
-      }
-      d.push(point);
-    }
-
-    var color = s.color || colors[i];
-    var backgroundColor = chartType === "area" ? addOpacity(color, 0.5) : color;
-
-    datasets.push({
-      label: s.name,
-      showLine: lineChart || false,
-      data: d,
-      borderColor: color,
-      backgroundColor: backgroundColor,
-      pointBackgroundColor: color,
-      fill: chartType === "area"
-    });
-  }
-
-  if (chartType === "area") {
-    chartType = "line";
-  }
-
-  var data = {datasets: datasets};
-
-  options.scales.xAxes[0].type = "linear";
-  options.scales.xAxes[0].position = "bottom";
-
-  this.drawChart(chart, chartType, data, options);
-};
-
-defaultExport.prototype.renderBubbleChart = function renderBubbleChart (chart) {
-  this.renderScatterChart(chart, "bubble");
-};
-
-defaultExport.prototype.drawChart = function drawChart (chart, type, data, options) {
-  if (chart.chart) {
-    chart.chart.destroy();
-  }
-
-  chart.element.innerHTML = "<canvas></canvas>";
-  var ctx = chart.element.getElementsByTagName("CANVAS")[0];
-  chart.chart = new this.library(ctx, {
-    type: type,
-    data: data,
-    options: options
-  });
-};
-
-var defaultOptions$1 = {
-  chart: {},
-  xAxis: {
-    title: {
-      text: null
-    },
-    labels: {
-      style: {
-        fontSize: "12px"
-      }
-    }
-  },
-  yAxis: {
-    title: {
-      text: null
-    },
-    labels: {
-      style: {
-        fontSize: "12px"
-      }
-    }
-  },
-  title: {
-    text: null
-  },
-  credits: {
-    enabled: false
-  },
-  legend: {
-    borderWidth: 0
-  },
-  tooltip: {
-    style: {
-      fontSize: "12px"
-    }
-  },
-  plotOptions: {
-    areaspline: {},
-    series: {
-      marker: {}
-    }
-  }
-};
-
-var hideLegend$1 = function (options, legend, hideLegend) {
-  if (legend !== undefined) {
-    options.legend.enabled = !!legend;
-    if (legend && legend !== true) {
-      if (legend === "top" || legend === "bottom") {
-        options.legend.verticalAlign = legend;
-      } else {
-        options.legend.layout = "vertical";
-        options.legend.verticalAlign = "middle";
-        options.legend.align = legend;
-      }
-    }
-  } else if (hideLegend) {
-    options.legend.enabled = false;
-  }
-};
-
-var setTitle$1 = function (options, title) {
-  options.title.text = title;
-};
-
-var setMin$1 = function (options, min) {
-  options.yAxis.min = min;
-};
-
-var setMax$1 = function (options, max) {
-  options.yAxis.max = max;
-};
-
-var setStacked$1 = function (options, stacked) {
-  options.plotOptions.series.stacking = stacked ? (stacked === true ? "normal" : stacked) : null;
-};
-
-var setXtitle$1 = function (options, title) {
-  options.xAxis.title.text = title;
-};
-
-var setYtitle$1 = function (options, title) {
-  options.yAxis.title.text = title;
-};
-
-var jsOptions$1 = jsOptionsFunc(defaultOptions$1, hideLegend$1, setTitle$1, setMin$1, setMax$1, setStacked$1, setXtitle$1, setYtitle$1);
-
-var setFormatOptions$1 = function(chart, options, chartType) {
-  var formatOptions = {
-    prefix: chart.options.prefix,
-    suffix: chart.options.suffix,
-    thousands: chart.options.thousands,
-    decimal: chart.options.decimal
-  };
-
-  if (formatOptions.prefix || formatOptions.suffix || formatOptions.thousands || formatOptions.decimal) {
-    if (chartType !== "pie" && !options.yAxis.labels.formatter) {
-      options.yAxis.labels.formatter = function () {
-        return formatValue("", this.value, formatOptions);
-      };
-    }
-
-    if (!options.tooltip.pointFormatter) {
-      options.tooltip.pointFormatter = function () {
-        return '<span style="color:' + this.color + '>\u25CF</span> ' + formatValue(this.series.name + ': <b>', this.y, formatOptions) + '</b><br/>';
-      };
-    }
-  }
-};
-
-var defaultExport$1 = function defaultExport(library) {
-  this.name = "highcharts";
-  this.library = library;
-};
-
-defaultExport$1.prototype.renderLineChart = function renderLineChart (chart, chartType) {
-  chartType = chartType || "spline";
-  var chartOptions = {};
-  if (chartType === "areaspline") {
-    chartOptions = {
-      plotOptions: {
-        areaspline: {
-          stacking: "normal"
-        },
-        area: {
-          stacking: "normal"
-        },
-        series: {
-          marker: {
-            enabled: false
-          }
-        }
-      }
-    };
-  }
-
-  if (chart.options.curve === false) {
-    if (chartType === "areaspline") {
-      chartType = "area";
-    } else if (chartType === "spline") {
-      chartType = "line";
-    }
-  }
-
-  var options = jsOptions$1(chart, chart.options, chartOptions), data, i, j;
-  options.xAxis.type = chart.discrete ? "category" : "datetime";
-  if (!options.chart.type) {
-    options.chart.type = chartType;
-  }
-  setFormatOptions$1(chart, options, chartType);
-
-  var series = chart.data;
-  for (i = 0; i < series.length; i++) {
-    data = series[i].data;
-    if (!chart.discrete) {
-      for (j = 0; j < data.length; j++) {
-        data[j][0] = data[j][0].getTime();
-      }
-    }
-    series[i].marker = {symbol: "circle"};
-    if (chart.options.points === false) {
-      series[i].marker.enabled = false;
-    }
-  }
-
-  this.drawChart(chart, series, options);
-};
-
-defaultExport$1.prototype.renderScatterChart = function renderScatterChart (chart) {
-  var options = jsOptions$1(chart, chart.options, {});
-  options.chart.type = "scatter";
-  this.drawChart(chart, chart.data, options);
-};
-
-defaultExport$1.prototype.renderPieChart = function renderPieChart (chart) {
-  var chartOptions = merge(defaultOptions$1, {});
-
-  if (chart.options.colors) {
-    chartOptions.colors = chart.options.colors;
-  }
-  if (chart.options.donut) {
-    chartOptions.plotOptions = {pie: {innerSize: "50%"}};
-  }
-
-  if ("legend" in chart.options) {
-    hideLegend$1(chartOptions, chart.options.legend);
-  }
-
-  if (chart.options.title) {
-    setTitle$1(chartOptions, chart.options.title);
-  }
-
-  var options = merge(chartOptions, chart.options.library || {});
-  setFormatOptions$1(chart, options, "pie");
-  var series = [{
-    type: "pie",
-    name: chart.options.label || "Value",
-    data: chart.data
-  }];
-
-  this.drawChart(chart, series, options);
-};
-
-defaultExport$1.prototype.renderColumnChart = function renderColumnChart (chart, chartType) {
-  chartType = chartType || "column";
-  var series = chart.data;
-  var options = jsOptions$1(chart, chart.options), i, j, s, d, rows = [], categories = [];
-  options.chart.type = chartType;
-  setFormatOptions$1(chart, options, chartType);
-
-  for (i = 0; i < series.length; i++) {
-    s = series[i];
-
-    for (j = 0; j < s.data.length; j++) {
-      d = s.data[j];
-      if (!rows[d[0]]) {
-        rows[d[0]] = new Array(series.length);
-        categories.push(d[0]);
-      }
-      rows[d[0]][i] = d[1];
-    }
-  }
-
-  if (chart.options.xtype === "number") {
-    categories.sort(sortByNumber);
-  }
-
-  options.xAxis.categories = categories;
-
-  var newSeries = [], d2;
-  for (i = 0; i < series.length; i++) {
-    d = [];
-    for (j = 0; j < categories.length; j++) {
-      d.push(rows[categories[j]][i] || 0);
-    }
-
-    d2 = {
-      name: series[i].name,
-      data: d
-    };
-    if (series[i].stack) {
-      d2.stack = series[i].stack;
-    }
-
-    newSeries.push(d2);
-  }
-
-  this.drawChart(chart, newSeries, options);
-};
-
-defaultExport$1.prototype.renderBarChart = function renderBarChart (chart) {
-  this.renderColumnChart(chart, "bar");
-};
-
-defaultExport$1.prototype.renderAreaChart = function renderAreaChart (chart) {
-  this.renderLineChart(chart, "areaspline");
-};
-
-defaultExport$1.prototype.drawChart = function drawChart (chart, data, options) {
-  if (chart.chart) {
-    chart.chart.destroy();
-  }
-
-  options.chart.renderTo = chart.element.id;
-  options.series = data;
-  chart.chart = new this.library.Chart(options);
-};
-
-var loaded = {};
-var callbacks = [];
-
-// Set chart options
-var defaultOptions$2 = {
-  chartArea: {},
-  fontName: "'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif",
-  pointSize: 6,
-  legend: {
-    textStyle: {
-      fontSize: 12,
-      color: "#444"
-    },
-    alignment: "center",
-    position: "right"
-  },
-  curveType: "function",
-  hAxis: {
-    textStyle: {
-      color: "#666",
-      fontSize: 12
-    },
-    titleTextStyle: {},
-    gridlines: {
-      color: "transparent"
-    },
-    baselineColor: "#ccc",
-    viewWindow: {}
-  },
-  vAxis: {
-    textStyle: {
-      color: "#666",
-      fontSize: 12
-    },
-    titleTextStyle: {},
-    baselineColor: "#ccc",
-    viewWindow: {}
-  },
-  tooltip: {
-    textStyle: {
-      color: "#666",
-      fontSize: 12
-    }
-  }
-};
-
-var hideLegend$2 = function (options, legend, hideLegend) {
-  if (legend !== undefined) {
-    var position;
-    if (!legend) {
-      position = "none";
-    } else if (legend === true) {
-      position = "right";
-    } else {
-      position = legend;
-    }
-    options.legend.position = position;
-  } else if (hideLegend) {
-    options.legend.position = "none";
-  }
-};
-
-var setTitle$2 = function (options, title) {
-  options.title = title;
-  options.titleTextStyle = {color: "#333", fontSize: "20px"};
-};
-
-var setMin$2 = function (options, min) {
-  options.vAxis.viewWindow.min = min;
-};
-
-var setMax$2 = function (options, max) {
-  options.vAxis.viewWindow.max = max;
-};
-
-var setBarMin$1 = function (options, min) {
-  options.hAxis.viewWindow.min = min;
-};
-
-var setBarMax$1 = function (options, max) {
-  options.hAxis.viewWindow.max = max;
-};
-
-var setStacked$2 = function (options, stacked) {
-  options.isStacked = stacked ? stacked : false;
-};
-
-var setXtitle$2 = function (options, title) {
-  options.hAxis.title = title;
-  options.hAxis.titleTextStyle.italic = false;
-};
-
-var setYtitle$2 = function (options, title) {
-  options.vAxis.title = title;
-  options.vAxis.titleTextStyle.italic = false;
-};
-
-var jsOptions$2 = jsOptionsFunc(defaultOptions$2, hideLegend$2, setTitle$2, setMin$2, setMax$2, setStacked$2, setXtitle$2, setYtitle$2);
-
-var resize = function (callback) {
-  if (window.attachEvent) {
-    window.attachEvent("onresize", callback);
-  } else if (window.addEventListener) {
-    window.addEventListener("resize", callback, true);
-  }
-  callback();
-};
-
-var defaultExport$2 = function defaultExport(library) {
-  this.name = "google";
-  this.library = library;
-};
-
-defaultExport$2.prototype.renderLineChart = function renderLineChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var chartOptions = {};
-
-    if (chart.options.curve === false) {
-      chartOptions.curveType = "none";
-    }
-
-    if (chart.options.points === false) {
-      chartOptions.pointSize = 0;
-    }
-
-    var options = jsOptions$2(chart, chart.options, chartOptions);
-    var columnType = chart.discrete ? "string" : "datetime";
-    if (chart.options.xtype === "number") {
-      columnType = "number";
-    }
-    var data = this$1.createDataTable(chart.data, columnType);
-
-    this$1.drawChart(chart, this$1.library.visualization.LineChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderPieChart = function renderPieChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var chartOptions = {
-      chartArea: {
-        top: "10%",
-        height: "80%"
-      },
-      legend: {}
-    };
-    if (chart.options.colors) {
-      chartOptions.colors = chart.options.colors;
-    }
-    if (chart.options.donut) {
-      chartOptions.pieHole = 0.5;
-    }
-    if ("legend" in chart.options) {
-      hideLegend$2(chartOptions, chart.options.legend);
-    }
-    if (chart.options.title) {
-      setTitle$2(chartOptions, chart.options.title);
-    }
-    var options = merge(merge(defaultOptions$2, chartOptions), chart.options.library || {});
-
-    var data = new this$1.library.visualization.DataTable();
-    data.addColumn("string", "");
-    data.addColumn("number", "Value");
-    data.addRows(chart.data);
-
-    this$1.drawChart(chart, this$1.library.visualization.PieChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderColumnChart = function renderColumnChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var options = jsOptions$2(chart, chart.options);
-    var data = this$1.createDataTable(chart.data, "string", chart.options.xtype);
-
-    this$1.drawChart(chart, this$1.library.visualization.ColumnChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderBarChart = function renderBarChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var chartOptions = {
-      hAxis: {
-        gridlines: {
-          color: "#ccc"
-        }
-      }
-    };
-    var options = jsOptionsFunc(defaultOptions$2, hideLegend$2, setTitle$2, setBarMin$1, setBarMax$1, setStacked$2, setXtitle$2, setYtitle$2)(chart, chart.options, chartOptions);
-    var data = this$1.createDataTable(chart.data, "string", chart.options.xtype);
-
-    this$1.drawChart(chart, this$1.library.visualization.BarChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderAreaChart = function renderAreaChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var chartOptions = {
-      isStacked: true,
-      pointSize: 0,
-      areaOpacity: 0.5
-    };
-
-    var options = jsOptions$2(chart, chart.options, chartOptions);
-    var columnType = chart.discrete ? "string" : "datetime";
-    if (chart.options.xtype === "number") {
-      columnType = "number";
-    }
-    var data = this$1.createDataTable(chart.data, columnType);
-
-    this$1.drawChart(chart, this$1.library.visualization.AreaChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderGeoChart = function renderGeoChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var chartOptions = {
-      legend: "none",
-      colorAxis: {
-        colors: chart.options.colors || ["#f6c7b6", "#ce502d"]
-      }
-    };
-    var options = merge(merge(defaultOptions$2, chartOptions), chart.options.library || {});
-
-    var data = new this$1.library.visualization.DataTable();
-    data.addColumn("string", "");
-    data.addColumn("number", chart.options.label || "Value");
-    data.addRows(chart.data);
-
-    this$1.drawChart(chart, this$1.library.visualization.GeoChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderScatterChart = function renderScatterChart (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, function () {
-    var chartOptions = {};
-    var options = jsOptions$2(chart, chart.options, chartOptions);
-
-    var series = chart.data, rows2 = [], i, j, data, d;
-    for (i = 0; i < series.length; i++) {
-      d = series[i].data;
-      for (j = 0; j < d.length; j++) {
-        var row = new Array(series.length + 1);
-        row[0] = d[j][0];
-        row[i + 1] = d[j][1];
-        rows2.push(row);
-      }
-    }
-
-    data = new this$1.library.visualization.DataTable();
-    data.addColumn("number", "");
-    for (i = 0; i < series.length; i++) {
-      data.addColumn("number", series[i].name);
-    }
-    data.addRows(rows2);
-
-    this$1.drawChart(chart, this$1.library.visualization.ScatterChart, data, options);
-  });
-};
-
-defaultExport$2.prototype.renderTimeline = function renderTimeline (chart) {
-    var this$1 = this;
-
-  this.waitForLoaded(chart, "timeline", function () {
-    var chartOptions = {
-      legend: "none"
-    };
-
-    if (chart.options.colors) {
-      chartOptions.colors = chart.options.colors;
-    }
-    var options = merge(merge(defaultOptions$2, chartOptions), chart.options.library || {});
-
-    var data = new this$1.library.visualization.DataTable();
-    data.addColumn({type: "string", id: "Name"});
-    data.addColumn({type: "date", id: "Start"});
-    data.addColumn({type: "date", id: "End"});
-    data.addRows(chart.data);
-
-    chart.element.style.lineHeight = "normal";
-
-    this$1.drawChart(chart, this$1.library.visualization.Timeline, data, options);
-  });
-};
-
-defaultExport$2.prototype.drawChart = function drawChart (chart, type, data, options) {
-  if (chart.chart) {
-    chart.chart.clearChart();
-  }
-
-  chart.chart = new type(chart.element);
-  resize(function () {
-    chart.chart.draw(data, options);
-  });
-};
-
-defaultExport$2.prototype.waitForLoaded = function waitForLoaded (chart, pack, callback) {
-    var this$1 = this;
-
-  if (!callback) {
-    callback = pack;
-    pack = "corechart";
-  }
-
-  callbacks.push({pack: pack, callback: callback});
-
-  if (loaded[pack]) {
-    this.runCallbacks();
-  } else {
-    loaded[pack] = true;
-
-    // https://groups.google.com/forum/#!topic/google-visualization-api/fMKJcyA2yyI
-    var loadOptions = {
-      packages: [pack],
-      callback: function () { this$1.runCallbacks(); }
-    };
-    var config = chart.__config();
-    if (config.language) {
-      loadOptions.language = config.language;
-    }
-    if (pack === "corechart" && config.mapsApiKey) {
-      loadOptions.mapsApiKey = config.mapsApiKey;
-    }
-
-    if (this.library.setOnLoadCallback) {
-      this.library.load("visualization", "1", loadOptions);
-    } else {
-      this.library.charts.load("current", loadOptions);
-    }
-  }
-};
-
-defaultExport$2.prototype.runCallbacks = function runCallbacks () {
-    var this$1 = this;
-
-  var cb, call;
-  for (var i = 0; i < callbacks.length; i++) {
-    cb = callbacks[i];
-    call = this$1.library.visualization && ((cb.pack === "corechart" && this$1.library.visualization.LineChart) || (cb.pack === "timeline" && this$1.library.visualization.Timeline));
-    if (call) {
-      cb.callback();
-      callbacks.splice(i, 1);
-      i--;
-    }
-  }
-};
-
-// cant use object as key
-defaultExport$2.prototype.createDataTable = function createDataTable (series, columnType, xtype) {
-  var i, j, s, d, key, rows = [], sortedLabels = [];
-  for (i = 0; i < series.length; i++) {
-    s = series[i];
-
-    for (j = 0; j < s.data.length; j++) {
-      d = s.data[j];
-      key = (columnType === "datetime") ? d[0].getTime() : d[0];
-      if (!rows[key]) {
-        rows[key] = new Array(series.length);
-        sortedLabels.push(key);
-      }
-      rows[key][i] = toFloat(d[1]);
-    }
-  }
-
-  var rows2 = [];
-  var day = true;
-  var value;
-  for (j = 0; j < sortedLabels.length; j++) {
-    i = sortedLabels[j];
-    if (columnType === "datetime") {
-      value = new Date(toFloat(i));
-      day = day && isDay(value);
-    } else if (columnType === "number") {
-      value = toFloat(i);
-    } else {
-      value = i;
-    }
-    rows2.push([value].concat(rows[i]));
-  }
-  if (columnType === "datetime") {
-    rows2.sort(sortByTime);
-  } else if (columnType === "number") {
-    rows2.sort(sortByNumberSeries);
-  }
-
-  if (xtype === "number") {
-    rows2.sort(sortByNumberSeries);
-
-    for (i = 0; i < rows2.length; i++) {
-      rows2[i][0] = toStr(rows2[i][0]);
-    }
-  }
-
-  // create datatable
-  var data = new this.library.visualization.DataTable();
-  columnType = columnType === "datetime" && day ? "date" : columnType;
-  data.addColumn(columnType, "");
-  for (i = 0; i < series.length; i++) {
-    data.addColumn("number", series[i].name);
-  }
-  data.addRows(rows2);
-
-  return data;
-};
-
-var pendingRequests = [], runningRequests = 0, maxRequests = 4;
-
-function pushRequest(url, success, error) {
-  pendingRequests.push([url, success, error]);
-  runNext();
-}
-
-function runNext() {
-  if (runningRequests < maxRequests) {
-    var request = pendingRequests.shift();
-    if (request) {
-      runningRequests++;
-      getJSON(request[0], request[1], request[2]);
-      runNext();
-    }
-  }
-}
-
-function requestComplete() {
-  runningRequests--;
-  runNext();
-}
-
-function getJSON(url, success, error) {
-  ajaxCall(url, success, function (jqXHR, textStatus, errorThrown) {
-    var message = (typeof errorThrown === "string") ? errorThrown : errorThrown.message;
-    error(message);
-  });
-}
-
-function ajaxCall(url, success, error) {
-  var $ = window.jQuery || window.Zepto || window.$;
-
-  if ($) {
-    $.ajax({
-      dataType: "json",
-      url: url,
-      success: success,
-      error: error,
-      complete: requestComplete
-    });
-  } else {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onload = function () {
-      requestComplete();
-      if (xhr.status === 200) {
-        success(JSON.parse(xhr.responseText), xhr.statusText, xhr);
-      } else {
-        error(xhr, "error", xhr.statusText);
-      }
-    };
-    xhr.send();
-  }
-}
-
-var config = (typeof window !== "undefined" && window.Chartkick) || {};
-var adapters = [];
-
-// helpers
-
-function setText(element, text) {
-  if (document.body.innerText) {
-    element.innerText = text;
-  } else {
-    element.textContent = text;
-  }
-}
-
-function chartError(element, message) {
-  setText(element, "Error Loading Chart: " + message);
-  element.style.color = "#ff0000";
-}
-
-function errorCatcher(chart) {
-  try {
-    chart.__render();
-  } catch (err) {
-    chartError(chart.element, err.message);
-    throw err;
-  }
-}
-
-function fetchDataSource(chart, dataSource) {
-  if (typeof dataSource === "string") {
-    pushRequest(dataSource, function (data) {
-      chart.rawData = data;
-      errorCatcher(chart);
-    }, function (message) {
-      chartError(chart.element, message);
-    });
-  } else {
-    chart.rawData = dataSource;
-    errorCatcher(chart);
-  }
-}
-
-function addDownloadButton(chart) {
-  var element = chart.element;
-  var link = document.createElement("a");
-  link.download = chart.options.download === true ? "chart.png" : chart.options.download; // http://caniuse.com/download
-  link.style.position = "absolute";
-  link.style.top = "20px";
-  link.style.right = "20px";
-  link.style.zIndex = 1000;
-  link.style.lineHeight = "20px";
-  link.target = "_blank"; // for safari
-  var image = document.createElement("img");
-  image.alt = "Download";
-  image.style.border = "none";
-  // icon from font-awesome
-  // http://fa2png.io/
-  image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABCFBMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMywEsqxAAAAV3RSTlMAAQIDBggJCgsMDQ4PERQaHB0eISIjJCouLzE0OTo/QUJHSUpLTU5PUllhYmltcHh5foWLjI+SlaCio6atr7S1t7m6vsHHyM7R2tze5Obo7fHz9ff5+/1hlxK2AAAA30lEQVQYGUXBhVYCQQBA0TdYWAt2d3d3YWAHyur7/z9xgD16Lw0DW+XKx+1GgX+FRzM3HWQWrHl5N/oapW5RPe0PkBu+UYeICvozTWZVK23Ao04B79oJrOsJDOoxkZoQPWgX29pHpCZEk7rEvQYiNSFq1UMqvlCjJkRBS1R8hb00Vb/TajtBL7nTHE1X1vyMQF732dQhyF2o6SAwrzP06iUQzvwsArlnzcOdrgBhJyHa1QOgO9U1GsKuvjUTjavliZYQ8nNPapG6sap/3nrIdJ6bOWzmX/fy0XVpfzZP3S8OJT3g9EEiJwAAAABJRU5ErkJggg==";
-  link.appendChild(image);
-  element.style.position = "relative";
-
-  chart.downloadAttached = true;
-
-  // mouseenter
-  addEvent(element, "mouseover", function(e) {
-    var related = e.relatedTarget;
-    // check download option again to ensure it wasn't changed
-    if (!related || (related !== this && !childOf(this, related)) && chart.options.download) {
-      link.href = chart.toImage();
-      element.appendChild(link);
-    }
-  });
-
-  // mouseleave
-  addEvent(element, "mouseout", function(e) {
-    var related = e.relatedTarget;
-    if (!related || (related !== this && !childOf(this, related))) {
-      if (link.parentNode) {
-        link.parentNode.removeChild(link);
-      }
-    }
-  });
-}
-
-// http://stackoverflow.com/questions/10149963/adding-event-listener-cross-browser
-function addEvent(elem, event, fn) {
-  if (elem.addEventListener) {
-    elem.addEventListener(event, fn, false);
-  } else {
-    elem.attachEvent("on" + event, function() {
-      // set the this pointer same as addEventListener when fn is called
-      return(fn.call(elem, window.event));
-    });
-  }
-}
-
-// https://gist.github.com/shawnbot/4166283
-function childOf(p, c) {
-  if (p === c) { return false; }
-  while (c && c !== p) { c = c.parentNode; }
-  return c === p;
-}
-
-function getAdapterType(library) {
-  if (library) {
-    if (library.product === "Highcharts") {
-      return defaultExport$1;
-    } else if (library.setOnLoadCallback || library.charts) {
-      return defaultExport$2;
-    } else if (isFunction(library)) {
-      return defaultExport;
-    }
-  }
-  throw new Error("Unknown adapter");
-}
-
-function addAdapter(library) {
-  var adapterType = getAdapterType(library);
-  var adapter = new adapterType(library);
-
-  if (adapters.indexOf(adapter) === -1) {
-    adapters.push(adapter);
-  }
-}
-
-function loadAdapters() {
-  if ("Chart" in window) {
-    addAdapter(window.Chart);
-  }
-
-  if ("Highcharts" in window) {
-    addAdapter(window.Highcharts);
-  }
-
-  if (window.google && (window.google.setOnLoadCallback || window.google.charts)) {
-    addAdapter(window.google);
-  }
-}
-
-function dataEmpty(data, chartType) {
-  if (chartType === "PieChart" || chartType === "GeoChart" || chartType === "Timeline") {
-    return data.length === 0;
-  } else {
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].data.length > 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-}
-
-function renderChart(chartType, chart) {
-  if (chart.options.messages && chart.options.messages.empty && dataEmpty(chart.data, chartType)) {
-    setText(chart.element, chart.options.messages.empty);
-  } else {
-    callAdapter(chartType, chart);
-    if (chart.options.download && !chart.downloadAttached && chart.adapter === "chartjs") {
-      addDownloadButton(chart);
-    }
-  }
-}
-
-// TODO remove chartType if cross-browser way
-// to get the name of the chart class
-function callAdapter(chartType, chart) {
-  var i, adapter, fnName, adapterName;
-  fnName = "render" + chartType;
-  adapterName = chart.options.adapter;
-
-  loadAdapters();
-
-  for (i = 0; i < adapters.length; i++) {
-    adapter = adapters[i];
-    if ((!adapterName || adapterName === adapter.name) && isFunction(adapter[fnName])) {
-      chart.adapter = adapter.name;
-      return adapter[fnName](chart);
-    }
-  }
-
-  if (adapters.length > 0) {
-    throw new Error("No charting library found for " + chartType);
-  } else {
-    throw new Error("No charting libraries found - be sure to include one before your charts");
-  }
-}
-
-// process data
-
-var toFormattedKey = function (key, keyType) {
-  if (keyType === "number") {
-    key = toFloat(key);
-  } else if (keyType === "datetime") {
-    key = toDate(key);
-  } else {
-    key = toStr(key);
-  }
-  return key;
-};
-
-var formatSeriesData = function (data, keyType) {
-  var r = [], key, j;
-  for (j = 0; j < data.length; j++) {
-    if (keyType === "bubble") {
-      r.push([toFloat(data[j][0]), toFloat(data[j][1]), toFloat(data[j][2])]);
-    } else {
-      key = toFormattedKey(data[j][0], keyType);
-      r.push([key, toFloat(data[j][1])]);
-    }
-  }
-  if (keyType === "datetime") {
-    r.sort(sortByTime);
-  } else if (keyType === "number") {
-    r.sort(sortByNumberSeries);
-  }
-  return r;
-};
-
-function detectDiscrete(series) {
-  var i, j, data;
-  for (i = 0; i < series.length; i++) {
-    data = toArr(series[i].data);
-    for (j = 0; j < data.length; j++) {
-      if (!isDate(data[j][0])) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
-
-// creates a shallow copy of each element of the array
-// elements are expected to be objects
-function copySeries(series) {
-  var newSeries = [], i, j;
-  for (i = 0; i < series.length; i++) {
-    var copy = {};
-    for (j in series[i]) {
-      if (series[i].hasOwnProperty(j)) {
-        copy[j] = series[i][j];
-      }
-    }
-    newSeries.push(copy);
-  }
-  return newSeries;
-}
-
-function processSeries(chart, keyType) {
-  var i;
-
-  var opts = chart.options;
-  var series = chart.rawData;
-
-  // see if one series or multiple
-  if (!isArray(series) || typeof series[0] !== "object" || isArray(series[0])) {
-    series = [{name: opts.label || "Value", data: series}];
-    chart.hideLegend = true;
-  } else {
-    chart.hideLegend = false;
-  }
-  if ((opts.discrete === null || opts.discrete === undefined) && keyType !== "bubble" && keyType !== "number") {
-    chart.discrete = detectDiscrete(series);
-  } else {
-    chart.discrete = opts.discrete;
-  }
-  if (chart.discrete) {
-    keyType = "string";
-  }
-  if (chart.options.xtype) {
-    keyType = chart.options.xtype;
-  }
-
-  // right format
-  series = copySeries(series);
-  for (i = 0; i < series.length; i++) {
-    series[i].data = formatSeriesData(toArr(series[i].data), keyType);
-  }
-
-  return series;
-}
-
-function processSimple(chart) {
-  var perfectData = toArr(chart.rawData), i;
-  for (i = 0; i < perfectData.length; i++) {
-    perfectData[i] = [toStr(perfectData[i][0]), toFloat(perfectData[i][1])];
-  }
-  return perfectData;
-}
-
-// define classes
-
-var Chart = function Chart(element, dataSource, options) {
-  var elementId;
-  if (typeof element === "string") {
-    elementId = element;
-    element = document.getElementById(element);
-    if (!element) {
-      throw new Error("No element with id " + elementId);
-    }
-  }
-  this.element = element;
-  this.options = merge(Chartkick.options, options || {});
-  this.dataSource = dataSource;
-
-  Chartkick.charts[element.id] = this;
-
-  fetchDataSource(this, dataSource);
-
-  if (this.options.refresh) {
-    this.startRefresh();
-  }
-};
-
-Chart.prototype.getElement = function getElement () {
-  return this.element;
-};
-
-Chart.prototype.getDataSource = function getDataSource () {
-  return this.dataSource;
-};
-
-Chart.prototype.getData = function getData () {
-  return this.data;
-};
-
-Chart.prototype.getOptions = function getOptions () {
-  return this.options;
-};
-
-Chart.prototype.getChartObject = function getChartObject () {
-  return this.chart;
-};
-
-Chart.prototype.getAdapter = function getAdapter () {
-  return this.adapter;
-};
-
-Chart.prototype.updateData = function updateData (dataSource, options) {
-  this.dataSource = dataSource;
-  if (options) {
-    this.__updateOptions(options);
-  }
-  fetchDataSource(this, dataSource);
-};
-
-Chart.prototype.setOptions = function setOptions (options) {
-  this.__updateOptions(options);
-  this.redraw();
-};
-
-Chart.prototype.redraw = function redraw () {
-  fetchDataSource(this, this.rawData);
-};
-
-Chart.prototype.refreshData = function refreshData () {
-  if (typeof this.dataSource === "string") {
-    // prevent browser from caching
-    var sep = this.dataSource.indexOf("?") === -1 ? "?" : "&";
-    var url = this.dataSource + sep + "_=" + (new Date()).getTime();
-    fetchDataSource(this, url);
-  }
-};
-
-Chart.prototype.startRefresh = function startRefresh () {
-    var this$1 = this;
-
-  var refresh = this.options.refresh;
-
-  if (!this.intervalId) {
-    if (refresh) {
-      this.intervalId = setInterval( function () {
-        this$1.refreshData();
-      }, refresh * 1000);
-    } else {
-      throw new Error("No refresh interval");
-    }
-  }
-};
-
-Chart.prototype.stopRefresh = function stopRefresh () {
-  if (this.intervalId) {
-    clearInterval(this.intervalId);
-    this.intervalId = null;
-  }
-};
-
-Chart.prototype.toImage = function toImage () {
-  if (this.adapter === "chartjs") {
-    return this.chart.toBase64Image();
-  } else {
-    return null;
-  }
-};
-
-Chart.prototype.__updateOptions = function __updateOptions (options) {
-  var updateRefresh = options.refresh && options.refresh !== this.options.refresh;
-  this.options = merge(Chartkick.options, options);
-  if (updateRefresh) {
-    this.stopRefresh();
-    this.startRefresh();
-  }
-};
-
-Chart.prototype.__render = function __render () {
-  this.data = this.__processData();
-  renderChart(this.__chartName(), this);
-};
-
-Chart.prototype.__config = function __config () {
-  return config;
-};
-
-var LineChart = (function (Chart) {
-  function LineChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) LineChart.__proto__ = Chart;
-  LineChart.prototype = Object.create( Chart && Chart.prototype );
-  LineChart.prototype.constructor = LineChart;
-
-  LineChart.prototype.__processData = function __processData () {
-    return processSeries(this, "datetime");
-  };
-
-  LineChart.prototype.__chartName = function __chartName () {
-    return "LineChart";
-  };
-
-  return LineChart;
-}(Chart));
-
-var PieChart = (function (Chart) {
-  function PieChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) PieChart.__proto__ = Chart;
-  PieChart.prototype = Object.create( Chart && Chart.prototype );
-  PieChart.prototype.constructor = PieChart;
-
-  PieChart.prototype.__processData = function __processData () {
-    return processSimple(this);
-  };
-
-  PieChart.prototype.__chartName = function __chartName () {
-    return "PieChart";
-  };
-
-  return PieChart;
-}(Chart));
-
-var ColumnChart = (function (Chart) {
-  function ColumnChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) ColumnChart.__proto__ = Chart;
-  ColumnChart.prototype = Object.create( Chart && Chart.prototype );
-  ColumnChart.prototype.constructor = ColumnChart;
-
-  ColumnChart.prototype.__processData = function __processData () {
-    return processSeries(this, "string");
-  };
-
-  ColumnChart.prototype.__chartName = function __chartName () {
-    return "ColumnChart";
-  };
-
-  return ColumnChart;
-}(Chart));
-
-var BarChart = (function (Chart) {
-  function BarChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) BarChart.__proto__ = Chart;
-  BarChart.prototype = Object.create( Chart && Chart.prototype );
-  BarChart.prototype.constructor = BarChart;
-
-  BarChart.prototype.__processData = function __processData () {
-    return processSeries(this, "string");
-  };
-
-  BarChart.prototype.__chartName = function __chartName () {
-    return "BarChart";
-  };
-
-  return BarChart;
-}(Chart));
-
-var AreaChart = (function (Chart) {
-  function AreaChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) AreaChart.__proto__ = Chart;
-  AreaChart.prototype = Object.create( Chart && Chart.prototype );
-  AreaChart.prototype.constructor = AreaChart;
-
-  AreaChart.prototype.__processData = function __processData () {
-    return processSeries(this, "datetime");
-  };
-
-  AreaChart.prototype.__chartName = function __chartName () {
-    return "AreaChart";
-  };
-
-  return AreaChart;
-}(Chart));
-
-var GeoChart = (function (Chart) {
-  function GeoChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) GeoChart.__proto__ = Chart;
-  GeoChart.prototype = Object.create( Chart && Chart.prototype );
-  GeoChart.prototype.constructor = GeoChart;
-
-  GeoChart.prototype.__processData = function __processData () {
-    return processSimple(this);
-  };
-
-  GeoChart.prototype.__chartName = function __chartName () {
-    return "GeoChart";
-  };
-
-  return GeoChart;
-}(Chart));
-
-var ScatterChart = (function (Chart) {
-  function ScatterChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) ScatterChart.__proto__ = Chart;
-  ScatterChart.prototype = Object.create( Chart && Chart.prototype );
-  ScatterChart.prototype.constructor = ScatterChart;
-
-  ScatterChart.prototype.__processData = function __processData () {
-    return processSeries(this, "number");
-  };
-
-  ScatterChart.prototype.__chartName = function __chartName () {
-    return "ScatterChart";
-  };
-
-  return ScatterChart;
-}(Chart));
-
-var BubbleChart = (function (Chart) {
-  function BubbleChart () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) BubbleChart.__proto__ = Chart;
-  BubbleChart.prototype = Object.create( Chart && Chart.prototype );
-  BubbleChart.prototype.constructor = BubbleChart;
-
-  BubbleChart.prototype.__processData = function __processData () {
-    return processSeries(this, "bubble");
-  };
-
-  BubbleChart.prototype.__chartName = function __chartName () {
-    return "BubbleChart";
-  };
-
-  return BubbleChart;
-}(Chart));
-
-var Timeline = (function (Chart) {
-  function Timeline () {
-    Chart.apply(this, arguments);
-  }
-
-  if ( Chart ) Timeline.__proto__ = Chart;
-  Timeline.prototype = Object.create( Chart && Chart.prototype );
-  Timeline.prototype.constructor = Timeline;
-
-  Timeline.prototype.__processData = function __processData () {
-    var i, data = this.rawData;
-    for (i = 0; i < data.length; i++) {
-      data[i][1] = toDate(data[i][1]);
-      data[i][2] = toDate(data[i][2]);
-    }
-    return data;
-  };
-
-  Timeline.prototype.__chartName = function __chartName () {
-    return "Timeline";
-  };
-
-  return Timeline;
-}(Chart));
-
-var Chartkick = {
-  LineChart: LineChart,
-  PieChart: PieChart,
-  ColumnChart: ColumnChart,
-  BarChart: BarChart,
-  AreaChart: AreaChart,
-  GeoChart: GeoChart,
-  ScatterChart: ScatterChart,
-  BubbleChart: BubbleChart,
-  Timeline: Timeline,
-  charts: {},
-  configure: function (options) {
-    for (var key in options) {
-      if (options.hasOwnProperty(key)) {
-        config[key] = options[key];
-      }
-    }
-  },
-  eachChart: function (callback) {
-    for (var chartId in Chartkick.charts) {
-      if (Chartkick.charts.hasOwnProperty(chartId)) {
-        callback(Chartkick.charts[chartId]);
-      }
-    }
-  },
-  config: config,
-  options: {},
-  adapters: adapters,
-  addAdapter: addAdapter
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (Chartkick);
-
-
-/***/ }),
-/* 428 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var pSlice = Array.prototype.slice;
-var objectKeys = __webpack_require__(429);
-var isArguments = __webpack_require__(430);
-
-var deepEqual = module.exports = function (actual, expected, opts) {
-  if (!opts) opts = {};
-  // 7.1. All identical values are equivalent, as determined by ===.
-  if (actual === expected) {
-    return true;
-
-  } else if (actual instanceof Date && expected instanceof Date) {
-    return actual.getTime() === expected.getTime();
-
-  // 7.3. Other pairs that do not both pass typeof value == 'object',
-  // equivalence is determined by ==.
-  } else if (!actual || !expected || typeof actual != 'object' && typeof expected != 'object') {
-    return opts.strict ? actual === expected : actual == expected;
-
-  // 7.4. For all other Object pairs, including Array objects, equivalence is
-  // determined by having the same number of owned properties (as verified
-  // with Object.prototype.hasOwnProperty.call), the same set of keys
-  // (although not necessarily the same order), equivalent values for every
-  // corresponding key, and an identical 'prototype' property. Note: this
-  // accounts for both named and indexed properties on Arrays.
-  } else {
-    return objEquiv(actual, expected, opts);
-  }
-}
-
-function isUndefinedOrNull(value) {
-  return value === null || value === undefined;
-}
-
-function isBuffer (x) {
-  if (!x || typeof x !== 'object' || typeof x.length !== 'number') return false;
-  if (typeof x.copy !== 'function' || typeof x.slice !== 'function') {
-    return false;
-  }
-  if (x.length > 0 && typeof x[0] !== 'number') return false;
-  return true;
-}
-
-function objEquiv(a, b, opts) {
-  var i, key;
-  if (isUndefinedOrNull(a) || isUndefinedOrNull(b))
-    return false;
-  // an identical 'prototype' property.
-  if (a.prototype !== b.prototype) return false;
-  //~~~I've managed to break Object.keys through screwy arguments passing.
-  //   Converting to array solves the problem.
-  if (isArguments(a)) {
-    if (!isArguments(b)) {
-      return false;
-    }
-    a = pSlice.call(a);
-    b = pSlice.call(b);
-    return deepEqual(a, b, opts);
-  }
-  if (isBuffer(a)) {
-    if (!isBuffer(b)) {
-      return false;
-    }
-    if (a.length !== b.length) return false;
-    for (i = 0; i < a.length; i++) {
-      if (a[i] !== b[i]) return false;
-    }
-    return true;
-  }
-  try {
-    var ka = objectKeys(a),
-        kb = objectKeys(b);
-  } catch (e) {//happens when one is a string literal and the other isn't
-    return false;
-  }
-  // having the same number of owned properties (keys incorporates
-  // hasOwnProperty)
-  if (ka.length != kb.length)
-    return false;
-  //the same set of keys (although not necessarily the same order),
-  ka.sort();
-  kb.sort();
-  //~~~cheap key test
-  for (i = ka.length - 1; i >= 0; i--) {
-    if (ka[i] != kb[i])
-      return false;
-  }
-  //equivalent values for every corresponding key, and
-  //~~~possibly expensive deep test
-  for (i = ka.length - 1; i >= 0; i--) {
-    key = ka[i];
-    if (!deepEqual(a[key], b[key], opts)) return false;
-  }
-  return typeof a === typeof b;
-}
-
-
-/***/ }),
 /* 429 */
-/***/ (function(module, exports) {
-
-exports = module.exports = typeof Object.keys === 'function'
-  ? Object.keys : shim;
-
-exports.shim = shim;
-function shim (obj) {
-  var keys = [];
-  for (var key in obj) keys.push(key);
-  return keys;
-}
-
-
-/***/ }),
-/* 430 */
-/***/ (function(module, exports) {
-
-var supportsArgumentsClass = (function(){
-  return Object.prototype.toString.call(arguments)
-})() == '[object Arguments]';
-
-exports = module.exports = supportsArgumentsClass ? supported : unsupported;
-
-exports.supported = supported;
-function supported(object) {
-  return Object.prototype.toString.call(object) == '[object Arguments]';
-};
-
-exports.unsupported = unsupported;
-function unsupported(object){
-  return object &&
-    typeof object == 'object' &&
-    typeof object.length == 'number' &&
-    Object.prototype.hasOwnProperty.call(object, 'callee') &&
-    !Object.prototype.propertyIsEnumerable.call(object, 'callee') ||
-    false;
-};
-
-
-/***/ }),
-/* 431 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126230,7 +126371,7 @@ function unsupported(object){
 });
 
 /***/ }),
-/* 432 */
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -126250,15 +126391,15 @@ if (false) {
 }
 
 /***/ }),
-/* 433 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(434)
+var __vue_script__ = __webpack_require__(432)
 /* template */
-var __vue_template__ = __webpack_require__(435)
+var __vue_template__ = __webpack_require__(436)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -126297,7 +126438,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 434 */
+/* 432 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126447,8 +126588,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 
-var AddBranch = __webpack_require__(436);
+var AddBranch = __webpack_require__(433);
 /* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
+  props: ['user', 'role'],
   components: {
     AddBranch: AddBranch
   },
@@ -126581,7 +126723,426 @@ var AddBranch = __webpack_require__(436);
 }));
 
 /***/ }),
+/* 433 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(434)
+/* template */
+var __vue_template__ = __webpack_require__(435)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\branches\\AddBranch.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-73313e8e", Component.options)
+  } else {
+    hotAPI.reload("data-v-73313e8e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 434 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['openAddRequest'],
+  data: function data() {
+    var defaultForm = Object.freeze({
+      branch_name: '',
+      email: '',
+      phone: '',
+      address: ''
+    });
+    return {
+      defaultForm: defaultForm,
+      e1: false,
+      form: Object.assign({}, defaultForm),
+      rules: {
+        name: [function (val) {
+          return (val || '').length > 0 || 'This field is required';
+        }]
+      }
+    };
+  },
+
+  methods: {
+    save: function save() {
+      var _this = this;
+
+      axios.post('/branches', this.$data.form).then(function (response) {
+        console.log(response);
+        _this.$parent.AllBranches.push(response.data);
+        _this.close;
+        _this.resetForm();
+        _this.$emit('closeRequest');
+        _this.$emit('alertRequest');
+      }).catch(function (error) {
+        return _this.errors = error.response.data.errors;
+      });
+    },
+    resetForm: function resetForm() {
+      this.form = Object.assign({}, this.defaultForm);
+      this.$refs.form.reset();
+    },
+    alert: function alert() {
+      this.$emit('alertRequest');
+    },
+    close: function close() {
+      this.$emit('closeRequest');
+    }
+  },
+  computed: {
+    formIsValid: function formIsValid() {
+      return this.form.branch_name && this.form.email && this.form.phone && this.form.address;
+    }
+  },
+  mounted: function mounted() {}
+});
+
+/***/ }),
 /* 435 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-layout",
+    { attrs: { row: "", "justify-center": "" } },
+    [
+      _c(
+        "v-dialog",
+        {
+          attrs: { persistent: "", "max-width": "700px" },
+          model: {
+            value: _vm.openAddRequest,
+            callback: function($$v) {
+              _vm.openAddRequest = $$v
+            },
+            expression: "openAddRequest"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c("v-card-title", { attrs: { fixed: "" } }, [
+                _c("span", { staticClass: "headline" }, [_vm._v("Add Role")])
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-container",
+                    { attrs: { "grid-list-md": "" } },
+                    [
+                      _c(
+                        "v-layout",
+                        { attrs: { wrap: "" } },
+                        [
+                          _c(
+                            "v-form",
+                            {
+                              ref: "form",
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.submit($event)
+                                }
+                              }
+                            },
+                            [
+                              _c(
+                                "v-container",
+                                { attrs: { "grid-list-xl": "", fluid: "" } },
+                                [
+                                  _c(
+                                    "v-layout",
+                                    { attrs: { wrap: "" } },
+                                    [
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm6: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              rules: _vm.rules.name,
+                                              color: "blue darken-2",
+                                              label: "Branch name",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.branch_name,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.form,
+                                                  "branch_name",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "form.branch_name"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm6: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              rules: _vm.rules.name,
+                                              color: "blue darken-2",
+                                              label: "Branch Address",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.address,
+                                              callback: function($$v) {
+                                                _vm.$set(
+                                                  _vm.form,
+                                                  "address",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "form.address"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm6: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              rules: _vm.rules.name,
+                                              color: "blue darken-2",
+                                              label: "Telephone Number",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.phone,
+                                              callback: function($$v) {
+                                                _vm.$set(_vm.form, "phone", $$v)
+                                              },
+                                              expression: "form.phone"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-flex",
+                                        { attrs: { xs12: "", sm6: "" } },
+                                        [
+                                          _c("v-text-field", {
+                                            attrs: {
+                                              rules: _vm.rules.name,
+                                              color: "blue darken-2",
+                                              label: "Branch Email",
+                                              required: ""
+                                            },
+                                            model: {
+                                              value: _vm.form.email,
+                                              callback: function($$v) {
+                                                _vm.$set(_vm.form, "email", $$v)
+                                              },
+                                              expression: "form.email"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { flat: "" },
+                                      on: { click: _vm.resetForm }
+                                    },
+                                    [_vm._v("reset")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { flat: "" },
+                                      on: { click: _vm.close }
+                                    },
+                                    [_vm._v("Close")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-spacer"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: {
+                                        disabled: !_vm.formIsValid,
+                                        flat: "",
+                                        color: "primary"
+                                      },
+                                      on: { click: _vm.save }
+                                    },
+                                    [_vm._v("Submit")]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-73313e8e", module.exports)
+  }
+}
+
+/***/ }),
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -127134,434 +127695,15 @@ if (false) {
 }
 
 /***/ }),
-/* 436 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(437)
-/* template */
-var __vue_template__ = __webpack_require__(438)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\branches\\AddBranch.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-73313e8e", Component.options)
-  } else {
-    hotAPI.reload("data-v-73313e8e", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
 /* 437 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['openAddRequest'],
-  data: function data() {
-    var defaultForm = Object.freeze({
-      branch_name: '',
-      email: '',
-      phone: '',
-      address: ''
-    });
-    return {
-      defaultForm: defaultForm,
-      e1: false,
-      form: Object.assign({}, defaultForm),
-      rules: {
-        name: [function (val) {
-          return (val || '').length > 0 || 'This field is required';
-        }]
-      }
-    };
-  },
-
-  methods: {
-    save: function save() {
-      var _this = this;
-
-      axios.post('/branches', this.$data.form).then(function (response) {
-        console.log(response);
-        _this.$parent.AllBranches.push(response.data);
-        _this.close;
-        _this.resetForm();
-        _this.$emit('closeRequest');
-        _this.$emit('alertRequest');
-      }).catch(function (error) {
-        return _this.errors = error.response.data.errors;
-      });
-    },
-    resetForm: function resetForm() {
-      this.form = Object.assign({}, this.defaultForm);
-      this.$refs.form.reset();
-    },
-    alert: function alert() {
-      this.$emit('alertRequest');
-    },
-    close: function close() {
-      this.$emit('closeRequest');
-    }
-  },
-  computed: {
-    formIsValid: function formIsValid() {
-      return this.form.branch_name && this.form.email && this.form.phone && this.form.address;
-    }
-  },
-  mounted: function mounted() {}
-});
-
-/***/ }),
-/* 438 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "v-layout",
-    { attrs: { row: "", "justify-center": "" } },
-    [
-      _c(
-        "v-dialog",
-        {
-          attrs: { persistent: "", "max-width": "700px" },
-          model: {
-            value: _vm.openAddRequest,
-            callback: function($$v) {
-              _vm.openAddRequest = $$v
-            },
-            expression: "openAddRequest"
-          }
-        },
-        [
-          _c(
-            "v-card",
-            [
-              _c("v-card-title", { attrs: { fixed: "" } }, [
-                _c("span", { staticClass: "headline" }, [_vm._v("Add Role")])
-              ]),
-              _vm._v(" "),
-              _c(
-                "v-card-text",
-                [
-                  _c(
-                    "v-container",
-                    { attrs: { "grid-list-md": "" } },
-                    [
-                      _c(
-                        "v-layout",
-                        { attrs: { wrap: "" } },
-                        [
-                          _c(
-                            "v-form",
-                            {
-                              ref: "form",
-                              on: {
-                                submit: function($event) {
-                                  $event.preventDefault()
-                                  return _vm.submit($event)
-                                }
-                              }
-                            },
-                            [
-                              _c(
-                                "v-container",
-                                { attrs: { "grid-list-xl": "", fluid: "" } },
-                                [
-                                  _c(
-                                    "v-layout",
-                                    { attrs: { wrap: "" } },
-                                    [
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm6: "" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              rules: _vm.rules.name,
-                                              color: "blue darken-2",
-                                              label: "Branch name",
-                                              required: ""
-                                            },
-                                            model: {
-                                              value: _vm.form.branch_name,
-                                              callback: function($$v) {
-                                                _vm.$set(
-                                                  _vm.form,
-                                                  "branch_name",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "form.branch_name"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm6: "" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              rules: _vm.rules.name,
-                                              color: "blue darken-2",
-                                              label: "Branch Address",
-                                              required: ""
-                                            },
-                                            model: {
-                                              value: _vm.form.address,
-                                              callback: function($$v) {
-                                                _vm.$set(
-                                                  _vm.form,
-                                                  "address",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "form.address"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm6: "" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              rules: _vm.rules.name,
-                                              color: "blue darken-2",
-                                              label: "Telephone Number",
-                                              required: ""
-                                            },
-                                            model: {
-                                              value: _vm.form.phone,
-                                              callback: function($$v) {
-                                                _vm.$set(_vm.form, "phone", $$v)
-                                              },
-                                              expression: "form.phone"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-flex",
-                                        { attrs: { xs12: "", sm6: "" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              rules: _vm.rules.name,
-                                              color: "blue darken-2",
-                                              label: "Branch Email",
-                                              required: ""
-                                            },
-                                            model: {
-                                              value: _vm.form.email,
-                                              callback: function($$v) {
-                                                _vm.$set(_vm.form, "email", $$v)
-                                              },
-                                              expression: "form.email"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { flat: "" },
-                                      on: { click: _vm.resetForm }
-                                    },
-                                    [_vm._v("reset")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { flat: "" },
-                                      on: { click: _vm.close }
-                                    },
-                                    [_vm._v("Close")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-spacer"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: {
-                                        disabled: !_vm.formIsValid,
-                                        flat: "",
-                                        color: "primary"
-                                      },
-                                      on: { click: _vm.save }
-                                    },
-                                    [_vm._v("Submit")]
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-73313e8e", module.exports)
-  }
-}
-
-/***/ }),
-/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(440)
+var __vue_script__ = __webpack_require__(438)
 /* template */
-var __vue_template__ = __webpack_require__(441)
+var __vue_template__ = __webpack_require__(439)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -127600,7 +127742,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 440 */
+/* 438 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127810,7 +127952,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var form = new FormData();
       form.append('image', image);
       this.file = form;
-      // console.log(e.target.files);
+      console.log(e.target.files);
     },
     upload: function upload() {
       var _this2 = this;
@@ -127871,7 +128013,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 441 */
+/* 439 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -128402,6 +128544,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-771bf76e", module.exports)
   }
 }
+
+/***/ }),
+/* 440 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
