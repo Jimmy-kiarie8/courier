@@ -5,11 +5,35 @@
         <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
       </div>
 
+        <!-- Assign Driver -->
+      <v-dialog v-model="imageModal" persistent max-width="400">
+        <!-- <v-btn slot="activator" color="primary" dark>Open Dialog</v-btn> -->
+        <v-card>
+          <v-card-title class="headline">Upload Company Logo</v-card-title><hr>
+          <v-card-text 
+              v-for="company in AllCompanies" 
+              :key="company.id" 
+              v-if="company.id === imageItem.id">
+            <v-btn color="red" darken-1 raised @click="onPickFile" style="color: #fff;">Upload Logo</v-btn>
+            <input type="file" @change="Getimage" accept="image/*" style="display: none" ref="fileInput" name="image">
+            <img v-show="imagePlaced" :src="imageItem.logo" alt="No logo Uploaded" style="width: 200px; height: 200px;">
+            <!-- <v-btn v-show="imagePlaced" class="primary" raised @click="cancle">Cancle</v-btn> -->
+            <!-- <v-btn class="primary" raised @click.prevent="upload">Upload</v-btn> -->
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="darken-1" flat @click.native="imageModal = false">Close</v-btn>
+            <v-btn color="darken-1" flat @click.prevent="upload">Assign</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <!-- Assign Driver -->
+
       <!-- Edit dialog -->
       <v-dialog v-model="editModal" persistent max-width="700px">
         <v-card>
           <v-card-title fixed>
-            <span class="headline">Add A Company</span>
+            <span class="headline">Edit {{editedItem.company_name}} Company</span>
           </v-card-title>
           <v-card-text>
             <v-container grid-list-md>
@@ -151,6 +175,9 @@
            <v-btn icon class="mx-0" @click="editItem(props.item)">
              <v-icon color="blue darken-2">edit</v-icon>
            </v-btn>
+           <v-btn icon class="mx-0" @click="imageUpload(props.item)">
+             <v-icon color="blue darken-2">image</v-icon>
+           </v-btn>
            <v-btn icon class="mx-0" @click="deleteItem(props.item)">
              <v-icon color="pink darken-2">delete</v-icon>
            </v-btn>
@@ -193,6 +220,7 @@ export default {
   data () {
     return{
       select: {},
+      avatar: '',
       /*items: [
         { state: 'Admin', abbr: 'Admin' },
         { state: 'company Admin', abbr: 'companyAdmin' },
@@ -220,18 +248,23 @@ export default {
       { text: 'Actions', value: 'name', sortable: false }
       ],
       Allusers: [],
+      companyLogo: {},
+      imageModal: false,
+      imagePlaced: false,
       editedIndex: -1,
       loader: false,
       Editloader: false,
       editModal: false,
       AllCompanies: [],
+      logo: '',
+      imageItem: {},
       address: '',
       editedItem: {
         company_name: '',
         email: '',
         phone: '',
         address: '',
-        admin: '',
+        admin: {},
       },
       emailRules: [
         v => {
@@ -259,6 +292,54 @@ export default {
 
 
   methods: { 
+    Getimage(e) {
+      this.imagePlaced = true
+      let image = e.target.files[0];
+      // this.read(image);
+      let reader = new FileReader();
+      reader.readAsDataURL(image);
+      reader.onload = e => {
+        this.avatar = e.target.result
+      }
+      let form = new FormData();
+      form.append('image', image);
+      this.file = form
+      console.log(e.target.files);
+    },
+
+    upload() {
+      axios.post(`/logo/${this.imageItem.id}`, this.file)
+      .then((response) => {
+        console.log(response);        
+        this.color = 'black';
+        this.text = 'Company Logo updated';
+        this.snackbar = true;
+        // this.close()
+      })
+    },
+    // Image Upload
+    onPickFile() {
+      this.$refs.fileInput.click()
+    },
+    onFilePicked(event) {
+      const files = event.target.files
+      let filename = files[0].name
+      if (filename.lastIndexOf('.') <= 0) {
+        return alert('please upload a valid image')
+      }
+      const fileReader = new FileReader()
+      fileReader.addEventListener('load', () => {
+        this.avatar = fileReader.result
+      })
+      fileReader.readAsDataURL(files[0])
+      this.image = files[0]
+    },
+
+    imageUpload (item) {
+      this.imageModal = true
+      this.editedIndex = this.AllCompanies.indexOf(item)
+      this.imageItem = Object.assign({}, item)
+    },
     editItem (item) {
       this.editModal = true
       this.editedIndex = this.AllCompanies.indexOf(item)
@@ -266,7 +347,7 @@ export default {
     },
     save () {
       this.Editloader = true
-      axios.patch(`/companies/${this.editedItem.id}`, {data: this.$data.editedItem, location: this.address})
+      axios.post(`/companupdate/${this.editedItem.id}`, {data: this.$data.editedItem, location: this.address})
       .then((response) => {
         console.log(response);
         // this.AllCompanies.push(this.editedItem)
@@ -274,7 +355,7 @@ export default {
         this.Editloader = false
         // this.close()
         this.color = 'black'
-        this.message = 'Branch Updated'
+        this.message = 'Company Updated'
         this.snackbar = true
       })
       .catch((error) => {
@@ -312,6 +393,15 @@ export default {
         this.$refs.form.reset()
       },
 
+    cancle() {
+      if (this.companyLogo.logo.length > 0) {
+        this.avatar = this.companyLogo.logo;
+      }else{
+        this.imagePlaced = false
+        this.avatar = ''
+      }
+    },
+
       getAddressData: function (addressData, placeResultData, id) {
         this.address = addressData;
       }
@@ -328,9 +418,37 @@ export default {
       })
 
 
+    axios.post('getLogo')
+    .then((response) => {
+      this.companyLogo = response.data
+      /*if (this.companyLogo.logo.length > 0) {
+        this.avatar = this.companyLogo.logo
+        this.imagePlaced = true
+      }*/
+    })
+    .catch((error) => {
+        this.errors = error.response.data.errors
+      })
+
+
       axios.post('getCompanies')
       .then((response) => {
         this.AllCompanies = response.data
+        this.loader=false
+      })
+      .catch((error) => {
+        this.errors = error.response.data.errors
+        this.loader=false
+      })
+
+      axios.post('getLogoOnly')
+      .then((response) => {
+        if (response.data.length > 0) {
+            this.imagePlaced = true
+            this.avatar = response.data
+          }else{
+            this.avatar = ''
+          }
         this.loader=false
       })
       .catch((error) => {

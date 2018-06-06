@@ -79,8 +79,6 @@ class ShipmentController extends Controller {
 			$derivery_arr = explode(' ', $derivery_status);
 			$ret = $derivery_arr[0];
 			$num = $derivery_arr[1];
-			// var_dump($num);
-			// var_dump($ret); die;
 			$new_num = $num + 1;
 			$barcode->derivery_status = 'Return' . ' ' . $new_num;
 		}
@@ -126,23 +124,14 @@ class ShipmentController extends Controller {
 							'sender_address' => Auth::user()->address,
 							'sender_city' => Auth::user()->city,
 							'user_id' => Auth::id(),
-							// 'created_at' => $row['created_at'],
 						];
 					}
 				}
-				// var_dump($dataArray); die;
 				if (!empty($dataArray)) {
 					Shipment::insert($dataArray);
-					// return back();
-				} else {
-					// var_dump('failed'); die;
 				}
 			}
-			// return redirect('/')->with('success', 'Import success');
-			// var_dump('success'); die;
-		} /*else{
-	            echo "fffffffffffffffaid";
-*/
+		}
 	}
 
 	public function export() {
@@ -156,12 +145,6 @@ class ShipmentController extends Controller {
 			});
 
 		})->export('csv');
-
-		/*if ($results) {
-				echo "suceceeecec";
-			} else {
-				echo 'faileddddddd';
-		*/
 	}
 
 	/**
@@ -183,11 +166,14 @@ class ShipmentController extends Controller {
 		$shipment->shipment_type = $request->shipment_type;
 		$shipment->payment = $request->payment;
 		$shipment->total_freight = $request->total_freight;
+		// $shipment->total = $request->total;
 		$shipment->insuarance_status = $request->insuarance_status;
 		$shipment->booking_date = $request->booking_date;
 		$shipment->derivery_date = $request->derivery_date;
 		$shipment->derivery_time = $request->derivery_time;
 		$shipment->bar_code = $request->bar_code;
+		$shipment->customer_id = $request->customer_id;
+		// return $request->customer_id;
 		$shipment->sender_name = Auth::user()->name;
 		$shipment->sender_email = Auth::user()->email;
 		$shipment->sender_phone = Auth::user()->phone;
@@ -218,13 +204,16 @@ class ShipmentController extends Controller {
 		$shipment->assign_staff = $request->assign_staff;
 		$shipment->airway_bill_no = $request->airway_bill_no;
 		$shipment->shipment_type = $request->shipment_type;
+		$shipment->customer_id = $request->customer_id;
 		$shipment->payment = $request->payment;
+		
 		$shipment->total_freight = $request->total_freight;
 		$shipment->insuarance_status = $request->insuarance_status;
 		$shipment->booking_date = $request->booking_date;
 		$shipment->derivery_date = $request->derivery_date;
 		$shipment->derivery_time = $request->derivery_time;
 		$shipment->save();
+		return $shipment;
 	}
 
 	/**
@@ -245,22 +234,21 @@ class ShipmentController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function updateStatus(Request $request, Shipment $shipment, $id) {
-		$coordinates = serialize($request->address);
-		$latitude = $request->address['latitude'];
-		$longitude = $request->address['longitude'];
-		// var_dump($coordinates);
-		// var_dump($request->address['longitude']);
-		// var_dump($coordinates->latitude);
-		// var_dump($coordinates['longitude']);
-		// var_dump($coordinates['longitude']);
-		$coords = array('lat' => $latitude, 'lng' => $longitude);
-
-		$shipment = Shipment::find($id);
-		$shipment->status = $request->status;
-		$shipment->coordinates = $coordinates;
-		$shipment->remark = $request->remark;
+		$shipment = Shipment::find($request->id);
+		if ($request->address) {
+			$coordinates = serialize($request->address);
+			$latitude = $request->address['latitude'];
+			$longitude = $request->address['longitude'];
+			$coords = array('lat' => $latitude, 'lng' => $longitude);
+			$shipment->coordinates = $coordinates;
+			$shipment->longitude = $longitude;
+			$shipment->latitude = $latitude;
+		}
+		$shipment->status = $request->formobg['status'];
+		// var_dump($request->formobg['status']); die;
+		$shipment->remark = $request->formobg['remark'];
 		$shipment->save();
-		return $coords;
+		return $shipment;
 	}
 
 	public function getcoordinatesArray($id) {
@@ -300,35 +288,6 @@ class ShipmentController extends Controller {
 
 	// Chart
 	public function getChartData() {
-		/*$shipment = Shipment::select('booking_date', 'id')->get();
-			      return json_decode(json_encode($shipment), true);
-			      // $flatten = array_flatten($shipmentArray);
-			      $retrive = array_except($shipmentArray, [
-			        'airway_bill_no', 'amount_ordered', 'assign_staff', 'bar_code',
-			        'booking_date', 'client_address', 'client_city', 'client_email',
-			        'client_name', 'client_phone', 'client_postal_code', 'client_region',
-			        'container', 'coordinates',
-			        'sender_name',
-			        'sender_phone',
-			        'sender_email',
-			        'sender_address',
-			        'sender_city',
-			        'shipment_type',
-			        'payment',
-			        'total_freight',
-			        'insuarance_status',
-			        'derivery_date',
-			        'derivery_time',
-		*/
-		// var_dump($flatten);
-		/* foreach ($shipmentArray as $value) {
-	        $slice = array_only($value, ['created_at', 'id']);
-	      var_dump($slice);
-
-	      // var_dump($slice);
-	        $sliceArray = array('date' => $slice['created_at'], 'id' => $slice['id']);
-	      }
-*/
 		$shipments = DB::table('products')
 			->select(DB::raw('count(id) as count, date_format(created_at, "%M %d") as date'))
 			->orderBy('created_at', 'desc')
@@ -342,14 +301,11 @@ class ShipmentController extends Controller {
 			$lables[] = $shipment->date;
 			$rows[] = $shipment->count;
 		}
-		// return json_decode(json_encode($rows), false);
 		$data = [
 			'lables' => $lables,
 			'rows' => $rows,
 		];
 		return $data;
-		// return response()->json([$data]);
-		// var_dump($rows); die;
 	}
 
 }

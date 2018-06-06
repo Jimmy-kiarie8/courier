@@ -94,4 +94,13 @@ class ContainerController extends Controller {
 	public function destroy(Container $container) {
 		//
 	}
+
+	public function assigndialog(Request $request, Container $container, $id)
+	{
+		// return $request->all();
+		$container = Container::find($id);
+		// return $request->driver;
+		$container->driver = $request->driver['id'];
+		$container->save();
+	}
 }

@@ -284,7 +284,6 @@
                <v-flex xs12 sm6>
                  <v-text-field
                  v-model="form.quantity"
-                 :rules="rules.name"
                  color="blue darken-2"
                  label="Quantity"
                  required
@@ -293,16 +292,16 @@
                <v-flex xs12 sm6>
                  <v-text-field
                  v-model="form.price"
-                 :rules="rules.name"
                  color="blue darken-2"
                  label="Each Cost"
                  required
                  ></v-text-field>
                </v-flex>
+               <v-btn @click="getTotal" raised>Get Total</v-btn>
                <v-flex xs12 sm6>
                  <v-text-field
+                 v-show="gettotlaAmount"
                  v-model="form.total"
-                 :rules="rules.name"
                  color="blue darken-2"
                  label="Total Cost"
                  required
@@ -376,11 +375,33 @@
               v-on:placechanged="getAddressData"
               country="ke"
               ></vue-google-autocomplete>
-              <select class="custom-select custom-select-sm col-md-12" v-model="updateitedItem.status">
-                <!-- <option selected>Insurance Status</option> -->
+              <!-- <select class="custom-select custom-select-sm col-md-12" v-model="updateitedItem.status">
                 <option value="waiting_pproval">Awaiting Approval</option>
                 <option value="approved">Approved</option>
+              </select> -->
+
+
+              <select class="custom-select custom-select-sm col-md-12" v-model="updateitedItem.status">
+                <option value="Awaiting Approval">Awaiting Approval</option>
+                <option value="Approved">Approved</option>
+                <option value="Cancelled">Cancelled</option>
+                <option value="Shipment Collected">Shipment Collected</option>
+                <option value="Waiting for Scan">Waiting for scan</option>
+                <option value="Ready For Depart">Ready For Depart</option>
+                <option value="Despatched">Despatched</option>
+                <option value="Arrived">Arrived</option>
+                <option value="Cleared">Cleared</option>
+                <option value="Transit">Transit</option>
+                <option value="Out For Destination">Out For Destination</option>
+                <option value="Out For Delivery">Out For Delivery</option>
+                <option value="Delivered">Delivered</option>
+                <option value="Returned">Returned</option>
+                <option value="Hold">Hold</option>
               </select>
+
+
+
+
               <v-flex xs12 sm12>
                 <v-text-field
                 v-model="updateitedItem.remark"
@@ -492,7 +513,6 @@
                 <v-flex xs4 sm3>
                   <v-text-field
                   v-model="editedItem.client_phone"
-                  :rules="rules.name"
                   color="blue darken-2"
                   label="Client Phone"
                   required
@@ -590,22 +610,40 @@
               required
               ></v-text-field>
             </v-flex>
-            <select class="custom-select custom-select-sm col-md-3" v-model="editedItem.insuarance_status">
-              <option selected>Insurance Status</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-            <select class="custom-select custom-select-sm col-md-3" v-model="editedItem.payment">
-              <option selected>Paid</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
+            <v-divider></v-divider>
+            <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Insuarance</label>
+                <div class="col-md-6">
+                  <select class="custom-select col-md-12" v-model="editedItem.insuarance_status">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Paid</label>
+                <div class="col-md-6">
+                  <select class="custom-select custom-select-sm col-md-12" v-model="editedItem.payment">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Customer</label>
+                <div class="col-md-6">
+                  <select class="custom-select custom-select-sm col-md-12" v-model="form.customer_id">
+                    <option v-for="customers in Allcustomers" :value="customers.id">{{customers.name}}</option>
+                  </select>
+                </div>
+            </div>
             <v-flex xs4 sm3>
               <v-text-field
               v-model="editedItem.bar_code"
               :rules="rules.name"
               color="blue darken-2"
-              label="Total Weight"
+              label="Barcode"
               required
               ></v-text-field>
             </v-flex>
@@ -638,7 +676,6 @@
 <div v-show="!loader">
  <v-card-title>
   <v-btn color="primary" flat @click="openShipment">Add Shipment</v-btn>
-  Shipments
   <v-spacer></v-spacer>
   <v-text-field
   v-model="search"
@@ -698,7 +735,7 @@ class="elevation-1"
 </v-layout>
 </v-container>
 </v-content>
-<AddShipment :addShipment="dialog" @closeRequest="close"></AddShipment>
+<AddShipment :addShipment="dialog" @closeRequest="close" :Allcustomer="Allcustomers"></AddShipment>
 <EditShipment :EditShipment="dialog1" @closeRequest="close"></EditShipment>
 <!-- <UpdateShipment :UpdateShipment="dialog1" @closeRequest="close"></UpdateShipment> -->
 <v-snackbar
@@ -735,8 +772,24 @@ export default {
        quantity: null,
        product_name: '',
        shipments_id: null,
+       customer_id: null,
      })
       return {
+        /*select: { state: 'All', abbr: 'All' },
+        items: [
+          { state: 'All', abbr: 'All' },
+          { state: 'Awaiting Approval', abbr: 'Awaiting Approval' },
+          { state: 'Approved', abbr: 'approved' },
+          { state: 'Cancelled', abbr: 'Cancelled' },
+          { state: 'Collected', abbr: 'Customer' },
+          { state: 'Arrived', abbr: 'Arrived' },
+          { state: 'Cleared', abbr: 'Cleared' },
+          { state: 'Returned', abbr: 'Returned' },
+          { state: 'Hold', abbr: 'Hold' },
+          { state: 'Ready', abbr: 'Ready' },
+          { state: 'Transit', abbr: 'Transit' },
+          { state: 'Despatched', abbr: 'Despatched' },
+        ],*/
         markers: {
           position: {}
         },
@@ -836,10 +889,16 @@ export default {
         tabs: null,
         bottom: true,
         left: true,
+        Allcustomers: {},
+        gettotlaAmount: false,
         transition: 'slide-y-reverse-transition'
       }
     },
     methods: {
+    resetForm () {
+      this.form = Object.assign({}, this.defaultForm)
+      this.$refs.form.reset()
+    },
      openShipment() {
       this.dialog = true
     },
@@ -847,7 +906,12 @@ export default {
     // alert(this.updateitedItem.id);
     axios.post(`/productAdd/${this.updateitedItem.id}`, this.$data.form)
     .then((response) => {
-     console.log(response.data); 
+     // console.log(response.data); 
+
+      this.message = 'Product Added'           
+      this.color = 'black'           
+      this.snackbar = true  
+     this.resetForm()
      this.AllProducts.push(response.data) 
      this.pdialog2 = false
    })
@@ -867,14 +931,18 @@ export default {
       // this.ProductItem = Object.assign({}, item)
       // this.updatedIndex = this.AllShipments.indexOf(item)
       // alert(updateitedItem.id);
-      console.log(updateitedItem);
+      // console.log(updateitedItem);
       this.pdialog2 = true
     },
     UpdateStatus() {
       // alert(this.updateitedItem.id);      
       axios.post(`/updateStatus/${this.updateitedItem.id}`, {formobg: this.$data.updateitedItem, address: this.$data.address})
       .then((response) => {
-        console.log(response);            
+        this.resetForm()
+        // console.log(response); 
+        this.message = 'Updated'           
+        this.color = 'black'           
+        this.snackbar = true           
         this.markers.push(response.data)
       })
     },
@@ -886,7 +954,9 @@ export default {
       axios.post(`/getcoordinatesArray/${item.id}`)
       .then((response) => this.markers.position = response.data)
       .catch((error) => this.errors = error.response.data.errors)
-      console.log(this.coordinatesArr);
+      // console.log(this.coordinatesArr);
+     this.resetForm()
+
       
       this.updateitedItem = Object.assign({}, item)
       this.updatedIndex = this.AllShipments.indexOf(item)
@@ -908,15 +978,19 @@ export default {
         axios.post('/getProducts')
         .then((response) => this.newProducts = response.data)
         .catch((error) => this.errors = error.response.data.errors)
-        console.log(this.newProducts);
+        // console.log(this.newProducts);
       },
 
       update() {
          // alert(this.editedItem.id);
          axios.patch(`/shipment/${this.editedItem.id}`, this.$data.editedItem)
          .then((response) => {
+
+            this.message = 'Updated'           
+            this.color = 'black'           
+            this.snackbar = true  
             // this.close()
-            console.log(response);            
+            // console.log(response);            
           // this.$emit('alertRequest')
               // this.$parent.manage.push(response.data)
             })
@@ -927,9 +1001,10 @@ export default {
         const index = this.AllShipments.indexOf(item)
         if (confirm('Are you sure you want to delete this item?')) {
          axios.delete(`/shipment/${item.id}`)
-         .then((response) => {
-             // this.snackbar = true
-             this.text = 'deleted Success'
+         .then((response) => {          
+            this.message = 'Deleted'           
+            this.color = 'black'           
+            this.snackbar = true  
              this.AllShipments.splice(index, 1)
              console.log(response);
            })
@@ -946,6 +1021,14 @@ export default {
     },
     getAddressData: function (addressData, placeResultData, id) {
       this.address = addressData;
+    },
+    getTotal() {
+      this.gettotlaAmount = true
+      if (this.form.quantity && this.form.price) {
+        this.form.total = this.form.quantity * this.form.price
+      }else{
+        this.form.total = 0
+      }
     }
       /*save () {
         if (this.editedIndex > -1) {
@@ -975,6 +1058,16 @@ export default {
       })
 
 
+  axios.post('getCustomer')
+  .then((response) => {
+   this.Allcustomers = response.data
+   this.loader=false
+  })
+  .catch((error) => {
+   this.errors = error.response.data.errors
+   this.loader=false
+})
+
       this.loader=true
       axios.post('/getProducts')
       .then((response) => {
@@ -998,7 +1091,22 @@ export default {
    },
    formTitle () {
     return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
-  }
+  },
+  /*totalPrice() {
+    if (!this.form.quantity || !this.form.price) {
+      return 0;
+    }
+    let total = 0;
+    let quantity = this.form.quantity
+    let price = this.form.price
+
+    return this.total.reduce(function (quantity, price) {
+        // return total + Number(value.total);
+        return this.quantity + this.price
+    });
+    // return this.quantity + this.price
+  }*/
+
 },
 created () {
   this.initialize()

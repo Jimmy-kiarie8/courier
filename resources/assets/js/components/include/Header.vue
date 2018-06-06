@@ -79,6 +79,14 @@
             </div>
           </div>
         </router-link>
+        <router-link to="/customers" class="list__tile list__tile--link">
+          <div class="list__tile__action"><i aria-hidden="true" class="icon material-icons">account_circle</i></div>
+          <div class="list__tile__content">
+            <div class="list__tile__title">
+              Manage Customers
+            </div>
+          </div>
+        </router-link>
         <router-link to="/profile" class="list__tile list__tile--link">
           <div class="list__tile__action"><i aria-hidden="true" class="icon material-icons">account_circle</i></div>
           <div class="list__tile__content">
@@ -123,8 +131,10 @@ app
 :clipped-left="$vuetify.breakpoint.lgAndUp"
 fixed
 >
-<v-toolbar-title style="width: 300px" class="ml-0 pl-3">
+<v-toolbar-title style="width: 300px" class="ml-0 pl-3" v-for="item, key in company" :key="company.id">
   <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+  {{item.company_name}}
+  <img :src="item.logo" alt="" style="width: 60px; height: 60px; border-radius: 50%;">
 </v-toolbar-title>
 <v-spacer></v-spacer>
 
@@ -166,23 +176,12 @@ v-model="menu"
 <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
 </v-toolbar>
 </v-app>
-<v-snackbar
-:top= 'top'
-:timeout="timeout"
-:color="color"
-:multi-line="mode === 'multi-line'"
-:vertical="mode === 'vertical'"
-v-model="snackbar"
->
-{{ text }}
-<v-btn dark flat @click.native="snackbar = false">Close</v-btn>
-</v-snackbar>
 </div>
 </template>
 
 <script>
 export default {
-  props: ['user', 'role'],
+  props: ['user', 'role', 'logo'],
   data () {
     return{
       items: [
@@ -204,19 +203,18 @@ export default {
       drawerRight: false,
       right: null,
       menu: false,
-      text: '',
-      top: 'top',
-      snackbar: false,
       mode: '',
-      timeout: 2000,
+      company: {},
     }
   },
-  methods: {
-    },/*
-    beforeCreate() {
-      axios.post('/getRole')
-      .then((response) => this.role = response.data)
-      .catch((error) => this.errors = error.response.data.errors)
-    },*/
+  mounted() {  
+    axios.post('getLogo')
+    .then((response) => {
+      this.company = response.data
+    })
+    .catch((error) => {
+        this.errors = error.response.data.errors
+      })
+  },
   }
   </script>

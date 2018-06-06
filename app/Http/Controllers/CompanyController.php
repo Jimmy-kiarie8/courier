@@ -34,33 +34,19 @@ class CompanyController extends Controller {
 				$locality = '';
 			}
 
-			// $locality = $loc['administrative_area_level_1'];
-			// return $locality;
-			// $route = $loc['route'];
-			// $street_number = $loc['street_number'];
-
 			$company->longitude = $longitude;
 			$company->latitude = $latitude;
 			$company->country = $country;
 			$company->locality = $locality;
 			$company->location = $location;
 		}
-		// $company->route = $route;
-		// $company->street_number = $street_number;
 		// Location
 		$company->company_name = $request->data['company_name'];
 		$company->email = $request->data['email'];
 		$company->phone = $request->data['phone'];
 		$company->address = $request->data['address'];
-		// return $request->data['admin'];
-
-		// foreach ($admin as $value) {
-		// 	$admin_id = $value['id'];
-		// }
-		// return $admin_id;
-
+		$company->admin = $request->data['admin']['id'];
 		$company->user_id = Auth::id();
-		// $company->admin = $request->data['admin'];
 		$company->save();
 		return $company;
 	}
@@ -72,11 +58,9 @@ class CompanyController extends Controller {
 	 * @param  \App\Company  $company
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, Company $company) {
+	public function companupdate(Request $request, Company $company) {
 		// return $request->all();
 		$company = Company::find($request->id);
-		// return $company;
-		// return $request->data['company_name'];
 		// Location
 		if ($request->location) {
 			$location = serialize($request->location);
@@ -99,14 +83,15 @@ class CompanyController extends Controller {
 			$company->location = $location;
 		}
 		// Location
+		if ($request->data['admin']) {
+			$admin = $request->data['admin'];
+		}		
 		$company->company_name = $request->data['company_name'];
 		$company->email = $request->data['email'];
 		$company->phone = $request->data['phone'];
-		$company->admin = $request->data['admin'];
-		// return $request->data['admin'];
+		$company->admin = $admin;
 		$company->address = $request->data['address'];
-		// $company->admin = $request->data['admin'];
-		// $company->save();
+		$company->save();
 		return $company;
 	}
 
@@ -137,5 +122,35 @@ class CompanyController extends Controller {
 			}
 		}
 		return $user;
+	}
+
+	public function logo(Request $request, Company $company)
+	{
+		// return $request->all();
+		$upload = Company::find($request->id);
+		if ($request->hasFile('image')) {
+			$imagename = time() . $request->image->getClientOriginalName();
+			$request->image->storeAs('public/logo', $imagename);
+			// return response();
+		}
+		$image_name = '/storage/logo/' . $imagename;
+		$upload->logo = $image_name;
+		$upload->save();
+	}
+
+	public function getLogo()
+	{
+		return Company::where('id', Auth::user()->company_id)->get();
+	}
+
+
+
+	public function getLogoOnly()
+	{
+		$companies = Company::where('id', Auth::user()->company_id)->get();
+		foreach ($companies as $company) {
+			$company_logo = $company->logo;
+		}
+		return $company_logo;
 	}
 }

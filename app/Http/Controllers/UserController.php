@@ -100,4 +100,35 @@ class UserController extends Controller {
 		$upload->profile = $image_name;
 		$upload->save();
 	}
+
+	public function getDrivers()
+	{
+		$users = User::with('roles')->get();
+		$userArr = [];
+		foreach ($users as $user) {
+				// var_dump($user->roles); die;
+			foreach ($user->roles as $role) {
+				if ($role->name == 'Driver') {
+					$userArr[] = $role->pivot->user_id;		
+				}
+			}
+		}
+		$drivers = User::whereIn('id', $userArr)->get();
+		return $drivers;
+	}
+
+	public function getCustomer()
+	{
+		$users = User::with('roles')->get();
+		$userArr = [];
+		foreach ($users as $user) {
+			foreach ($user->roles as $role) {
+				if ($role->name == 'Customer') {
+					$userArr[] = $role->pivot->user_id;		
+				}
+			}
+		}
+		$customers = User::whereIn('id', $userArr)->get();
+		return json_decode(json_encode($customers));
+	}
 }

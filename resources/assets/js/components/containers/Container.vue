@@ -33,6 +33,37 @@
         </v-dialog>
         <!-- Show Container details -->
 
+        <!-- Assign Driver -->
+      <v-dialog v-model="assigndialog" persistent max-width="290">
+        <!-- <v-btn slot="activator" color="primary" dark>Open Dialog</v-btn> -->
+        <v-card>
+          <v-card-title class="headline">Assign Driver</v-card-title>
+          <v-card-text>
+
+             <v-flex xs12 sm12>
+               <v-select
+                :items="AllDrivers"
+                v-model="assignItem.driver"
+                label="Select"
+                single-line
+                item-text="name"
+                item-value="id"
+                return-object
+                persistent-hint
+              ></v-select>
+            </v-flex>
+
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="darken-1" flat @click.native="assigndialog = false">Close</v-btn>
+            <v-btn color="darken-1" flat @click.native="assignDriver">Assign</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+      <!-- Assign Driver -->
+
+
         <!-- Update Container -->
         <v-dialog v-model="updateModal" fullscreen hide-overlay transition="dialog-bottom-transition">
           <v-card>
@@ -372,9 +403,14 @@ class="elevation-1"
  <v-btn icon class="mx-0" @click="deleteItem(props.item)">
    <v-icon color="pink darken-2">delete</v-icon>
  </v-btn>
+ <!-- <v-btn icon class="mx-0" @click="showDetails(props.item)">
+   <v-icon color="blue darken-2">assign</v-icon>
+ </v-btn> -->
+ <v-btn flat color="primary" @click="openAssign(props.item)">Assign</v-btn>
  <v-btn icon class="mx-0" @click="showDetails(props.item)">
    <v-icon color="blue darken-2">visibility</v-icon>
  </v-btn>
+
 </td> 
 </template>
 <v-alert slot="no-results" :value="true" color="error" icon="warning">
@@ -420,6 +456,8 @@ export default {
     data () {
       const defaultForm = Object.freeze({})
       return {
+        // select: { state: 'All', abbr: 'all' },
+        assigndialog: false,
         snackbar: false,
         timeout: 5000,
         message: 'Success',
@@ -444,6 +482,8 @@ export default {
         sound: true,
         AllContainers: [],
         AllShipments: [],
+        AllDrivers: [],
+        drivers: {},
         ShipmentArray: [],
 
         Shipheaders: [
@@ -471,6 +511,7 @@ export default {
         newProducts: {},
         showItem: {},
         editedItem: {},
+        assignItem: {},
         headers: [
         {
          text: 'airway_bill_no',
@@ -607,6 +648,30 @@ export default {
         })         
        },
 
+       openAssign(item) {
+        this.assignItem = Object.assign({}, item)
+        this.editedIndex = this.AllDrivers.indexOf(item)
+        console.log(this.assignItem);
+        this.assigndialog = true
+
+       },
+
+       assignDriver() {
+        axios.post(`/assigndialog/${this.assignItem.id}`, this.$data.assignItem)
+        .then((response) => {
+          this.assigndialog = false
+           this.snackbar = true    
+           this.color = 'black'    
+           this.message = 'Updated' 
+        })
+        .catch((error) => {
+          this.errors = error.response.data.errors
+           this.snackbar = false    
+           this.color = 'red'    
+           this.message = 'Something went wrong' 
+        }) 
+       },
+
        deleteItem (item) {
         const index = this.AllContainers.indexOf(item)
         if (confirm('Are you sure you want to delete this container?')) {
@@ -651,34 +716,41 @@ export default {
       axios.post('/getContainers')
       .then((response) => {
         this.AllContainers = response.data
-        this.loader=false
       })
       .catch((error) => {
-        this.errors = error.response.data.errors
-        this.loader=false        
+        this.errors = error.response.data.errors        
         this.snackbar = false    
         this.color = 'red'    
         this.message = 'Something went wrong' 
       })
 
 
-      this.loader=true
       axios.post('/getContainers')
       .then((response) => {
         this.AllProducts = response.data
-        this.loader=false
       })
       .catch((error) => {
         console.log(error);
-        this.errors = error.response.data.errors
-        this.loader=false        
+        this.errors = error.response.data.errors        
         this.snackbar = false    
         this.color = 'red'    
         this.message = 'Something went wrong' 
       })
 
 
-      this.loader=true
+      axios.post('/getDrivers')
+      .then((response) => {
+        this.AllDrivers = response.data
+      })
+      .catch((error) => {
+        console.log(error);
+        this.errors = error.response.data.errors        
+        this.snackbar = false    
+        this.color = 'red'    
+        this.message = 'Something went wrong' 
+      })
+
+
       axios.post('/getShipments')
       .then((response) => {
         this.AllShipments = response.data

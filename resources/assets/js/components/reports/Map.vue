@@ -1,5 +1,5 @@
 <template>
-  <my-map></my-map>
+  <my-map :data='datacollection'></my-map>
 </template>
 <script>
 

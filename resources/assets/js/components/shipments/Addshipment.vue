@@ -56,7 +56,6 @@
                   <v-flex xs4 sm3>
                     <v-text-field
                     v-model="form.client_phone"
-                    :rules="rules.name"
                     color="blue darken-2"
                     label="Client Phone"
                     required
@@ -74,7 +73,6 @@
                   <v-flex xs4 sm3>
                     <v-text-field
                     v-model="form.airway_bill_no"
-                    :rules="rules.name"
                     color="blue darken-2"
                     label="Zip Code"
                     required
@@ -154,8 +152,8 @@
                 required
                 ></v-text-field>
               </v-flex>
-              <select class="custom-select custom-select-sm col-md-3" v-model="form.insuarance_status">
-                <option selected>Insurance Status</option>
+              <select class="custom-select col-md-3" v-model="form.insuarance_status">
+                <option value="0" selected="">Insuarance</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
@@ -163,11 +161,13 @@
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
+              <select class="custom-select custom-select-sm col-md-3" v-model="form.customer_id">
+                <option v-for="customers in Allcustomer" :value="customers.id">{{customers.name}}</option>
+              </select>
 
               <v-flex xs4 sm3>
                 <v-text-field
                 v-model="form.bar_code"
-                :rules="rules.name"
                 color="blue darken-2"
                 label="Total Weight"
                 required
@@ -209,7 +209,7 @@ export default {
   components: {
     'barcode': VueBarcode
   },
-  props: ['addShipment'],
+  props: ['addShipment', 'Allcustomer'],
   data () {
     const defaultForm = Object.freeze({
       client_name: '',
@@ -238,14 +238,6 @@ export default {
       dmodal2: false,
       tmodal: false,
       sound: true,
-      /*products_ob: {
-      // total_weight: '',
-        total_cost: '',
-        quantity: '',
-        weight: '',
-        each_cost: '',
-        product_name: '',
-      },*/
       widgets: false,form: Object.assign({}, defaultForm),
 
       emailRules: [
@@ -319,6 +311,17 @@ export default {
         )
     },
   },
+  mounted() {
+},
+beforeRouteEnter(to, from, next) {
+   next(vm => {
+     if (vm.role === 'Admin' || vm.role === 'companyAdmin') {
+      next(); 
+   } else {
+      next('/');
+   }
+})
+}
 }
 </script>
 

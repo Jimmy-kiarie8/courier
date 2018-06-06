@@ -1,4 +1,5 @@
 <?php
+use App\Company;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,15 @@ Route::get('/courier/{name}', function () {
 })->where('name', '[A-Za-z]+');
 
 Route::get('/courier', function () {
+    $companies = Company::where('id', Auth::user()->company_id)->get();
+    foreach ($companies as $company) {
+        $company_logo = $company->logo;
+    }
 	$newrole = Auth::user()->roles;
-	// var_dump($newrole); die;
 	foreach ($newrole as $name) {
 		$rolename = $name->name;
 	}
-	return view('welcome', compact('rolename'));
+	return view('welcome', compact('rolename', 'company_logo'));
 })->middleware('auth');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -60,14 +64,19 @@ Route::post('getcoordinatesArray/{id}', 'ShipmentController@getcoordinatesArray'
 Route::post('AddShipments/{id}', 'ContainerController@AddShipments')->name('AddShipments');
 Route::post('conupdateStatus/{id}', 'ContainerController@conupdateStatus')->name('conupdateStatus');
 Route::post('getShipmentArray/{id}', 'ContainerController@getShipmentArray')->name('getShipmentArray');
+Route::post('assigndialog/{id}', 'ContainerController@assigndialog')->name('assigndialog');
 Route::post('getContainers', 'ContainerController@getContainers')->name('getContainers');
 
 Route::post('productAdd/{id}', 'ProductController@productAdd')->name('productAdd');
 Route::post('getProducts', 'ProductController@getProducts')->name('getProducts');
 
 Route::post('getUsers', 'UserController@getUsers')->name('getUsers');
+Route::post('getDrivers', 'UserController@getDrivers')->name('getDrivers');
+Route::post('getCustomer', 'UserController@getCustomer')->name('getCustomer');
 Route::post('getLogedinUsers', 'UserController@getLogedinUsers')->name('getLogedinUsers');
 Route::post('profile/{id}', 'UserController@profile')->name('profile');
+
+
 
 Route::post('getUsersRole', 'RoleController@getUsersRole')->name('getUsersRole');
 Route::post('getRoles', 'RoleController@getRoles')->name('getRoles');
@@ -76,6 +85,10 @@ Route::post('getBranch', 'BranchController@getBranch')->name('getBranch');
 
 Route::post('getCompanies', 'CompanyController@getCompanies')->name('getCompanies');
 Route::post('getCompanyAdmin', 'CompanyController@getCompanyAdmin')->name('getCompanyAdmin');
+Route::post('companupdate/{id}', 'CompanyController@companupdate')->name('companupdate');
+Route::post('logo/{id}', 'CompanyController@logo')->name('logo');
+Route::post('getLogo', 'CompanyController@getLogo')->name('getLogo');
+Route::post('getLogoOnly', 'CompanyController@getLogoOnly')->name('getLogoOnly');
 
 // Reports
 
