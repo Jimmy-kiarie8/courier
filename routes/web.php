@@ -15,6 +15,8 @@ Route::get('/search', 'ShipmentController@search')->name('search');
 Route::get('/algoria', function () {
 	return view('search');
 });
+Route::get('verifyEmailFirst', 'Auth\RegisterController@verifyEmailFirst')->name('verifyEmailFirst');
+Route::get('/verify/{verifyToken}', 'EmailController@verify')->name('verify');
 
 Route::get('/map', function () {
 	return view('csv.map');
@@ -51,6 +53,7 @@ Route::resource('reports', 'ReportController');
 Route::resource('container', 'ContainerController');
 Route::resource('branches', 'BranchController');
 Route::resource('companies', 'CompanyController');
+Route::resource('email', 'EmailController');
 
 Route::post('updateStatus/{id}', 'ShipmentController@updateStatus')->name('updateStatus');
 Route::post('barcodeUpdate/{bar_code}', 'ShipmentController@barcodeUpdate')->name('barcodeUpdate');
@@ -117,3 +120,16 @@ Route::post('deriveredShipment', 'ShipmentController@deriveredShipment')->name('
 
 // Chart
 Route::post('getChartData', 'ShipmentController@getChartData')->name('getChartData');
+
+
+// E-MAILS
+Route::post('/sendmail', 'EmailController@sendmail')->name('sendmail');
+Route::post('/getsubscribers', 'EmailController@getsubscribers')->name('getsubscribers');
+Route::post('/subscribe', 'EmailController@subscribe')->name('subscribe');
+Route::post('/refresh/{id}', 'EmailController@refresh')->name('refresh');
+
+
+Route::get('/slack', 'EmailController@slack');
+Route::get('/slacks', 'EmailController@slacks');
+
+Route::post('/getunsubscribed', 'EmailController@getunsubscribed')->name('getunsubscribed');

@@ -25,6 +25,7 @@
                     label="Bar Code number"
                     required
                     ></v-text-field>
+                  <small class="has-text-danger" v-if="errors.bar_code">{{ errors.bar_code[0] }}</small>
                   </v-flex>
                   <v-flex xs4 sm3>
                     <v-text-field
@@ -34,6 +35,7 @@
                     label="Address"
                     required
                     ></v-text-field>
+                  <small class="has-text-danger" v-if="errors.address">{{ errors.address[0] }}</small>
                   </v-flex>
                   <v-flex xs4 sm3>
                     <v-text-field
@@ -43,6 +45,7 @@
                     label="City"
                     required
                     ></v-text-field>
+                  <small class="has-text-danger" v-if="errors.client_city">{{ errors.client_city[0] }}</small>
                   </v-flex>
                   <v-flex xs4 sm3>
                     <v-text-field
@@ -52,6 +55,7 @@
                     label="Assigned Staff"
                     required
                     ></v-text-field>
+                  <small class="has-text-danger" v-if="errors.assign_staff">{{ errors.assign_staff[0] }}</small>
                   </v-flex>
 
                   <!-- date picker -->
@@ -72,6 +76,7 @@
                   prepend-icon="event"
                   readonly
                   ></v-text-field>
+                  <small class="has-text-danger" v-if="errors.derivery_date">{{ errors.derivery_date[0] }}</small>
                   <v-date-picker v-model="form.derivery_date" scrollable>
                     <v-spacer></v-spacer>
                     <v-btn flat color="primary" @click="dmodal2 = false">Cancel</v-btn>
@@ -90,10 +95,9 @@
                 label="Derivery Time"
                 required
                 ></v-text-field>
+                  <small class="has-text-danger" v-if="errors.derivery_time">{{ errors.derivery_time[0] }}</small>
               </v-flex>
-              <barcode v-bind:value="form.bar_code" v-show="!null">
-                Show this if the rendering fails.
-              </barcode>
+              <barcode v-bind:value="form.bar_code" v-show="!null"></barcode>
             </v-layout>
           </v-container>
           <v-card-actions>
@@ -137,6 +141,7 @@ export default {
     })
     return {
       notifications: false,
+      errors: {},
       list: {},
       loader: false,
       dmodal1: false,

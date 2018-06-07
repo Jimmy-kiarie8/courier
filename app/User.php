@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Notifications\verifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -26,10 +27,6 @@ class User extends Authenticatable {
 		'password', 'remember_token',
 	];
 
-	/*public function roles() {
-		// return $this->belongsToMany('App\Role');
-		return $this->belongsToMany(App\Role::class, 'role_users');
-	}*/
 
 	/**
 	 * The roles that belong to the user.
@@ -37,5 +34,15 @@ class User extends Authenticatable {
 	public function roles() {
 		return $this->belongsToMany('App\Role');
 	}
+
+    public function verified()
+    {
+        return $this->verifyToken === null;
+    }
+
+    public function sendVerificationEmail()
+    {
+        $this->notify(new verifyEmail($this));
+    }
 
 }

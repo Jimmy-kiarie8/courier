@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller {
 	/*
@@ -60,11 +61,18 @@ class RegisterController extends Controller {
 	 * @return \App\User
 	 */
 	protected function create(array $data) {
-		return User::create([
+		$user = User::create([
 			'name' => $data['name'],
 			'email' => $data['email'],
-			'company' => $data['company'],
+			'company_id' => $data['company'],
 			'password' => Hash::make($data['password']),
+            'verifyToken' => Str::random(40),
 		]);
-	}
+        $user->sendVerificationEmail();
+        return $user;
+	}   
+	public function verifyEmailFirst()
+    {
+        return view('emails.verifyEmailFirst');
+    }
 }

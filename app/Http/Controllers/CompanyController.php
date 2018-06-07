@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Http\Requests\CompanyRequest;
 use App\User;
 use Auth;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ class CompanyController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request) {
+	public function store(CompanyRequest $request) {
 		// return $request->all();
 		$company = new Company;
 		if ($request->location) {

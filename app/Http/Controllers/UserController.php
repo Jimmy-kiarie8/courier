@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UsersRequest;
 use App\Role_user;
 use App\User;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class UserController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request) {
+	public function store(UsersRequest $request) {
 		// return $request->all();
 		// var_dump($request->form); die;
 		$user = new User;

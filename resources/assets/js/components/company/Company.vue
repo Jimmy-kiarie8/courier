@@ -219,6 +219,7 @@ export default {
   },
   data () {
     return{
+      errors: {},
       select: {},
       avatar: '',
       /*items: [
@@ -373,7 +374,7 @@ export default {
 
       deleteItem (item) {
         const index = this.AllCompanies.indexOf(item)
-        confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
+        confirm('Are you sure you want to delete this item?') && this.AllCompanies.splice(index, 1)
       },
 
       alert() {

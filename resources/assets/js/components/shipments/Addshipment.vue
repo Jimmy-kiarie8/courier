@@ -169,13 +169,11 @@
                 <v-text-field
                 v-model="form.bar_code"
                 color="blue darken-2"
-                label="Total Weight"
+                label="Barcode"
                 required
                 ></v-text-field>
               </v-flex>
-              <barcode v-bind:value="form.bar_code">
-                Show this if the rendering fails.
-              </barcode>
+              <barcode v-bind:value="form.bar_code"></barcode>
 
               
             </v-layout>

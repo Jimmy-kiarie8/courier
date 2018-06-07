@@ -27,7 +27,9 @@
                         color="blue darken-2"
                         label="Branch name"
                         required
-                        ></v-text-field>
+                        >
+                        </v-text-field>
+                        <small class="has-text-danger" v-if="errors.branch_name">{{ errors.branch_name[0] }}</small>
                       </v-flex>
                       <v-flex xs12 sm6>
                         <v-text-field
@@ -36,7 +38,9 @@
                         color="blue darken-2"
                         label="Branch Address"
                         required
-                        ></v-text-field>
+                        >
+                        </v-text-field>
+                        <small class="has-text-danger" v-if="errors.address">{{ errors.address[0] }}</small>
                       </v-flex>
                       <v-flex xs12 sm6>
                         <v-text-field
@@ -45,7 +49,9 @@
                         color="blue darken-2"
                         label="Telephone Number"
                         required
-                        ></v-text-field>
+                        >
+                        </v-text-field>
+                        <small class="has-text-danger" v-if="errors.phone">{{ errors.phone[0] }}</small>
                       </v-flex>
                       <v-flex xs12 sm6>
                         <v-text-field
@@ -54,7 +60,9 @@
                         color="blue darken-2"
                         label="Branch Email"
                         required
-                        ></v-text-field>
+                        >
+                        </v-text-field>
+                        <small class="has-text-danger" v-if="errors.email">{{ errors.email[0] }}</small>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -149,6 +157,7 @@ export default {
   },
   data () {
     return{
+      errors: {},
       OpenAdd: false,
       search: '',
       snackbar: false,

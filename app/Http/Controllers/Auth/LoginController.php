@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 use Socialite;
 
 class LoginController extends Controller {
@@ -69,5 +70,19 @@ class LoginController extends Controller {
 			Auth::login($userSocialite->email);
 			return redirect('/');
 		}
+	}
+
+	
+	/**
+	 * Get the needed authorization credentials from the request.
+	 *
+	 * @param  \Illuminate\Http\Request  $request
+	 * @return array
+	 */
+	protected function credentials(Request $request)
+	{
+	    $credentials = $request->only($this->username(), 'password');
+	    $credentials['status'] = 1;
+	    return $credentials;
 	}
 }

@@ -51,6 +51,7 @@ let myBranch = require('./components/branches/Branch.vue');
 let myProfile = require('./components/users/Profile.vue');
 let myCompany = require('./components/company/Company.vue');
 let myCustomer = require('./components/customers/Customer.vue');
+let mysubsicriber = require('./components/emails/Subscribe.vue');
 
 const routes = [
 {path: '/', component: dashboard },
@@ -62,7 +63,7 @@ const routes = [
 {path: '/branches', component: myBranch },
 {path: '/profile', component: myProfile },
 {path: '/companies', component: myCompany },
-{path: '/customers', component: myCustomer },
+{path: '/subscribers', component: mysubsicriber },
 ]
 const router = new VueRouter({
 // mode: 'history',
@@ -74,7 +75,7 @@ const app = new Vue({
     router,
     components: {
     	myHeader, myUser, myRole, myShipment, myScanner, myContainer, myMap,
-        myBranch, myProfile, myCompany, myCustomer
+        myBranch, myProfile, myCompany, myCustomer, mysubsicriber
     },
     data: {
     shipments: [],

@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration {
 			$table->string('profile')->nullable();
 			$table->integer('company_id')->nullable();
 			$table->boolean('status')->nullable();
+			$table->string('verifyToken')->nullable();
 			$table->rememberToken();
 			$table->timestamps();
 		});

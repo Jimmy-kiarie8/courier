@@ -19,6 +19,7 @@
                       label="Company name"
                       required
                       ></v-text-field>
+                      <small class="has-text-danger" v-if="errors.company_name">{{ errors.company_name[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -28,6 +29,7 @@
                       label="Company Address"
                       required
                       ></v-text-field>
+                      <small class="has-text-danger" v-if="errors.address">{{ errors.address[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -37,6 +39,7 @@
                       label="Telephone Number"
                       required
                       ></v-text-field>
+                      <small class="has-text-danger" v-if="errors.phone">{{ errors.phone[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -46,6 +49,7 @@
                       label="Company Email"
                       required
                       ></v-text-field>
+                      <small class="has-text-danger" v-if="errors.email">{{ errors.email[0] }}</small>
                     </v-flex>
 
                     <!-- Location -->
@@ -120,6 +124,7 @@ export default {
       defaultForm,
       e1: false,
       address: '',
+      errors: {},
       form: Object.assign({}, defaultForm),
       rules: {
         name: [val => (val || '').length > 0 || 'This field is required']

@@ -19,6 +19,7 @@
                       label="Full name"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.name">{{ errors.name[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -28,6 +29,7 @@
                       label="Email"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.email">{{ errors.email[0] }}</small>
                     </v-flex>
                     <v-flex  xs12 sm6>
                       <v-text-field
@@ -42,6 +44,7 @@
                         value=""
                         class="input-group--focused"
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.password">{{ errors.password[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -51,6 +54,7 @@
                       label="Address"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.address">{{ errors.address[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -60,6 +64,7 @@
                       label="City"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.city">{{ errors.city[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -69,6 +74,7 @@
                       label="Country"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.country">{{ errors.country[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -78,6 +84,7 @@
                       label="Phone"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.phone">{{ errors.phone[0] }}</small>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-text-field
@@ -87,6 +94,7 @@
                       label="Zip Code"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.zipcode">{{ errors.zipcode[0] }}</small>
                     </v-flex>
 
                     <v-flex xs12 sm6>
@@ -97,6 +105,7 @@
                       label="Branch"
                       required
                       ></v-text-field>
+                    <small class="has-text-danger" v-if="errors.branch">{{ errors.branch[0] }}</small>
                     </v-flex>
                     <select class="custom-select custom-select-md col-md-3" v-model="form.role_id">
                       <option value="1">Admin</option>
@@ -104,13 +113,6 @@
                       <option value="3">Customer</option>
                       <option value="4">Driver</option>
                     </select>
-                    <!-- <select class="custom-select" name="company_id">
-                      <option value="0" selected>Select Company</option>                      
-                      <option data-subtext="" v-for="company, key in companies" 
-                        :key="company.id"
-                        value="company.id">{{$company->company_name}}
-                      </option>
-                    </select> -->
               </v-layout>
             </v-container>
             <v-card-actions>
@@ -153,6 +155,7 @@ export default {
       })
     return{
       companies: {},
+      errors: {},
       defaultForm,
       loader: false,
       e1: false,

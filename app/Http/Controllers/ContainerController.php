@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Container;
+use App\Http\Requests\ContainerRequest;
 use App\Shipment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,7 +38,7 @@ class ContainerController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request) {
+	public function store(ContainerRequest $request) {
 		// return $request->all();
 		$container = new Container;
 		$container->bar_code = $request->bar_code;

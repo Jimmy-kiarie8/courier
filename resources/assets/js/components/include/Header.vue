@@ -79,6 +79,14 @@
             </div>
           </div>
         </router-link>
+        <router-link to="/subscribers" class="list__tile list__tile--link">
+          <div class="list__tile__action"><i aria-hidden="true" class="icon material-icons">email</i></div>
+          <div class="list__tile__content">
+            <div class="list__tile__title">
+              Manage Subscrinbers
+            </div>
+          </div>
+        </router-link>
         <router-link to="/customers" class="list__tile list__tile--link">
           <div class="list__tile__action"><i aria-hidden="true" class="icon material-icons">account_circle</i></div>
           <div class="list__tile__content">

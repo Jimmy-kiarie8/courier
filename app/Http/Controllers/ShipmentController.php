@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ShipmentRequest;
 use App\Shipment;
 use DateTime;
 use Illuminate\Http\Request;
@@ -153,7 +154,7 @@ class ShipmentController extends Controller {
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request) {
+	public function store(ShipmentRequest $request) {
 		// return $request->all();
 		$shipment = new Shipment;
 		$shipment->client_name = $request->client_name;

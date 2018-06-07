@@ -989,7 +989,7 @@ export default {
             this.message = 'Updated'           
             this.color = 'black'           
             this.snackbar = true  
-            // this.close()
+            this.close()
             // console.log(response);            
           // this.$emit('alertRequest')
               // this.$parent.manage.push(response.data)
@@ -1006,7 +1006,7 @@ export default {
             this.color = 'black'           
             this.snackbar = true  
              this.AllShipments.splice(index, 1)
-             console.log(response);
+             // console.log(response);
            })
          .catch((error) => this.errors = error.response.data.errors)
        }
@@ -1030,18 +1030,6 @@ export default {
         this.form.total = 0
       }
     }
-      /*save () {
-        if (this.editedIndex > -1) {
-          Object.assign(this.AllShipments[this.editedIndex], this.editedItem)
-        } else {
-          axios.patch('/getShipments/${this.list.id}')
-             .then((response) => {
-               this.AllShipments.push(this.editedItem)               
-            })
-             .catch((error) => this.errors = error.response.data.errors)
-        }
-        this.close()
-      }*/
     },
     mounted() {
 
