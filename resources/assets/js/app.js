@@ -42,7 +42,7 @@ let dashboard = require('./components/Dashboard.vue');
 
 let myHeader = require('./components/include/Header.vue');
 let myUser = require('./components/users/User.vue');
-let myRole = require('./components/roles/Role.vue');
+let myDrivers = require('./components/drivers/Driver.vue');
 let myShipment = require('./components/shipments/Shipment.vue');
 let myScanner = require('./components/scanner/Scanner.vue');
 let myContainer = require('./components/containers/Container.vue');
@@ -56,7 +56,7 @@ let mysubsicriber = require('./components/emails/Subscribe.vue');
 const routes = [
 {path: '/', component: dashboard },
 {path: '/users', component: myUser },
-{path: '/roles', component: myRole },
+{path: '/drivers', component: myDrivers },
 {path: '/shipments', component: myShipment },
 {path: '/scanner', component: myScanner },
 {path: '/containers', component: myContainer },
@@ -64,6 +64,7 @@ const routes = [
 {path: '/profile', component: myProfile },
 {path: '/companies', component: myCompany },
 {path: '/subscribers', component: mysubsicriber },
+{path: '/customers', component: myCustomer },
 ]
 const router = new VueRouter({
 // mode: 'history',
@@ -74,7 +75,7 @@ const app = new Vue({
     el: '#app',
     router,
     components: {
-    	myHeader, myUser, myRole, myShipment, myScanner, myContainer, myMap,
+    	myHeader, myUser, myDrivers, myShipment, myScanner, myContainer, myMap,
         myBranch, myProfile, myCompany, myCustomer, mysubsicriber
     },
     data: {

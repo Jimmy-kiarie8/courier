@@ -1,0 +1,66 @@
+Local Hosting
+
+/*****************************/
+/***Laravel installation****/
+After downloading the project go to https://getcomposer.org/ and download and install composer. Then go to https://git-scm.com/, download and install git. Go to laravel.com then to the documentation and follow the installation process
+
+
+/***Vuejs installation****/
+Go to https://nodejs.org/en/, download and install nodejs. In your server folder right click and open git bash and run the command:: vue init webpack my-project
+You can see vuejs installation on https://vuejs.org/v2/guide/installation.html
+
+
+/***Set url installation****/
+If you are using xampp go to 
+xampp\apache\config\extra and open httpd-vhosts.conf and add this
+
+
+<VirtualHost *:80>
+    DocumentRoot "/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+
+
+Do the above procedures once if you have done it in the other project don't repeat
+/*****************************/
+
+##Courier system
+<VirtualHost *:80>
+    DocumentRoot "/xampp/htdocs/your-path-folder/courier/public"
+    ServerName courier.dev (url you want to use)
+</VirtualHost>
+
+then run notepad as admin and open C:\Windows\System32\drivers\etc  open hosts
+add 
+127.0.0.1       localhost
+127.0.0.1       courier.dev (url you want to use)
+
+save and restart the server
+courier.dev will be the url
+
+
+/***database****/
+in the root directory open .env and configure your environment 
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=courier
+DB_USERNAME=database username
+DB_PASSWORD=enter your password
+
+go to the database and create a database courier
+open git on the root directory and run the command
+php artisan migrate
+this will create all the tables or use database export courier.sql in the root directory
+
+
+in the browser the url will be
+courier.dev/courier
+
+
+You can find:
+routes in routes/web.php
+controllers on app/http/controlles
+models on app/
+database migrations in Database/migrations

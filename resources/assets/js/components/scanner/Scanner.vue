@@ -13,62 +13,67 @@
             <span>{{message}}</span>
             <v-icon dark>{{icon}}</v-icon>
          </v-snackbar>
-         <v-form ref="form" @submit.prevent="submit" style="width: 100%;">
-            <v-container grid-list-md text-xs-center>
-               <v-layout row wrap>
-                  <v-flex xs6 sm6>
+         <v-card>
+            <v-flex sm8 offset-sm2>
+               <v-form ref="form" @submit.prevent="submit" style="width: 100%;">
+                  <v-container grid-list-md text-xs-center>
                      <v-layout row wrap>
-                        <v-flex xs12 sm12>
-                           <v-text-field
-                           v-model="form.bar_code"
-                           color="blue darken-2"
-                           label="Outscan"
-                           required
-                           style="margin-top: 40px;"
-                           ></v-text-field>
-                           <v-btn 
-                           color="primary" 
-                           flat
-                           @click="Outscan"
-                           >InScan
-                        </v-btn>
-                     </v-flex>
-                     <v-flex xs12 sm12>
-                        <barcode :value="form.bar_code" style="height: 30px;"></barcode> 
-                     </v-flex>
-                  </v-layout>
-               </v-flex> 
-               <v-spacer></v-spacer>
-               <v-flex xs6 sm6>
-                  <v-layout row wrap>
-                     <v-flex xs12 sm12>
-                        <v-text-field
-                        v-model="form.bar_code_in"
-                        color="blue darken-2"
-                        label="Inscan"
-                        required
-                        style="margin-top: 40px;"
-                        ></v-text-field>
-                        <v-btn 
-                        color="primary" 
-                        flat
-                        @click="Inscan"
-                        >OutScan
-                     </v-btn>
-                  </v-flex> 
-                  <v-flex xs12 sm12>
-                     <barcode :value="form.bar_code_in" style="height: 30px;"></barcode> 
-                  </v-flex>
-               </v-layout>
-            </v-flex>  
-         </v-layout> 
-      </v-container>
-   </v-form>   
+                        <v-flex xs12 sm6 offset-sm2>
+                           <v-layout row wrap>
+                              <v-flex xs12 sm6>
+                                 <v-text-field
+                                 v-model="form.bar_code"
+                                 color="blue darken-2"
+                                 label="Outscan"
+                                 required
+                                 style="margin-top: 40px;"
+                                 ></v-text-field>
+                                 <v-btn 
+                                 color="primary" 
+                                 flat
+                                 @click="Outscan"
+                                 >Outscan
+                              </v-btn>
+                           </v-flex>
+                           <v-flex xs12 sm6>
+                              <barcode :value="form.bar_code" style="height: 30px;"></barcode> 
+                           </v-flex>
+                        </v-layout>
+                     </v-flex> 
+                     <v-divider></v-divider>
+                     <v-divider></v-divider>
+                     <v-flex xs12 sm6 offset-sm2>
+                        <v-layout row wrap>
+                           <v-flex xs12 sm6>
+                              <v-text-field
+                              v-model="form.bar_code_in"
+                              color="blue darken-2"
+                              label="Inscan"
+                              required
+                              style="margin-top: 40px;"
+                              ></v-text-field>
+                              <v-btn 
+                              color="primary" 
+                              flat
+                              @click="Inscan"
+                              >Inscan
+                           </v-btn>
+                        </v-flex> 
+                        <v-flex xs12 sm6>
+                           <barcode :value="form.bar_code_in" style="height: 30px;"></barcode> 
+                        </v-flex>
+                     </v-layout>
+                  </v-flex>  
+               </v-layout> 
+            </v-container>
+         </v-form> 
+      </v-flex>
+   </v-card>  
 </v-layout>
 </v-container>
 
 <div v-show="loader" style="text-align: center; width: 100%;">
-    <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
+  <v-progress-circular :width="3" indeterminate color="red" style="margin: 1rem"></v-progress-circular>
 </div>
 </v-content>
 </template>
@@ -76,9 +81,9 @@
 <script>
 import VueBarcode from 'vue-barcode';
 export default {
-  props: ['user', 'role'],
+ props: ['user', 'role'],
  components: {
-    'barcode': VueBarcode
+  'barcode': VueBarcode
      // , UpdateShipment
   },
   data() {
@@ -102,8 +107,8 @@ methods: {
       this.$refs.form.reset()
    },
    Outscan () {
-    var length = this.AllShipments.length;
-    for(var i = 0; i < length; i++) {
+     var length = this.AllShipments.length;
+     for(var i = 0; i < length; i++) {
       if(this.AllShipments[i].bar_code == this.form.bar_code) {
                // alert('success')
                this.loader=true
@@ -133,8 +138,8 @@ methods: {
             }
          },
          Inscan () {
-          var length = this.AllShipments.length;
-          for(var i = 0; i < length; i++) {
+           var length = this.AllShipments.length;
+           for(var i = 0; i < length; i++) {
             if(this.AllShipments[i].bar_code == this.form.bar_code_in) {
                // alert('success')
                this.loader=true
@@ -163,31 +168,31 @@ methods: {
                }
             }
          },
-},
-mounted() {
-   this.loader = true
- axios.post('/getShipments')
- .then((response) => {
-   this.AllShipments = response.data
-   this.loader = false
-})
- .catch((error) => {
-   this.errors = error.response.data.errors
-   this.loader = false
-})
-},
-computed: {
-   formIsValid () {
-    return (
-     this.form.bar_code
-     )
- }
-},
-}
-</script>
+      },
+      mounted() {
+         this.loader = true
+         axios.post('/getShipments')
+         .then((response) => {
+            this.AllShipments = response.data
+            this.loader = false
+         })
+         .catch((error) => {
+            this.errors = error.response.data.errors
+            this.loader = false
+         })
+      },
+      computed: {
+         formIsValid () {
+           return (
+             this.form.bar_code
+             )
+        }
+     },
+  }
+  </script>
 
 
-<style scoped>
+  <style scoped>
 
-</style>
+  </style>
 // 0000002

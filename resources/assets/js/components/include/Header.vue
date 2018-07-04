@@ -146,9 +146,7 @@ fixed
 </v-toolbar-title>
 <v-spacer></v-spacer>
 
-
-
-<v-menu
+<v-menu 
 offset-x
 :close-on-content-click="false"
 :nudge-width="200"

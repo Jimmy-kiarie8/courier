@@ -13,11 +13,13 @@
                 <!-- <v-icon class="text-center" color="indigo" style="font-size:100px; text-align:center;">account_circle</v-icon> -->
                 <v-divider></v-divider>
                 <h6 class="text-center" color="green">Admin</h6>
-                <v-btn>Change image</v-btn>
-                <input type="file" @change="Getimage" accept="image/*">
+                <v-btn color="red" darken-1 raised @click="onPickFile" style="color: #fff;">Upload</v-btn>
+                <!-- <input type="file" @change="Getimage" accept="image/*"> -->
+                <input type="file" @change="Getimage" accept="image/*" style="display: none" ref="fileInput">
+                <!-- <img v-show="imagePlaced" :src="avatar" style="width: 300px; height: 240px;"> -->
                 <img v-show="imagePlaced" :src="avatar" style="width: 200px; height: 200px;">
-                <v-btn @click="upload" v-show="imagePlaced">Upload</v-btn>
-                <v-btn @click="cancle" v-show="imagePlaced">Cancle</v-btn>
+                <v-btn @click="upload" flat v-show="imagePlaced">Upload</v-btn>
+                <v-btn @click="cancle" flat v-show="imagePlaced">Cancle</v-btn>
               </v-card>
             </v-flex>
 
@@ -186,6 +188,24 @@ export default {
     }
   },
   methods: {
+    // Image Upload
+    onPickFile() {
+      this.$refs.fileInput.click()
+    },
+    onFilePicked(event) {
+      this.imagePlaced = true
+      const files = event.target.files
+      let filename = files[0].name
+      if (filename.lastIndexOf('.') <= 0) {
+        return alert('please upload a valid image')
+      }
+      const fileReader = new FileReader()
+      fileReader.addEventListener('load', () => {
+        this.avatar = fileReader.result
+      })
+      fileReader.readAsDataURL(files[0])
+      this.image = files[0]
+    },
     Getimage(e) {
       let image = e.target.files[0];
       // this.read(image);

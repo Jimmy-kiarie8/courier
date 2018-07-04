@@ -1032,7 +1032,6 @@ export default {
     }
     },
     mounted() {
-
       this.$refs.address.focus();
       this.loader=true
       axios.post('/getShipments')

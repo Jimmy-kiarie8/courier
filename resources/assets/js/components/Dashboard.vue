@@ -31,7 +31,7 @@
                 </v-flex>
                 <v-flex sm7 offset-sm1>
                   <strong>12</strong>  <v-divider></v-divider>
-                  <h6>Total Bookings</h6>
+                  <h6>Total Freight</h6>
                 </v-flex>
               </v-layout>
             </v-card-actions>
@@ -46,7 +46,7 @@
                 </v-flex>
                 <v-flex sm7 offset-sm1>
                   <strong>4</strong>  <v-divider></v-divider>
-                  <h6>Total Bookings</h6>
+                  <h6>Total Derivered</h6>
                 </v-flex>
               </v-layout>
             </v-card-actions>
@@ -61,7 +61,7 @@
                 </v-flex>
                 <v-flex sm7 offset-sm1>
                   <strong>2</strong>  <v-divider></v-divider>
-                  <h6>Total Bookings</h6>
+                  <h6>Total Freight</h6>
                 </v-flex>
               </v-layout>
             </v-card-actions>
@@ -283,7 +283,7 @@ export default {
   }
 }
 </script>
-
+ 
 
 <style scoped>
 /*#tiles .col-md-3{

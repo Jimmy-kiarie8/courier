@@ -58,12 +58,15 @@ class LoginController extends Controller {
 		$userSocialite = Socialite::driver($service)->user();
 		$findUser = User::where('email', $userSocialite->email)->first();
 		if ($findUser) {
-			Auth::login($findUser);
+			return $findUser;
+			// Auth::login($findUser);
 			return redirect('/');
 		} else {
 			$user = new User;
 			$user->name = $userSocialite->name;
 			$user->email = $userSocialite->email;
+			$user->profile = $userSocialite->avatar;
+			return $user;
 			// $user->status = '0';
 			$user->password = Hash::make('password');
 			$user->save();
